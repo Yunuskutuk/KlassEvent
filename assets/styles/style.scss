@@ -1,5 +1,5 @@
-$font-primary: "Poppins", Arial, sans-serif;
-$font-secondary: "Great Vibes", cursive;
+$font-primary: 'Poppins', Arial, sans-serif;
+$font-secondary: 'Great Vibes', cursive;
 
 $white: #fff;
 $black: #000000;
@@ -8,46 +8,46 @@ $black: #000000;
 $primary: #c8a97e;
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin transition($transition) {
-  -moz-transition: all $transition ease;
-  -o-transition: all $transition ease;
-  -webkit-transition: all $transition ease;
-  -ms-transition: all $transition ease;
-  transition: all $transition ease;
+      -moz-transition: all $transition ease;
+      -o-transition: all $transition ease;
+      -webkit-transition: all $transition ease;
+      -ms-transition: all $transition ease;
+      transition: all $transition ease;
 }
 
 html {
   // overflow-x: hidden;
 }
 body {
-  font-family: $font-primary;
-  background: $white;
-  font-size: 17px;
-  line-height: 2;
-  font-weight: 400;
-  color: lighten($black, 40%);
-  &.menu-show {
-    overflow: hidden;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-  }
+      font-family: $font-primary;
+      background: $white;
+      font-size: 17px;
+      line-height: 2;
+      font-weight: 400;
+      color: lighten($black, 40%);
+      &.menu-show {
+        overflow: hidden;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+      }
 }
 a {
-  transition: 0.3s all ease;
-  color: $primary;
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: $primary;
-    outline: none !important;
-  }
+      transition: 0.3s all ease;
+      color: $primary;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $primary;
+        outline: none !important;
+      }
 }
 h1,
 h2,
@@ -65,48 +65,48 @@ h5,
 }
 
 .top {
-  background: transparent !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.05) !important;
-  // border-bottom: 1px solid rgba(255,255,255,.2);
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
-  @include media-breakpoint-down(md) {
-    display: none;
-  }
+      background: transparent !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.05) !important;
+      // border-bottom: 1px solid rgba(255,255,255,.2);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
 }
 
 .ftco-navbar-light {
-  background: transparent !important;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  padding: 0;
-  @include media-breakpoint-up(lg) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
+      background: transparent !important;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      padding: 0;
+      @include media-breakpoint-up(lg) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
   }
   @include media-breakpoint-down(md) {
-    background: $black !important;
-    position: relative;
-    top: 0;
-    padding: 10px 15px;
+        background: $black !important;
+        position: relative;
+        top: 0;
+        padding: 10px 15px;
   }
 
   .navbar-brand {
-    color: $white;
-    &:hover,
-    &:focus {
-      color: $white;
+        color: $white;
+        &:hover,
+        &:focus {
+          color: $white;
     }
     @include media-breakpoint-down(md) {
-      color: $white;
+          color: $white;
     }
   }
 
@@ -116,86 +116,86 @@ h5,
     }
     > .nav-item {
       > .nav-link {
-        font-size: 14px;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-weight: 400;
-        color: $white;
-        &:hover {
-          color: $white;
+            font-size: 14px;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: 400;
+            color: $white;
+            &:hover {
+              color: $white;
         }
         opacity: 1 !important;
         @include media-breakpoint-down(md) {
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0.9rem;
-          padding-bottom: 0.9rem;
-          color: rgba(255, 255, 255, 0.7);
-          &:hover {
-            color: $white;
+              padding-left: 0;
+              padding-right: 0;
+              padding-top: 0.9rem;
+              padding-bottom: 0.9rem;
+              color: rgba(255, 255, 255, 0.7);
+              &:hover {
+                color: $white;
           }
         }
       }
 
       .dropdown-menu {
-        border: none;
-        background: $white;
-        -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
-        -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
-        box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
-        .dropdown-item {
-          font-size: 14px;
-          &:hover,
-          &:focus {
-            background: transparent;
-            color: $black;
+            border: none;
+            background: $white;
+            -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+            box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+            .dropdown-item {
+              font-size: 14px;
+              &:hover,
+              &:focus {
+                background: transparent;
+                color: $black;
           }
         }
       }
 
       &.ftco-seperator {
-        position: relative;
-        margin-left: 20px;
-        padding-left: 20px;
-        @include media-breakpoint-down(md) {
-          padding-left: 0;
-          margin-left: 0;
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+            @include media-breakpoint-down(md) {
+              padding-left: 0;
+              margin-left: 0;
         }
         &:before {
-          position: absolute;
-          content: "";
-          top: 10px;
-          bottom: 10px;
-          left: 0;
-          width: 2px;
-          background: rgba($white, 0.05);
-          @include media-breakpoint-down(md) {
-            display: none;
+              position: absolute;
+              content: "";
+              top: 10px;
+              bottom: 10px;
+              left: 0;
+              width: 2px;
+              background: rgba($white, 0.05);
+              @include media-breakpoint-down(md) {
+                display: none;
           }
         }
       }
       &.cta {
         > a {
-          background: $primary;
-          color: $white;
-          @include border-radius(5px);
-          @include media-breakpoint-down(md) {
-            padding-left: 15px;
-            padding-right: 15px;
-          }
-          @include media-breakpoint-down(md) {
-            color: $white;
-            background: $primary;
+              background: $primary;
+              color: $white;
+              @include border-radius(5px);
+              @include media-breakpoint-down(md) {
+                padding-left: 15px;
+                padding-right: 15px;
+              }
+              @include media-breakpoint-down(md) {
+                color: $white;
+                background: $primary;
           }
         }
       }
       &.active {
         > a {
-          color: $primary;
-          @include media-breakpoint-down(md) {
-            color: $white;
+              color: $primary;
+              @include media-breakpoint-down(md) {
+                color: $white;
           }
         }
       }
@@ -203,51 +203,51 @@ h5,
   }
 
   .navbar-toggler {
-    border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
-    cursor: pointer;
-    padding-right: 0;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 0.1em;
-    &:focus {
-      outline: none !important;
-    }
+        border: none;
+        color: rgba(255, 255, 255, 0.5) !important;
+        cursor: pointer;
+        padding-right: 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        &:focus {
+          outline: none !important;
+        }
   }
 
   &.scrolled {
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin-top: -130px;
-    background: $white !important;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    @include media-breakpoint-up(lg) {
-      border-bottom: none;
-      padding-bottom: 0;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin-top: -130px;
+        background: $white !important;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        @include media-breakpoint-up(lg) {
+          border-bottom: none;
+          padding-bottom: 0;
     }
     .nav-item {
-      &.active {
-        > a {
-          color: $primary !important;
-        }
+          &.active {
+            > a {
+              color: $primary !important;
+            }
       }
       &.cta {
         > a {
-          color: $white !important;
-          background: $primary;
-          border: none !important;
-          @include border-radius(0);
-          span {
-            display: inline-block;
-            color: $white !important;
-          }
+              color: $white !important;
+              background: $primary;
+              border: none !important;
+              @include border-radius(0);
+              span {
+                display: inline-block;
+                color: $white !important;
+              }
         }
-        &.cta-colored {
-          span {
-            border-color: $primary;
-          }
+          &.cta-colored {
+            span {
+              border-color: $primary;
+            }
         }
       }
     }
