@@ -16,16 +16,19 @@ class Event
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $type;
 
     /**
      * @ORM\ManyToMany(targetEntity=Service::class, inversedBy="event")
+     * @var ArrayCollection
      */
     private $service;
 

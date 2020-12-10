@@ -17,21 +17,25 @@ class Option
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $name;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @var string
      */
     private $description;
 
     /**
      * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="options")
+     * @var ArrayCollection
      */
     private $services;
 
@@ -64,7 +68,9 @@ class Option
 
     public function setDescription(?string $description): self
     {
-        $this->description = $description;
+        if ($description) {
+            $this->description = $description;
+        }
 
         return $this;
     }

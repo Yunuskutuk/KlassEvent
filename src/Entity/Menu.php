@@ -16,31 +16,37 @@ class Menu
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
-    private $Name;
+    private $name;
 
     /**
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $price;
 
     /**
      * @ORM\Column(type="text")
+     * @var string
      */
     private $description;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @var string
      */
     private $more;
 
     /**
      * @ORM\ManyToMany(targetEntity=Week::class, mappedBy="menu")
+     * @var ArrayCollection
      */
     private $weeks;
 
@@ -56,12 +62,12 @@ class Menu
 
     public function getName(): ?string
     {
-        return $this->Name;
+        return $this->name;
     }
 
-    public function setName(string $Name): self
+    public function setName(string $name): self
     {
-        $this->Name = $Name;
+        $this->name = $name;
 
         return $this;
     }
@@ -97,7 +103,9 @@ class Menu
 
     public function setMore(?string $more): self
     {
-        $this->more = $more;
+        if ($more) {
+            $this->more = $more;
+        }
 
         return $this;
     }

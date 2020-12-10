@@ -16,26 +16,31 @@ class Picture
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $path;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $alt;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
      */
     private $name;
 
     /**
      * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="picture")
+     * @var ArrayCollection
      */
     private $services;
 
@@ -80,7 +85,9 @@ class Picture
 
     public function setName(?string $name): self
     {
-        $this->name = $name;
+        if ($name) {
+            $this->name = $name;
+        }
 
         return $this;
     }

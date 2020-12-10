@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\WeekRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\WeekRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass=WeekRepository::class)
@@ -16,26 +17,31 @@ class Week
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $id;
 
     /**
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $number;
 
     /**
      * @ORM\Column(type="date")
+     * @var DateTimeInterface
      */
     private $start;
 
     /**
      * @ORM\Column(type="date")
+     * @var DateTimeInterface
      */
     private $end;
 
     /**
      * @ORM\ManyToMany(targetEntity=Menu::class, inversedBy="weeks")
+     * @var ArrayCollection
      */
     private $menu;
 

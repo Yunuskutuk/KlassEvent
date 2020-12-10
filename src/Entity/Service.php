@@ -16,31 +16,37 @@ class Service
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @var integer
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     * @var string
      */
     private $description;
 
     /**
      * @ORM\ManyToMany(targetEntity=Event::class, mappedBy="service")
+     * @var ArrayCollection
      */
     private $event;
 
     /**
      * @ORM\ManyToMany(targetEntity=Option::class, inversedBy="services")
+     * @var ArrayCollection
      */
     private $options;
 
     /**
      * @ORM\ManyToMany(targetEntity=picture::class, inversedBy="services")
+     * @var ArrayCollection
      */
     private $picture;
 
@@ -132,14 +138,14 @@ class Service
     }
 
     /**
-     * @return Collection|picture[]
+     * @return Collection|Picture[]
      */
     public function getPicture(): Collection
     {
         return $this->picture;
     }
 
-    public function addPicture(picture $picture): self
+    public function addPicture(Picture $picture): self
     {
         if (!$this->picture->contains($picture)) {
             $this->picture[] = $picture;
@@ -148,7 +154,7 @@ class Service
         return $this;
     }
 
-    public function removePicture(picture $picture): self
+    public function removePicture(Picture $picture): self
     {
         $this->picture->removeElement($picture);
 
