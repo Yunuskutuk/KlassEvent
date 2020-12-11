@@ -6,9 +6,12 @@ use App\Repository\MenuRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=MenuRepository::class)
+ * @UniqueEntity("name")
  */
 class Menu
 {
@@ -23,18 +26,29 @@ class Menu
     /**
      * @ORM\Column(type="string", length=255)
      * @var string
+     * @Assert\NotBlank(message="Le nom du produit est obligatoire !")
+     * @Assert\Length(
+     * min=3,
+     * max=255,
+     * minMessage="Le nom du produit doit avoir au moins {{ limit }} caractères",
+     * maxMessage="Le nom du produit doit avoir maximum {{ limit }} caractères"
      */
     private $name;
 
     /**
      * @ORM\Column(type="integer")
      * @var integer
+     * @Assert\NotBlank(message="Un prix doit être enregistré !")
      */
     private $price;
 
     /**
      * @ORM\Column(type="text")
      * @var string
+     * @Assert\NotBlank(message="chaque menu doit avoir une description !")
+     * @Assert\Length(
+     * min=10,
+     * minMessage="La description du menu doit avoir au moins {{ limit }} caractères",
      */
     private $description;
 
