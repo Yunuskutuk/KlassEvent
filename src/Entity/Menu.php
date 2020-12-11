@@ -28,7 +28,7 @@ class Menu
      * @var string
      * @Assert\NotBlank(message="Le nom du produit est obligatoire !")
      * @Assert\Length(
-     * min=3,
+     * min=5,
      * max=255,
      * minMessage="Le nom du produit doit avoir au moins {{ limit }} caractères",
      * maxMessage="Le nom du produit doit avoir maximum {{ limit }} caractères"
