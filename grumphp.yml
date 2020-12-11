@@ -3,7 +3,7 @@ grumphp:
         phpcs:
             standard: ~
         phpstan:
-            configuration: ./phpstan.neon
+            configuration: phpstan.neon
             level: max
         phpmd:
             whitelist_patterns:
