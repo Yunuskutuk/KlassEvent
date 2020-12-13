@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6ad58565-57cc-4270-bac4-501814db0b01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +218,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607899805607</updated>
-      <workItem from="1607899810256" duration="958000" />
+      <workItem from="1607899810256" duration="1191000" />
     </task>
     <servers />
   </component>
