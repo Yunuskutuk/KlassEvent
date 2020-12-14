@@ -31,7 +31,7 @@ class Menu
      * min=5,
      * max=255,
      * minMessage="Le nom du produit doit avoir au moins {{ limit }} caractères",
-     * maxMessage="Le nom du produit doit avoir maximum {{ limit }} caractères"
+     * maxMessage="Le nom du produit doit avoir maximum {{ limit }} caractères")
      */
     private $name;
 
@@ -48,7 +48,7 @@ class Menu
      * @Assert\NotBlank(message="chaque menu doit avoir une description !")
      * @Assert\Length(
      * min=10,
-     * minMessage="La description du menu doit avoir au moins {{ limit }} caractères",
+     * minMessage="La description du menu doit avoir au moins {{ limit }} caractères")
      */
     private $description;
 
