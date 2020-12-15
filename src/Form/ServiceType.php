@@ -25,36 +25,35 @@ class ServiceType extends AbstractType
                 ]
             ])
             ->add('description', TextareaType::class, [
-                'label' => 'Description du service',
+                'label' => 'Description du service: ',
                 'attr' => [
                     'placeholder' => 'Ecrivez une description assez courte mais parlante pour le visiteur'
                 ]
             ])
             ->add('event', EntityType::class, [
-                'label' => 'Services proposé dans les évenements:',
+                'label' => 'Services proposé dans les évenements: ',
                 'expanded' => true,
                 'multiple' => true,
                 'placeholder' => '-- Choisir les évenements --',
-                'choice_label' => 'event',
+                'choice_label' => 'type',
                 'class' => Event::class
             ])
             ->add('options', EntityType::class, [
-                'label' => 'Options du service:',
+                'label' => 'Options du service: ',
                 'expanded' => true,
                 'multiple' => true,
                 'placeholder' => '-- Choisir les optionss --',
-                'choice_label' => 'options',
+                'choice_label' => 'name',
                 'class' => Option::class
             ])
-            ->add('piture', EntityType::class, [
+            ->add('picture', EntityType::class, [
                 'label' => 'Photos du services:',
                 'expanded' => true,
                 'multiple' => true,
                 'placeholder' => '-- Choisir les photos --',
-                'choice_label' => 'picture',
+                'choice_label' => 'path',
                 'class' => Picture::class
-            ])
-            ->add('picture');
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -26,7 +26,7 @@ class EventType extends AbstractType
                 'expanded' => true,
                 'multiple' => true,
                 'placeholder' => '-- Choisir les services --',
-                'choice_label' => 'service',
+                'choice_label' => 'title',
                 'class' => Service::class
             ]);
     }
