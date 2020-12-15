@@ -1,0 +1,99 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<!-- Background picture -->
+
+<section class="home-slider owl-carousel">
+      <div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/breakfast-5.02560acf.jpg') }}')">
+       <div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-12 col-sm-12 text-center">
+            	<span class="subheading">Klass Event</span>
+              <h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</section>
+
+<!-- End Background picture -->
+   
+
+<!-- Step 1, 2, 3 -->
+
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-2">
+
+          <div class="col-md-12 text-center heading-section">
+          	<span class="subheading">Choisissez</span>
+            <h2 class="mb-4">Votre événement</h2>			
+				<form action="#" class="subscribe-form">
+				<div class="form-group">
+				<select name="pets" id="pet-select">
+					<option value="">Mariage</option>
+					<option value="dog">Héné</option>
+					<option value="cat">Anniversaire</option>
+					<option value="hamster">Réception</option>
+					<option value="parrot">Location de matériel</option>
+				</select>
+                </div>
+              </form>
+          </div>
+        </div>
+      
+		<div class="row">
+
+          <div class="col-md-4 d-flex align-self-stretch text-center">
+            <div class="media block-6 services d-block step-background margin-event">           
+              <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+			  	      <div><span class="step-number">1</span></div>
+                <h3 class="heading">Créez votre mariage de rêve sur mesure</h3>
+                <p>Remplissez un devis en ligne</p>
+              </div>
+            </div>      
+          </div>
+          
+		  <div class="col-md-4 d-flex align-self-stretch text-center">
+            <div class="media block-6 services d-block step-background margin-event">
+              <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+			  	      <div><span class="step-number">2</span></div>
+                <h3 class="heading">Nous vous contactons</h3>
+                <p>Vous bénéficiez de nos conseils et de notre expériece, pour que votre fête soit parfaite</p>
+              </div>
+            </div>    
+          </div>
+          
+		  <div class="col-md-4 d-flex align-self-stretch text-center">
+            <div class="media block-6 services d-block step-background margin-event">
+              <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+			  	<div><span class="step-number">3</span></div>
+                <h3 class="heading">Klass Event s'occupe de tout</h3>
+                <p>Vous êtes pleinemant disponible le jour J</p>
+              </div>
+            </div>      
+          </div>
+
+    	</div>
+	</div>
+
+	<div class="d-flex align-self-stretch text-center">
+        <div class="media block-6 services d-block">
+            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+				<h5 class="margin-event">Déplacements jusqu'à 350km autour de Strasbourg</h5>
+		        <p class="margin-event"><a href="#" class="btn btn-primary btn-lg">C'est parti !</a></p>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<!-- End Step -->
+
+{% endblock %}
