@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Event;
+use App\Entity\Service;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+
+class EventType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('type', TextType::class, [
+                'label' => "Nom de l'évenement: ",
+                'attr' => [
+                    'placeholder' => "Tapez le nom de l'évenement"
+                ]
+            ])
+            ->add('service', EntityType::class, [
+                'label' => 'Services inclus',
+                'expanded' => true,
+                'multiple' => true,
+                'placeholder' => '-- Choisir les services --',
+                'choice_label' => 'service',
+                'class' => Service::class
+            ]);
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => Event::class,
+        ]);
+    }
+}
