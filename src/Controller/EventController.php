@@ -11,22 +11,22 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/event")
+ * @Route("/admin/event")
  */
 class EventController extends AbstractController
 {
     /**
-     * @Route("/", name="event_index", methods={"GET"})
+     * @Route("/", name="admin_event_index", methods={"GET"})
      */
     public function index(EventRepository $eventRepository): Response
     {
-        return $this->render('event/index.html.twig', [
+        return $this->render('admin/event/index.html.twig', [
             'events' => $eventRepository->findAll(),
         ]);
     }
 
     /**
-     * @Route("/new", name="event_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_event_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -39,27 +39,27 @@ class EventController extends AbstractController
             $entityManager->persist($event);
             $entityManager->flush();
 
-            return $this->redirectToRoute('event_index');
+            return $this->redirectToRoute('admin_event_index');
         }
 
-        return $this->render('event/new.html.twig', [
+        return $this->render('admin/event/new.html.twig', [
             'event' => $event,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="event_show", methods={"GET"})
+     * @Route("/{id}", name="admin_event_show", methods={"GET"})
      */
     public function show(Event $event): Response
     {
-        return $this->render('event/show.html.twig', [
+        return $this->render('admin/event/show.html.twig', [
             'event' => $event,
         ]);
     }
 
     /**
-     * @Route("/{id}/edit", name="event_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_event_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Event $event): Response
     {
@@ -69,17 +69,17 @@ class EventController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('event_index');
+            return $this->redirectToRoute('admin_event_index');
         }
 
-        return $this->render('event/edit.html.twig', [
+        return $this->render('admin/event/edit.html.twig', [
             'event' => $event,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="event_delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin_event_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Event $event): Response
     {
@@ -89,6 +89,6 @@ class EventController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('event_index');
+        return $this->redirectToRoute('admin/event_index');
     }
 }
