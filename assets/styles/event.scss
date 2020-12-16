@@ -1,0 +1,57 @@
+/* ---- Step Style ---- */
+/*Step circle number */
+
+@mixin cercle($borderradius,$size,$color,$x, $y){
+    border-radius:$borderradius;
+    width:$size;
+    height:$size;
+    border:$size/15 solid $color;
+    box-shadow: $size/50 $size/50 $size/50 darken($color, 30%), inset $size/50 $size/50 $size/50 darken($color, 30%);
+}
+
+.step-number{
+/* cercle */
+    display: inline-block;
+    margin-bottom: 35px;   
+    @include cercle(50%,150px,$primary,2px, 2px);
+    background-color: $white;
+        
+/* font */   
+    top: -50px;     
+    font-weight: normal;
+    font-size: 100px;   
+    color: rgba(0, 0, 0, 0.2);
+    color: lighten($primary, 0%);
+    line-height: 1.4;
+    font-family: $font-secondary; 
+}
+
+.step-background{
+    background :rgb(250, 249, 249);
+    border-radius:10px;
+    filter: drop-shadow(5px 5px 5px black);
+    transition-property:background-color;
+	transition-duration:1s;
+}
+
+.step-background:hover {
+	background-color:lighten($primary,17%);
+}
+
+/* ---- End Step Style ---- */
+
+
+
+/* spacement */
+.margin-event {
+    margin-bottom:30px;
+}
+
+/*h2 title index*/
+.h2-event{
+    font-weight: bold;
+    color:$white;
+}
+
+
+

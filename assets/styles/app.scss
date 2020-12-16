@@ -1,5 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "style";
+@import "event";
+
 body {
-  background-image: url("../../images/image_2.jpg");
+  background-color: $white;
+  color: $black;    
 }
 @import "~bootstrap/scss/bootstrap";
 @import "variables";

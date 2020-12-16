@@ -12,6 +12,10 @@
 		{% endblock %}
 	</head>
 	<body>
+	    <header>
+            {% include '_navbarevent.html.twig' %}
+        </header> 
+
 		{% block body %}{% endblock %}
 
 		{% block javascripts %}
@@ -20,6 +24,7 @@
 
 	<footer>
         {% include '_footer.html.twig' %}
-    </footer> 
+		
+    </footer> 	
 	</body>
 </html>
