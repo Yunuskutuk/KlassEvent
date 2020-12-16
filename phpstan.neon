@@ -4,8 +4,9 @@ includes:
     - vendor/phpstan/phpstan-symfony/extension.neon
 parameters:
     excludes_analyse:
-        - src/DataFixtures
-        - assets/styles
+        - 'src/DataFixtures'
+        - 'assets/styles'
+        - 'assets'
         - vendor/*
         - var/*
     ignoreErrors:

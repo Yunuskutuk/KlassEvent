@@ -7,3 +7,7 @@ body {
   background-color: $white;
   color: $black;    
 }
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "style";
+
