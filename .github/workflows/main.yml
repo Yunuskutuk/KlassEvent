@@ -8,19 +8,16 @@ on:
   push:
     branches: [ dev, master ]
     paths-ignore:
-<<<<<<< HEAD
-    - assets
-    - vendor
-    -var
-=======
-      - vendor
-      - var
->>>>>>> 7c9880a6e9dd921dd60011cc61802dc5c659d754
+      - 'vendor/**'
+      - 'var/**'
+      - 'assets/js/**'
+      
   pull_request:
     branches: [ dev, master ]
     paths-ignore:
-      - vendor
-      - var
+      - 'vendor/**'
+      - 'var/**'
+      - 'assets/js/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
