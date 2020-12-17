@@ -10,6 +10,7 @@
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-react": "^7.21.5",
         "node-sass": "^4.0.0",
+        "popper.js": "^1.16.1",
         "postcss": "^8.2.1",
         "postcss-loader": "^4.1.0",
         "regenerator-runtime": "^0.13.2",
@@ -26,6 +27,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "jquery": "^3.5.1"
     }
 }

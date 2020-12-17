@@ -4,6 +4,34 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Welcome on your project 3</h1>
-	<img src="{{ asset('build/images/breakfast-5.02560acf.jpg') }}" alt="Dewey dancing">
-{% endblock %}
+	<section class="home-slider bg-light">
+		<div class="container">
+			<div class="row justify-content-center mb-3">
+				<div class="col-md-6 text-center heading-section">
+					<img src="{{ asset('build/images/logo_klass.png') }}" style="margin-top= 5px" alt="Logo klass Event">
+				</div>
+				<h1>Votre organisateur de Mariage et Restaurateur</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-6 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background margin-event">
+						<a href="blog-single.html" class="block-20" style="background-image:url('{{ asset('build/images/image_1.jpg') }}')"></a>
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<h3 class="heading">Klass Event</h3>
+							<p>Organisation de mariage / fêtes familiales : Wedding planner</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background margin-event">
+						<a href="blog-single.html" class="block-20" style="background-image:url('{{ asset('build/images/image_2.jpg') }}')"></a>
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<h3 class="heading">Klass Traiteur</h3>
+							<p>Livraison de repas pour Entreprises et particuliers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>{% endblock %}

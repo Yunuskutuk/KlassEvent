@@ -1,4 +1,4 @@
-{
+php bin/console cache:pool:clear cache.global_clearer{
     "amphp/amp": {
         "version": "v2.5.1"
     },
