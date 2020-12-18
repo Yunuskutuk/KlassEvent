@@ -4,34 +4,44 @@
 {% endblock %}
 
 {% block body %}
-	<section class="home-slider bg-light">
-		<div class="container">
-			<div class="row justify-content-center mb-3">
-				<div class="col-md-6 text-center heading-section">
-					<img src="{{ asset('build/images/logo_klass.png') }}" style="margin-top= 5px" alt="Logo klass Event">
+
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<section class="home-slider bg-light">
+			<div class="container">
+				<div class="row justify-content-center mb-3">
+					<div class="col-md-6 text-center heading-section">
+						<img src="{{ asset('build/images/logo_klass.png') }}" style="margin-top= 5px" alt="Logo klass Event">
+					</div>
+					<h1>Votre Traiteur et Organisateur d'événements</h1>
 				</div>
-				<h1>Votre organisateur de Mariage et Restaurateur</h1>
-			</div>
-			<div class="row">
-				<div class="col-md-6 d-flex align-self-stretch text-center">
-					<div class="media block-6 services d-block step-background margin-event">
-						<a href="blog-single.html" class="block-20" style="background-image:url('{{ asset('build/images/image_1.jpg') }}')"></a>
-						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-							<h3 class="heading">Klass Event</h3>
-							<p>Organisation de mariage / fêtes familiales : Wedding planner</p>
+				<div class="row">
+					<div class="col-md-6 d-flex align-self-stretch text-center">
+						<div class="media block-6 services d-block step-background margin-event">
+							<a href="blog-single.html" class="block-20" style="background-image:url('{{ asset('build/images/image_1.jpg') }}')"></a>
+							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+								<h3 class="heading">Klass Event</h3>
+								<p>Organisation de mariage / fêtes familiales : Wedding planner</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 d-flex align-self-stretch text-center">
+						<div class="media block-6 services d-block step-background margin-event">
+							<a href="blog-single.html" class="block-20" style="background-image:url('{{ asset('build/images/image_2.jpg') }}')"></a>
+							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+								<h3 class="heading">Klass Traiteur</h3>
+								<p>Livraison de repas pour Entreprises et particuliers</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 d-flex align-self-stretch text-center">
-					<div class="media block-6 services d-block step-background margin-event">
-						<a href="blog-single.html" class="block-20" style="background-image:url('{{ asset('build/images/image_2.jpg') }}')"></a>
-						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-							<h3 class="heading">Klass Traiteur</h3>
-							<p>Livraison de repas pour Entreprises et particuliers</p>
-						</div>
-					</div>
-				</div>
 			</div>
+		</section>
+		<div class="slider-item .event-slider">
+			<div class="overlay"></div>
 		</div>
-	</div>
-</section>{% endblock %}
+
+	</section>
+	<!-- End Background picture -->
+{% endblock %}
