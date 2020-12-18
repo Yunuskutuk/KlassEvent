@@ -15,4 +15,12 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig');
     }
+
+    /**
+     * @Route("/event/", name="event_index")
+     */
+    public function indexEvent(): Response
+    {
+        return $this->render('event/index.html.twig');
+    }
 }
