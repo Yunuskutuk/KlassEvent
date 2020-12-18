@@ -31,7 +31,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="json")
-     * @var array
+     * @var array<string,array>
      */
     private $roles = [];
 
@@ -112,6 +112,7 @@ class User implements UserInterface
 
     /**
      * @see UserInterface
+     * @return array<int|string, array|string>
      */
     public function getRoles(): array
     {
@@ -122,6 +123,9 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
+    /**
+     * @param array<string,array> $roles
+     */
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
@@ -150,12 +154,13 @@ class User implements UserInterface
     public function getSalt()
     {
         // not needed when using the "bcrypt" algorithm in security.yaml
+        return "phpstan is your friend also";
     }
 
     /**
      * @see UserInterface
      */
-    public function eraseCredentials()
+    public function eraseCredentials(): void
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
