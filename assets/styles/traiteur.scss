@@ -1,0 +1,46 @@
+/* ---- Step Style ---- */
+/*Step circle number */
+
+.step-number{
+/* font */
+    top: -50px;
+    font-weight: normal;
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.2);
+    color: lighten($secondary, 0%);
+    line-height: 1.4;
+    font-family: $font-secondary;
+}
+
+.step-background{
+    background :rgb(250, 249, 249);
+    border-radius:10px;
+    filter: drop-shadow(5px 5px 5px black);
+    transition-property:background-color;
+	transition-duration:1s;
+}
+
+.step-background:hover {
+	background-color:lighten($secondary,17%);
+}
+
+/* ---- End Step Style ---- */
+
+
+
+/* spacement */
+.margin-event {
+    margin-bottom:30px;
+}
+
+/*h2 title index*/
+.h2-event{
+    font-weight: bold;
+    color: #cbd3da;
+}
+
+
+
+
+
+
