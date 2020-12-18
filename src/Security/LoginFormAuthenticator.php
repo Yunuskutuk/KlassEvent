@@ -26,9 +26,24 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
     public const LOGIN_ROUTE = 'security_login';
 
+    /**
+     * @var mixed
+     */
     private $entityManager;
+
+    /**
+     * @var mixed
+     */
     private $urlGenerator;
+
+    /**
+     * @var mixed
+     */
     private $csrfTokenManager;
+
+    /**
+     * @var mixed
+     */
     private $passwordEncoder;
 
     public function __construct(
@@ -97,13 +112,13 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey)
     {
-        if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
+        $targetPath = $this->getTargetPath($request->getSession(), $providerKey);
+        if ($targetPath) {
             return new RedirectResponse($targetPath);
         }
 
         // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
         return new RedirectResponse($this->urlGenerator->generate('home'));
-        throw new \Exception('TODO: provide a valid redirect inside ' . __FILE__);
     }
 
     protected function getLoginUrl()
