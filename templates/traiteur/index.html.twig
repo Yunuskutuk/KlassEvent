@@ -1,0 +1,100 @@
+{% extends 'basetraiteur.html.twig' %}
+
+{% block title %}KlassTraiteur{% endblock %}
+
+{% block body %}
+
+<!-- Background picture -->
+
+<section class="home-slider owl-carousel">
+      <div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/bg_5.jpg') }}')">
+       <div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-12 col-sm-12 text-center">
+            	<span class="titre-traiteur">Klass Traiteur</span>
+              <h2 class="mb-4 h2-event"> Choisissez votre menu pour la semaine du ... au ... : </h2>
+                <p class="mb-4 h2-event">A partir de 3 menus par livraison</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</section>
+
+<!-- End Background picture -->
+   
+
+<!-- Menu 1, 2, 3 -->
+
+<section class="ftco-section">
+	<div class="container">
+
+		<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-12 text-center heading-section">
+          	<span class="menu-traiteur">Les menus</span>
+            <h2 class="mb-4">De la semaine</h2>
+          </div>        
+    </div>
+      
+		<div class="row">
+
+          <div class="col-md-4 d-flex align-self-stretch text-center">
+            <div class="media block-6 services d-block step-background margin-traiteur">
+              <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+			  	      <img src="{{ asset('build/images/Menu1.jpeg') }}" alt="grillade">
+                <h3 class="heading">grillade mixte</h3>
+                <h3 class="heading">15 € </h3>
+                <p>Entrée</p>
+                <p>Plat</p>
+                <p>Dessert</p>
+              </div>
+            </div>      
+          </div>
+          
+		  <div class="col-md-4 d-flex align-self-stretch text-center">
+            <div class="media block-6 services d-block step-background margin-traiteur">
+              <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+                  <img src="{{ asset('build/images/Menu2.jpeg') }}" alt="beyti">
+                <h3 class="heading">Beyti</h3>
+                <h3 class="heading">10 €</h3>
+                <p>Entrée</p>
+                <p>Plat</p>
+                <p>Dessert</p>
+              </div>
+            </div>    
+          </div>
+          
+		  <div class="col-md-4 d-flex align-self-stretch text-center">
+            <div class="media block-6 services d-block step-background margin-traiteur">
+              <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+                  <img src="{{ asset('build/images/Menu3.jpeg') }}" alt="plat">
+                <h3 class="heading">sauté d'agneau</h3>
+                <h3 class="heading">20 €</h3>
+                <p>Entrée</p>
+                <p>Plat</p>
+                <p>Dessert</p>
+              </div>
+            </div>      
+          </div>
+
+    	</div>
+	</div>
+
+	<div class="d-flex align-self-stretch text-center">
+        <div class="media block-6 services d-block">
+            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+				<h5 class="margin-event">Déplacements jusqu'à 20km autour de Strasbourg</h5>
+                <div class="btn-livre">
+		        <p class="margin-event"><a href="#" class="btn">Détails des livraisons !</a></p>
+                </div>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<!-- End Step -->
+
+{% endblock %}
