@@ -24,10 +24,18 @@ class HomeController extends AbstractController
         return $this->render('event/index.html.twig');
     }
     /**
-     * @Route("/traiteur/")
+     * @Route("/traiteur/", name="traiteur_index")
      */
     public function indexTraiteur(): Response
     {
         return $this->render('traiteur/index.html.twig');
+    }
+
+        /**
+     * @Route("/admin/", name="admin_index")
+     */
+    public function indexAdmin(): Response
+    {
+        return $this->render('admin/index.html.twig');
     }
 }
