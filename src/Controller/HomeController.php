@@ -17,14 +17,14 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/event/", name="event_index")
+     * @Route("/event", name="event_index")
      */
     public function indexEvent(): Response
     {
         return $this->render('event/index.html.twig');
     }
     /**
-     * @Route("/traiteur/", name="traiteur_index")
+     * @Route("/traiteur", name="traiteur_index")
      */
     public function indexTraiteur(): Response
     {
