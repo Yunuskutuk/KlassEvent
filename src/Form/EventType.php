@@ -21,7 +21,7 @@ class EventType extends AbstractType
                     'class' => 'font-weight-bold'
                 ],
                 'attr' => [
-                    'placeholder' => "Tapez le nom de l'évenement",
+                    'placeholder' => "Tapez le nom de l'évenement"
                 ]
             ])
             ->add('service', EntityType::class, [
