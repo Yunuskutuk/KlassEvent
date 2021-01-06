@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Form\UserInfoType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -32,6 +33,26 @@ class AccountController extends AbstractController
         }
 
         return $this->render('account/create.html.twig', [
+            'user' => $user,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/edit", name="account_edit_info", methods={"GET","POST"})
+     */
+    public function editInfo(Request $request, User $user): Response
+    {
+        $form = $this->createForm(UserInfoType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('user_index');
+        }
+
+        return $this->render('account/editInfo.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
         ]);
