@@ -30,4 +30,12 @@ class HomeController extends AbstractController
     {
         return $this->render('traiteur/index.html.twig');
     }
+
+        /**
+     * @Route("/admin/", name="admin_index")
+     */
+    public function indexAdmin(): Response
+    {
+        return $this->render('admin/index.html.twig');
+    }
 }

@@ -1,35 +1,55 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
 {% block title %}Event index{% endblock %}
 
 {% block body %}
-<h1>Event index</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Type</th>
-            <th>actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for event in events %}
-        <tr>
-            <td>{{ event.id }}</td>
-            <td>{{ event.type }}</td>
-            <td>
-                <a href="{{ path('admin_event_show', {'id': event.id}) }}">show</a>
-                <a href="{{ path('admin_event_edit', {'id': event.id}) }}">edit</a>
-            </td>
-        </tr>
-        {% else %}
-        <tr>
-            <td colspan="3">no records found</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row  slider-text align-items-center justify-content-center">
+          <div class="col-md-9 text-center mt-5">
+            <h1 class="mb-2 bread">KlassEvent</h1>
+            <h2 class="breadcrumbs" style="font-size: 25px;">Evenements</h2>
+          </div>
+        </div>
+      </div>
+</section>
 
-<a href="{{ path('admin_event_new') }}">Create new</a>
+<section class="ftco-section pt-5">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section">
+
+
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Type d'événement</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                {% for event in events %}
+                    <tr>
+                        <td>{{ event.type }}</td>
+                        <td>
+                            <a class="admin-light mr-3" href="{{ path('admin_event_show', {'id': event.id}) }}">Voir</a>
+                            <a class="admin-light" href="{{ path('admin_event_edit', {'id': event.id}) }}">Editer</a>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="3">Pas d'événement trouvé</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>    
+            <button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('admin_event_new') }}">Ajouter un nouvel événement</a></button>
+
+            </div>   
+        </div>	
+    </div>
+</section>
+
 {% endblock %}

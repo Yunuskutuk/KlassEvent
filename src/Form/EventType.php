@@ -16,7 +16,10 @@ class EventType extends AbstractType
     {
         $builder
             ->add('type', TextType::class, [
-                'label' => "Nom de l'évenement: ",
+                'label' => "Nom de l'évenement : ",
+                'label_attr' => [
+                    'class' => 'font-weight-bold'
+                ],
                 'attr' => [
                     'placeholder' => "Tapez le nom de l'évenement"
                 ]
