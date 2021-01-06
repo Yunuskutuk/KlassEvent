@@ -23,6 +23,7 @@ class HomeController extends AbstractController
     {
         return $this->render('event/index.html.twig');
     }
+
     /**
      * @Route("/traiteur/", name="traiteur_index")
      */
