@@ -39,7 +39,7 @@ class ServiceController extends AbstractController
             $entityManager->persist($service);
             $entityManager->flush();
 
-            return $this->redirectToRoute('service_index');
+            return $this->redirectToRoute('admin_service_index');
         }
 
         return $this->render('admin/service/new.html.twig', [
