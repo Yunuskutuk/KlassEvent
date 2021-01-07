@@ -65,7 +65,7 @@ class AccountController extends AbstractController
             return $this->redirectToRoute('account_show');
         }
 
-        return $this->render('user/edit.html.twig', [
+        return $this->render('account/editPass.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
         ]);

@@ -14,9 +14,9 @@ class UserPassType extends AbstractType
     {
         $builder
             ->add('password', PasswordType::class, [
-                'label' => "votre mot de passe: ",
+                'label' => "votre nouveau mot de passe: ",
                 'attr' => [
-                    'placeholder' => "votre mot de passe"
+                    'placeholder' => "votre nouveau mot de passe"
                 ]
             ]);
     }
