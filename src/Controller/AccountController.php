@@ -8,13 +8,23 @@ use App\Form\UserInfoType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AccountController extends AbstractController
 {
     /**
-     * @Route("/account/create", name="account_create")
+     * @Route("/account/show", name="account_show", methods={"GET"})
+     */
+    public function show(): Response
+    {
+        return $this->render('account/show.html.twig');
+    }
+
+    /**
+     * @Route("/create", name="account_create", methods={"GET","POST"})
      */
     public function create(Request $request, UserPasswordEncoderInterface $encoder): Response
     {
@@ -39,7 +49,7 @@ class AccountController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="account_edit_info", methods={"GET","POST"})
+     * @Route("/account/{id}/edit", name="account_edit_info", methods={"GET","POST"})
      */
     public function editInfo(Request $request, User $user): Response
     {
@@ -49,7 +59,7 @@ class AccountController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('user_index');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('account/editInfo.html.twig', [
