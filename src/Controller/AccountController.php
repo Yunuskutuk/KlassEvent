@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Form\UserInfoType;
+use App\Form\UserPassType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -49,6 +50,28 @@ class AccountController extends AbstractController
     }
 
     /**
+     * @Route("/account/{id}/password", name="account_change_password", methods={"GET","POST"})
+     */
+    public function edit(Request $request, User $user, UserPasswordEncoderInterface $encoder): Response
+    {
+        $form = $this->createForm(UserPassType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $hash = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($hash);
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('account_show');
+        }
+
+        return $this->render('user/edit.html.twig', [
+            'user' => $user,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
      * @Route("/account/{id}/edit", name="account_edit_info", methods={"GET","POST"})
      */
     public function editInfo(Request $request, User $user): Response
@@ -59,7 +82,7 @@ class AccountController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('account_show');
         }
 
         return $this->render('account/editInfo.html.twig', [
