@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}creation de compte
+{% endblock %}
+
+{% block body %}
+
+
+<h1>Compte associé à {{ app.user.email }}</h1>
+
+<p>nom: {{ app.user.name }}</p>
+
+<p>prénom: {{ app.user.firstName }}</p>
+
+<p>n° de Téléphone: {{ app.user.phone }} </p>
+
+<p>adresse personelle: {{ app.user.adress }}</p>
+
+<p>adresse de livraison: {{ app.user.adressEvent }}</p>
+
+<a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
+<button class="btn btn-primary">{{ button_label|default('modifier') }}</button>
+</a>
+<br>
+{% endblock %}
