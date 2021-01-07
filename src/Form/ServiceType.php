@@ -20,18 +20,24 @@ class ServiceType extends AbstractType
         $builder
             ->add('title', TextType::class, [
                 'label' => "Nom du service: ",
+                'label_attr' => [
+                    'class' => 'font-weight-bold'
+                ],
                 'attr' => [
                     'placeholder' => "Tapez le nom du service"
                 ]
             ])
             ->add('description', TextareaType::class, [
-                'label' => 'Description du service: ',
+                'label' => 'Description du service : ',
+                'label_attr' => [
+                    'class' => 'font-weight-bold'
+                ],
                 'attr' => [
                     'placeholder' => 'Ecrivez une description assez courte mais parlante pour le visiteur'
                 ]
             ])
             ->add('event', EntityType::class, [
-                'label' => 'Services proposé dans les évenements: ',
+                'label' => 'Services proposé dans les évenements : ',
                 'expanded' => true,
                 'multiple' => true,
                 'placeholder' => '-- Choisir les évenements --',
@@ -39,7 +45,10 @@ class ServiceType extends AbstractType
                 'class' => Event::class
             ])
             ->add('options', EntityType::class, [
-                'label' => 'Options du service: ',
+                'label' => 'Options du service : ',
+                'label_attr' => [
+                    'class' => 'font-weight-bold'
+                ],
                 'expanded' => true,
                 'multiple' => true,
                 'placeholder' => '-- Choisir les optionss --',
@@ -47,7 +56,10 @@ class ServiceType extends AbstractType
                 'class' => Option::class
             ])
             ->add('picture', EntityType::class, [
-                'label' => 'Photos du services:',
+                'label' => 'Photos du services :',
+                'label_attr' => [
+                    'class' => 'font-weight-bold'
+                ],
                 'expanded' => true,
                 'multiple' => true,
                 'placeholder' => '-- Choisir les photos --',

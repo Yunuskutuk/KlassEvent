@@ -1,0 +1,152 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block body %}
+
+
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">Espace Administrateur</span>
+						<h2 class="mb-4 h2-event">Gérez ici votre site</h2>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Background picture -->
+
+	<!-- Cards Traiteur Admin -->
+
+	<section class="ftco-section">
+		<div class="container">
+
+
+
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-12 text-center heading-section">
+					<span class="subheading admin-light">Traiteur Admin</span>
+					<h2 class="mb-4">Gérez les menus traiteur</h2>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin">1</span>
+							</div>
+							<h3 class="heading">A compléter</h3>
+							<button type="button" class="btn admin-button mb-3">Gérer</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin">2</span>
+							</div>
+							<h3 class="heading">A compléter</h3>
+							<button type="button" class="btn admin-button mb-3">Gérer</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin">3</span>
+							</div>
+							<h3 class="heading">A compléter</h3>
+							<button type="button" class="btn admin-button mb-3">Gérer</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- End Cards Traiteur Admin -->
+
+
+	<!-- Cards Event Admin -->
+
+	<section class="ftco-section">
+		<div class="container">
+
+
+
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-12 text-center heading-section">
+					<span class="subheading admin-light">Event Admin</span>
+					<h2 class="mb-4">Gérez vos événements</h2>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="currentColor" class="bi bi-bookmark-heart-fill" viewBox="-1 0 16 9">
+  <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/></svg></span>
+							</div>
+							<h3 class="heading">Evénements</h3>
+							<button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('admin_event_index') }}">Gérer</a></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="currentColor" class="bi bi-basket2" viewBox="-1 0 16 9">
+  <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+  <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+</svg></span>
+							</div>
+							<h3 class="heading">Services</h3>
+							<button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('admin_service_index') }}">Gérer</a></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin">3</span>
+							</div>
+							<h3 class="heading">A compléter</h3>
+							<button type="button" class="btn admin-button mb-3">Gérer</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		</section>
+
+		<!-- End Cards Event Admin -->
+
+	{% endblock %}

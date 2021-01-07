@@ -1,0 +1,73 @@
+/* ---- Black and white filter ---- */
+.img-black-white{
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);
+ }
+/* ---- End Black and white filter ---- */
+
+/* ---- Step Style ---- */
+/*Step circle number */
+
+@mixin cercle($borderradius,$size,$color,$x, $y){
+    border-radius:$borderradius;
+    width:$size;
+    height:$size;
+    border:$size/15 solid $color;
+    box-shadow: $size/50 $size/50 $size/50 darken($color, 30%), inset $size/50 $size/50 $size/50 darken($color, 30%);
+}
+
+.step-number-admin{
+/* cercle */
+    display: inline-block;
+    margin-bottom: 35px;   
+    @include cercle(50%,150px,$tertiary,2px, 2px);
+    background-color: $white;
+        
+/* font */   
+    top: -50px;     
+    font-weight: normal;
+    font-size: 100px;   
+    color: rgba(0, 0, 0, 0.2);
+    color: lighten($tertiary, 0%);
+    line-height: 1.4;
+    font-family: $font-secondary; 
+}
+
+.step-background-admin{
+    background :rgb(250, 249, 249);
+    border-radius:10px;
+    filter: drop-shadow(5px 5px 5px black);
+    transition-property:background-color;
+	transition-duration:1s;
+}
+
+.step-background-admin:hover {
+	background-color:lighten($tertiary,17%);
+}
+
+/* ---- End Step Style ---- */
+
+/* ---- Font Style ---- */
+.admin-button{
+    background: black;
+    border:$tertiary;
+}
+
+.admin-button:hover {
+    border: 1px solid $tertiary;
+    background: transparent;
+    color: $tertiary;
+}
+
+.admin-light{
+color:$tertiary !important;
+}
+
+legend{
+    font-weight: bold;
+    text-align: left;
+}
+
