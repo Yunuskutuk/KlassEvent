@@ -55,5 +55,31 @@
 
 
 
+/* ---- Pictures Gallery ---- */
 
+.picture-gallery{ 
+    
+    transition-property:filter;
+    transition-duration:0.5s;   
+}
+
+.picture-gallery:hover {
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);   
+}
+
+.zoom-gallery {     
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.zoom-gallery:hover {
+    -webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
 
