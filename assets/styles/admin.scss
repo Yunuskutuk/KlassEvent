@@ -52,14 +52,15 @@
 
 /* ---- Font Style ---- */
 .admin-button{
-    background: black;
+    border: 1px solid black !important;
+    background: black !important;
     border:$tertiary;
 }
 
 .admin-button:hover {
-    border: 1px solid $tertiary;
+    border: 1px solid $tertiary !important;
     background: transparent;
-    color: $tertiary;
+    color: $tertiary !important;
 }
 
 .admin-light{
