@@ -91,5 +91,4 @@ class EventController extends AbstractController
 
         return $this->redirectToRoute('admin/event_index');
     }
-    
 }
