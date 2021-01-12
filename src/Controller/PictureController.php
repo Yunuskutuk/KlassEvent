@@ -73,6 +73,7 @@ class PictureController extends AbstractController
             return $this->redirectToRoute('admin_picture_index');
         }
 
+        dump($picture);
         return $this->render('admin/picture/edit.html.twig', [
             'picture' => $picture,
             'form' => $form->createView(),
@@ -84,6 +85,8 @@ class PictureController extends AbstractController
      */
     public function delete(Request $request, Picture $picture): Response
     {
+
+        dump($picture);
         if ($this->isCsrfTokenValid('delete' . $picture->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($picture);
