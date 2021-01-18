@@ -84,20 +84,18 @@
 			<div class="media block-6 services d-block">
 				<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 					<h5 class="margin-event">Déplacements jusqu'à 350km autour de Strasbourg</h5>
-					<form action="#" class="subscribe-form margin-event">
-						<div class="form-group">
-							<select name="pets" id="pet-select">
-								<option value="">Mariage</option>
-								<option value="dog">Héné</option>
-								<option value="cat">Anniversaire</option>
-								<option value="hamster">Réception</option>
-								<option value="parrot">Location de matériel</option>
-							</select>
-						</div>
-					</form>
-					<p class="margin-event">
-						<a href="#" class="btn btn-primary btn-lg">C'est parti !</a>
-					</p>
+					<table>
+						{% for event in events %}
+						<tr>
+							<td>{{ event.type }} </td>
+							<td><a href="{{ path('quote_quote', {'id': event.id}) }} ">
+							<button class="btn btn-primary">{{ button_label|default('faire un devis') }}</button>
+							</a></td>
+						</tr>
+							{% else %}
+							<p>aucun evenement possible, contactez l'administrateur</p>
+						{% endfor %}
+					</table>
 				</div>
 			</div>
 
