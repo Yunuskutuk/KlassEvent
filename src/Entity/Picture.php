@@ -2,16 +2,20 @@
 
 namespace App\Entity;
 
-use App\Repository\PictureRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use App\Repository\PictureRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=PictureRepository::class)
  * @UniqueEntity("path")
+ * @Vich\Uploadable
  */
 class Picture
 {
@@ -24,10 +28,16 @@ class Picture
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @var string
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string|null
      */
     private $path;
+
+    /**
+     * @Vich\UploadableField(mapping="upload_picture", fileNameProperty="path")
+     * @var mixed
+     */
+    private $pathFile;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -40,6 +50,13 @@ class Picture
      * @var string
      */
     private $name;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var Datetime
+     */
+
+    private $updatedAt;
 
     /**
      * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="picture")
@@ -62,11 +79,26 @@ class Picture
         return $this->path;
     }
 
-    public function setPath(string $path): self
+    public function setPath(?string $path): self
     {
         $this->path = $path;
 
         return $this;
+    }
+
+    public function setPathFile(File $image = null): self
+    {
+        $this->pathFile = $image;
+        if ($image) {
+            $this->updatedAt = new DateTime('now');
+        }
+        return $this;
+    }
+
+
+    public function getPathFile(): ?File
+    {
+        return $this->pathFile;
     }
 
     public function getAlt(): ?string

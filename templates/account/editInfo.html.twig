@@ -3,7 +3,7 @@
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-
+    <h1>mise à jour des infos de votre compte</h1>
 
 	<!-- Background picture -->
 
@@ -39,7 +39,7 @@
  
     {{ include('account/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    {#<a href="{{ path('user_index') }}">back to account</a>#}
+    <a href="{{ path('account_show') }}">retour sur mon compte</a>
 
     {{ include('user/_delete_form.html.twig') }}
 

@@ -1,6 +1,6 @@
 {% extends 'baseadmin.html.twig' %}
 
-{% block title %}Option{% endblock %}
+{% block title %}New Option{% endblock %}
 
 {% block body %}
 
@@ -21,31 +21,15 @@
 		<div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section">
 
-                <h2>Option :</h2>
+                <h2>Ajouter une option :</h2>   
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Name</th>
-                <td>{{ option.name }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ option.description }}</td>
-            </tr>
-        </tbody>
-    </table>
+    {{ include('admin/option/_form.html.twig') }}
 
-    <a class="admin-light mx-2" href="{{ path('option_index') }}">Retour</a>
-
-    <a class="admin-light" href="{{ path('option_edit', {'id': option.id}) }}">Editer</a>
-
-    {{ include('option/_delete_form.html.twig') }}
-
-                </div>
+    <a class="admin-light" href="{{ path('admin_option_index') }}">Retour</a>
 
             </div>   
         </div>	
     </div>
 </section>
+
 {% endblock %}
