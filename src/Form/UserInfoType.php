@@ -17,37 +17,37 @@ class UserInfoType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, [
-                'label' => "votre adresse de courriel: ",
+                'label' => "Votre adresse de courriel : ",
                 'attr' => [
                     'placeholder' => "votre courriel"
                 ]
             ])
             ->add('name', TextType::class, [
-                'label' => "votre nom: ",
+                'label' => "Votre nom : ",
                 'attr' => [
                     'placeholder' => "votre nom"
                 ]
             ])
             ->add('firstName', TextType::class, [
-                'label' => "votre prénom: ",
+                'label' => "Votre prénom : ",
                 'attr' => [
                     'placeholder' => "votre prénom"
                 ]
             ])
             ->add('phone', TelType::class, [
-                'label' => "votre numéro de téléphone: ",
+                'label' => "Votre numéro de téléphone : ",
                 'attr' => [
                     'placeholder' => "n° de téléphone"
                 ]
             ])
             ->add('adress', TextareaType::class, [
-                'label' => "votre adresse: ",
+                'label' => "Votre adresse : ",
                 'attr' => [
                     'placeholder' => "votre adresse"
                 ]
             ])
             ->add('adressEvent', TextareaType::class, [
-                'label' => "lieu ou adresse de l'événement",
+                'label' => "Lieu ou adresse de l'événement :",
                 'attr' => [
                     'placeholder' => "adresse de l'événement"
                 ]

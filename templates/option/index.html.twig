@@ -1,37 +1,57 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
 {% block title %}Option index{% endblock %}
 
 {% block body %}
-    <h1>Option index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for option in options %}
-            <tr>
-                <td>{{ option.id }}</td>
-                <td>{{ option.name }}</td>
-                <td>{{ option.description }}</td>
-                <td>
-                    <a href="{{ path('option_show', {'id': option.id}) }}">show</a>
-                    <a href="{{ path('option_edit', {'id': option.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row  slider-text align-items-center justify-content-center">
+          <div class="col-md-9 text-center mt-5">
+            <h1 class="mb-2 bread">KlassEvent</h1>
+            <h2 class="breadcrumbs" style="font-size: 25px;">Options</h2>
+          </div>
+        </div>
+      </div>
+</section>
 
-    <a href="{{ path('option_new') }}">Create new</a>
+<section class="ftco-section pt-5">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section">
+            <h2 class="mb-5">Toutes les options :</h2>
+
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>                
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for option in options %}
+                        <tr>                
+                            <td>{{ option.name }}</td>
+                            <td>{{ option.description }}</td>
+                            <td>
+                                <a class="btn btn-success mr-3" href="{{ path('option_show', {'id': option.id}) }}">Voir</a>
+                                <a class="btn btn-warning" href="{{ path('option_edit', {'id': option.id}) }}">Editer</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="4">Pas d'option trouvée</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('option_new') }}">Ajouter une option</a></button>
+
+            </div>   
+        </div>	
+    </div>
+</section>
+
 {% endblock %}

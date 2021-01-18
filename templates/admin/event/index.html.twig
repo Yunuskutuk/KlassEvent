@@ -34,8 +34,8 @@
                     <tr>
                         <td>{{ event.type }}</td>
                         <td>
-                            <a class="admin-light mr-3" href="{{ path('admin_event_show', {'id': event.id}) }}">Voir</a>
-                            <a class="admin-light" href="{{ path('admin_event_edit', {'id': event.id}) }}">Editer</a>
+                            <a class="btn btn-success mr-3" href="{{ path('admin_event_show', {'id': event.id}) }}">Voir</a>
+                            <a class="btn btn-warning" href="{{ path('admin_event_edit', {'id': event.id}) }}">Editer</a>
                         </td>
                     </tr>
                     {% else %}

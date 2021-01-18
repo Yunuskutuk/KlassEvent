@@ -1,25 +1,72 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseevent.html.twig' %}
 
 {% block title %}creation de compte
 {% endblock %}
 
 {% block body %}
 
+	<!-- Background picture -->
 
-<h1>Compte associé à {{ app.user.email }}</h1>
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/ImgKlassEvent/IMG_1167.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
-<p>nom: {{ app.user.name }}</p>
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">Klass Event</span>
+						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+					</div>
 
-<p>prénom: {{ app.user.firstName }}</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<p>n° de Téléphone: {{ app.user.phone }} </p>
+	<!-- End Background picture -->
 
-<p>adresse personelle: {{ app.user.adress }}</p>
+    <!-- Show Account -->
 
-<p>adresse de livraison: {{ app.user.adressEvent }}</p>
+	<section class="ftco-section">
+		<div class="container">
 
-<a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
-<button class="btn btn-primary">{{ button_label|default('modifier') }}</button>
-</a>
-<br>
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-12 text-center heading-section">
+					<span class="subheading">Mon compte</span>
+					<h2 class="mb-4">Klass Event</h2>
+				</div>
+			</div>
+
+            <div class="container-fluid">
+
+                <h1 class="text-center">Compte associé à {{ app.user.email }}</h1>
+
+                <div class="text-center">
+
+                    <p>Nom : {{ app.user.name }}</p>
+
+                    <p>Prénom : {{ app.user.firstName }}</p>
+
+                    <p>N° de téléphone : {{ app.user.phone }} </p>
+
+                    <p>Adresse personelle : {{ app.user.adress }}</p>
+
+                    <p>Adresse de livraison : {{ app.user.adressEvent }}</p>
+
+                <a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
+                <button class="btn btn-primary mt-3">{{ button_label|default('Modifier') }}</button>
+                </a>
+
+                </div>
+
+
+            
+            </div>
+
+		</div>
+
+	</section>
+
+		<!-- End Show Account -->
+
 {% endblock %}
