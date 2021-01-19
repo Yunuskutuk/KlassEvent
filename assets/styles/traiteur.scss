@@ -1,13 +1,14 @@
-.step-back{
+.step-background-traiteur{
     background :rgb(250, 249, 249);
     border-radius:10px;
     filter: drop-shadow(5px 5px 5px black);
     transition-property:background-color;
 	transition-duration:1s;
 }
-/* ---- End Step Style ---- */
 
-
+.step-background-traiteur:hover {
+	background-color:lighten($secondary,17%);
+}
 
 /* spacement */
 .margin-event {
@@ -90,7 +91,65 @@ $font-secondary: 'Great Vibes', cursive;
     color: #0f6674;
 }
 
+$font-secondary: 'Great Vibes', cursive;
 
 
+/* .nav-cta {
+  > a {
+    background: #1c7430;
+    color: $white;
+    @include border-radius(5px);
+    @include media-breakpoint-down(md) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include media-breakpoint-down(md) {
+      color: $white;
+      background: $primary;
+    }
+  }
+}
+.nav-link {
+  font-size: 14px;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  color: $white;
 
+  &:hover {
+    color: $white;
+  }
+}
 
+.titre-traiteur{
+  font-size: 80px;
+  color: $secondary;
+  font-weight: normal;
+  font-family: $font-secondary;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.menu-traiteur{
+  font-size: 80px;
+  color: $secondary;
+  font-weight: normal;
+  font-family: $font-secondary;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.btn {
+  background: $secondary;
+  border: 1px solid $secondary;
+  color: $white;
+
+  &:hover {
+    border: 1px solid $secondary;
+    background: transparent;
+    color: $secondary;
+  }
+}
+.step-background-traiteur:hover {
+  background-color:lighten($secondary,17%);
+} */

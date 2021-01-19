@@ -33,8 +33,8 @@ class SecurityController extends AbstractController
     /**
      * @Route("/logout", name="security_logout")
      */
-    public function logout(): void
+    public function logout(): Response
     {
-        throw new LogicException('This method can be blank ');
+        return $this->redirectToRoute('home');
     }
 }

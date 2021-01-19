@@ -19,7 +19,6 @@
 
 		{% block bodyy %}{% endblock %}
 
-
 <head>
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
@@ -34,16 +33,20 @@
 </head>
 
 <body>
+	<header>
+		{% include '_navbarbase.html.twig' %}
+	</header>
+
 	<div class="container">
 		{% block body %}{% endblock %}
 	</div>
 	{% block javascripts %}
+	
 	{{ encore_entry_script_tags('app') }}
+
 	{% endblock %}
-
-
-		<footer>
-			{% include '_footer.html.twig' %}
-		</footer>
-	</body>
+	<footer>
+		{% include '_footer.html.twig' %}
+	</footer>
+</body>
 </html>
