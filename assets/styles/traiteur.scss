@@ -32,7 +32,7 @@
 $font-secondary: 'Great Vibes', cursive;
 
 
-.nav-cta {
+/* .nav-cta {
   > a {
     background: #1c7430;
     color: $white;
@@ -83,14 +83,14 @@ $font-secondary: 'Great Vibes', cursive;
   color: $white;
 
   &:hover {
-    border: 1px solid #34ce57;
+    border: 1px solid $secondary;
     background: transparent;
     color: $secondary;
   }
 }
 .step-background-traiteur:hover {
   background-color:lighten($secondary,17%);
-}
+} */
 
 
 
