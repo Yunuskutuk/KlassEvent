@@ -1,29 +1,10 @@
-/* ---- Step Style ---- */
-/*Step circle number */
-
-.step-number{
-/* font */
-    top: -50px;
-    font-weight: normal;
-    font-size: 100px;
-    color: rgba(0, 0, 0, 0.2);
-    color: lighten($secondary, 0%);
-    line-height: 1.4;
-    font-family: $font-secondary;
-}
-
-.step-background{
+.step-back{
     background :rgb(250, 249, 249);
     border-radius:10px;
     filter: drop-shadow(5px 5px 5px black);
     transition-property:background-color;
 	transition-duration:1s;
 }
-
-.step-background:hover {
-	background-color:lighten($secondary,17%);
-}
-
 /* ---- End Step Style ---- */
 
 
@@ -38,7 +19,76 @@
     font-weight: bold;
     color: #cbd3da;
 }
+$font-secondary: 'Great Vibes', cursive;
 
+
+.nav-cta {
+    > a {
+        background: #1c7430;
+        color: $white;
+        @include border-radius(5px);
+        @include media-breakpoint-down(md) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @include media-breakpoint-down(md) {
+            color: $white;
+            background: $primary;
+        }
+    }
+}
+.nav-link {
+    font-size: 14px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    color: $white;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.titre-traiteur{
+    font-size: 80px;
+    color: #34ce57;
+    font-weight: normal;
+    font-family: $font-secondary;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.menu-traiteur{
+    font-size: 80px;
+    color: #34ce57;
+    font-weight: normal;
+    font-family: $font-secondary;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.btn {
+    background: #34ce57;
+    border: 1px solid #34ce57;
+    color: $white;
+
+    &:hover {
+        border: 1px solid #34ce57;
+        background: transparent;
+        color: #34ce57;
+    }
+}
+.step-back:hover {
+    background-color:lighten(#34ce57,17%);
+}
+.see {
+    background: #514B4A;
+    border: 1px solid #000000;
+    color: $white;
+}
+.modal-recette{
+    color: #0f6674;
+}
 
 
 

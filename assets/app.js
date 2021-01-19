@@ -1,4 +1,4 @@
-/*
+    /*
  * Welcome to your app's main JavaScript file!
  *
  * We recommend including the built version of this JavaScript file
@@ -32,3 +32,4 @@ require('./js/owl.carousel.min');
 require('./js/popper.min');
 require('./js/range');
 require('./js/scrollax.min');
+require('./js/popup');
