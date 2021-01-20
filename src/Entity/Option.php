@@ -27,7 +27,7 @@ class Option
     /**
      * @ORM\Column(type="string", length=255)
      * @var string
-     * @Assert\NotBlank(message="chaque ption doit avoir un nom !")
+     * @Assert\NotBlank(message="chaque option doit avoir un nom !")
      */
     private $name;
 

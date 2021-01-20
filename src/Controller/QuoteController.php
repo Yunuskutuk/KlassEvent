@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\EventRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,17 +13,17 @@ class QuoteController extends AbstractController
     /**
      * @Route("/quote/{id}", name="quote_quote")
      */
-    public function quote(string $id, Request $request): Response
+    public function quote(string $id, EventRepository $eventRepository): Response
     {
         // pour faire un devis, il nous faut:
-        // 1 la date (et l'heure) de l'événement
-        // 2 nombre d'invités
-        // 3 le type d'évenement
-        // 4 les services
-        // 5 pour chaques service, les options
-        // 6 le contact
-        dd($id);
-
-        return $this->render('quote/index.html.twig');
+        // la date (et l'heure) de l'événement
+        // nombre d'invités
+        // les services
+        // pour chaques service, les options
+        // le contact
+        $eventSelected = $eventRepository->findOneBy(['id' => $id]);
+        return $this->render('quote/quote.html.twig', [
+            'event' => $eventSelected
+        ]);
     }
 }

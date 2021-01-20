@@ -1,0 +1,24 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}Hello QuoteController!{% endblock %}
+
+{% block body %}
+<h1> on est dans la page des devis pour un {{ event.type }} </h1>
+
+    
+    
+    {% for service in event.service %}
+        Service: {{ service.title }}
+        <br>
+        Description: {{ service.description }}
+        <br>
+        {% for option in service.options %}
+        options dans le service: {{ option.name }}
+        <br>
+        description de l'option: {{ option.description }}
+        <br>
+        {% endfor %}
+    {% endfor %}
+
+
+{% endblock %}
