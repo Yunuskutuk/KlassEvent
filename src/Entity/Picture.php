@@ -64,6 +64,12 @@ class Picture
      */
     private $services;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     * @var string|null
+     */
+    private $description;
+
     public function __construct()
     {
         $this->services = new ArrayCollection();
@@ -150,6 +156,18 @@ class Picture
         if ($this->services->removeElement($service)) {
             $service->removePicture($this);
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
