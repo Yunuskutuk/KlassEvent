@@ -23,7 +23,6 @@ class TraiteurController extends AbstractController
 
     /**
      * @Route("/traiteur/contact", name="traiteur_contact")
-     * @Param $body ressource|string|null
      */
     public function contact(Request $request, MailerInterface $mailer): Response
     {
