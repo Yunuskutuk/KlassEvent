@@ -36,8 +36,8 @@
                             <td>{{ option.name }}</td>
                             <td>{{ option.description }}</td>
                             <td>
-                                <a class="btn btn-success mr-3" href="{{ path('option_show', {'id': option.id}) }}">Voir</a>
-                                <a class="btn btn-warning" href="{{ path('option_edit', {'id': option.id}) }}">Editer</a>
+                                <a class="btn btn-success mr-3" href="{{ path('admin_option_show', {'id': option.id}) }}">Voir</a>
+                                <a class="btn btn-warning" href="{{ path('admin_option_edit', {'id': option.id}) }}">Editer</a>
                             </td>
                         </tr>
                     {% else %}
@@ -47,7 +47,7 @@
                     {% endfor %}
                     </tbody>
                 </table>
-                <button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('option_new') }}">Ajouter une option</a></button>
+                <button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('admin_option_new') }}">Ajouter une option</a></button>
 
             </div>   
         </div>	
