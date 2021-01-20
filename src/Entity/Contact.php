@@ -38,6 +38,12 @@ class Contact
     private $receiverEmail;
 
     /**
+     * @ORM\Column(type="string")
+     * @var string
+     */
+    private $number;
+
+    /**
      * @ORM\Column(type="string", length=50)
      * @var string
      */
@@ -48,6 +54,19 @@ class Contact
      * @var string
      */
     private $message;
+
+
+    public function getNumber(): ?string
+    {
+        return $this->number;
+    }
+
+    public function setNumber(string $number): self
+    {
+        $this->number = $number;
+
+        return $this;
+    }
 
     public function getId(): ?int
     {
