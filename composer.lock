@@ -1459,13 +1459,10 @@
                 "xml",
                 "yaml"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/schmittjoh/metadata/issues",
                 "source": "https://github.com/schmittjoh/metadata/tree/2.4.0"
             },
->>>>>>> 852148ab19c99fe35c4a6913b2909b151ebebb3b
             "time": "2020-11-30T11:08:28+00:00"
         },
         {
@@ -7195,13 +7192,10 @@
                 "file uploads",
                 "upload"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/dustin10/VichUploaderBundle/issues",
                 "source": "https://github.com/dustin10/VichUploaderBundle/tree/1.16.0"
             },
->>>>>>> 852148ab19c99fe35c4a6913b2909b151ebebb3b
             "time": "2020-12-04T10:49:15+00:00"
         },
         {
@@ -7989,13 +7983,6 @@
                 "Fixture",
                 "persistence"
             ],
-<<<<<<< HEAD
-=======
-            "support": {
-                "issues": "https://github.com/doctrine/DoctrineFixturesBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineFixturesBundle/tree/3.4.0"
-            },
->>>>>>> 852148ab19c99fe35c4a6913b2909b151ebebb3b
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
