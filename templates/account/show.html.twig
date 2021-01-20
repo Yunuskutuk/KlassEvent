@@ -1,0 +1,83 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}creation de compte
+{% endblock %}
+
+{% block body %}
+
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/ImgKlassEvent/IMG_1167.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">Klass Event</span>
+						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Background picture -->
+
+    <!-- Show Account -->
+
+	<section class="ftco-section">
+		<div class="container">
+
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-12 text-center heading-section">
+					<span class="subheading">Mon compte</span>
+					<h2 class="mb-4">Klass Event</h2>
+				</div>
+			</div>
+
+            <div class="container-fluid">
+
+                <h1 class="text-center">Compte associé à {{ app.user.email }}</h1>
+
+                <div class="text-center">
+
+                    <p>Nom : {{ app.user.name }}</p>
+
+                    <p>Prénom : {{ app.user.firstName }}</p>
+
+                    <p>N° de téléphone : {{ app.user.phone }} </p>
+
+                    <p>Adresse personelle : {{ app.user.adress }}</p>
+
+                    <p>Adresse de livraison : {{ app.user.adressEvent }}</p>
+
+                <a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
+                <button class="btn btn-primary mt-3">{{ button_label|default('Modifier') }}</button>
+                </a>
+
+                </div>
+
+
+            
+            </div>
+
+		</div>
+
+	</section>
+
+		<!-- End Show Account -->
+
+<a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
+<button class="btn btn-primary">{{ button_label|default('modifier') }}</button>
+</a>
+<br>
+<br>
+<a href="{{ path('account_change_password', {'id': app.user.id}) }}">
+<button class="btn btn-primary">{{ button_label|default('changer le mot de passe') }}</button>
+</a>
+<br>
+<br>
+<br>
+{% endblock %}
