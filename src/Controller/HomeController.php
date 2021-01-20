@@ -33,7 +33,6 @@ class HomeController extends AbstractController
     {
         return $this->render('event/galleryDecoration.html.twig');
     }
-
     /**
      * @Route("/event/gallery/mariage", name="event_gallery_mariage")
      */
@@ -66,6 +65,13 @@ class HomeController extends AbstractController
     public function indexTraiteur(): Response
     {
         return $this->render('traiteur/index.html.twig');
+    }
+    /**
+     * @Route("/traiteur/menus", name="traiteur_menus")
+     */
+    public function menusTraiteur(): Response
+    {
+        return $this->render('traiteur/menus.html.twig');
     }
 
 /* ---- Admin Routes ---- */
