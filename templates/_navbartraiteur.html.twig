@@ -1,4 +1,10 @@
-<div class="py-1 bg-black top">
+{% for message in app.flashes('success') %}
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		{{ message }}
+	</div>
+{% endfor %}
+
+<div class="py-1 bg-black top {{ app.session.flashbag.peek('success')|length > 0 ? '' : '' }}">
 	<div class="container">
 		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 			<div class="col-lg-12 d-block">
@@ -61,7 +67,7 @@
 					<a href="contact.html" class="nav-link">Liste des menus</a>
 				</li>
 				<li class="nav-cta">
-					<a href="reservation.html" class="nav-link">Contact</a>
+					<a href="/traiteur/contact" class="nav-link">Contact</a>
 				</li>
 			</ul>
 		</div>
