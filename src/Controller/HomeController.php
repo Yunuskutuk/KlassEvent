@@ -66,7 +66,6 @@ class HomeController extends AbstractController
     {
         return $this->render('traiteur/index.html.twig');
     }
-  
     /**
      * @Route("/traiteur/menus", name="traiteur_menus")
      */
