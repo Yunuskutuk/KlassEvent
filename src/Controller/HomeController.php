@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\EventRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use App\Entity\Contact;
@@ -26,9 +27,11 @@ class HomeController extends AbstractController
     /**
      * @Route("/event", name="event_index")
      */
-    public function indexEvent(): Response
+    public function indexEvent(EventRepository $eventRepository): Response
     {
-        return $this->render('event/index.html.twig');
+        return $this->render('event/index.html.twig', [
+            'events' => $eventRepository->findAll(),
+        ]);
     }
 
     /**

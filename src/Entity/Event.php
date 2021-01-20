@@ -31,7 +31,7 @@ class Event
     private $type;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Service::class, inversedBy="event")
+     * @ORM\ManyToMany(targetEntity=Service::class, inversedBy="event", cascade={"persist", "remove"})
      * @var ArrayCollection
      */
     private $service;
