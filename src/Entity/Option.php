@@ -39,7 +39,7 @@ class Option
     private $description;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="options")
+     * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="options", cascade={"persist", "remove"})
      * @var ArrayCollection
      */
     private $services;

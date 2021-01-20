@@ -59,7 +59,7 @@ class Picture
     private $updatedAt;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="picture")
+     * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="picture", cascade={"persist", "remove"})
      * @var ArrayCollection
      */
     private $services;
