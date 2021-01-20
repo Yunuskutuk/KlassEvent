@@ -4,9 +4,12 @@
 @import "event";
 @import "traiteur";
 @import "footer";
+@import "admin";
+@import "traiteur";
+@import "navbar";
 
 body {
   background-color: $white;
-  color: $black;    
+  color: $black;
 }
 

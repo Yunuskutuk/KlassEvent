@@ -1,17 +1,15 @@
-.step-back{
+.step-background-traiteur{
     background :rgb(250, 249, 249);
     border-radius:10px;
     filter: drop-shadow(5px 5px 5px black);
     transition-property:background-color;
 	transition-duration:1s;
 }
-/* ---- End Step Style ---- */
-
-
-
 /* spacement */
 .margin-event {
     margin-bottom:30px;
+    font-weight: bold;
+    color: #cbd3da;	    color: #cbd3da;
 }
 
 /*h2 title index*/
@@ -82,15 +80,7 @@ $font-secondary: 'Great Vibes', cursive;
     background-color:lighten(#34ce57,17%);
 }
 .see {
-    background: #514B4A;
+    background: #34ce57;
     border: 1px solid #000000;
     color: $white;
 }
-.modal-recette{
-    color: #0f6674;
-}
-
-
-
-
-
