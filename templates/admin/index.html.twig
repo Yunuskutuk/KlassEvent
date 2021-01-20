@@ -91,8 +91,6 @@
 	<section class="ftco-section">
 		<div class="container">
 
-
-
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
 					<span class="subheading admin-light">Event Admin</span>
@@ -119,7 +117,7 @@
 					<div class="media block-6 services d-block step-background-admin margin-event">
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 							<div>
-								<span class="step-number-admin"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="currentColor" class="bi bi-basket2" viewBox="-1 0 16 9">
+								<span class="step-number-admin"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 9">
   <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
   <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
 </svg></span>
@@ -134,15 +132,66 @@
 					<div class="media block-6 services d-block step-background-admin margin-event">
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 							<div>
-								<span class="step-number-admin">3</span>
+								<span class="step-number-admin"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 9">
+  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+</svg></span>
 							</div>
-							<h3 class="heading">A compléter</h3>
-							<button type="button" class="btn admin-button mb-3">Gérer</button>
+							<h3 class="heading">Options</h3>
+							<button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('admin_option_index') }}">Gérer</a></button>
+
 						</div>
 					</div>
 				</div>
 
 			</div>
+
+<div class="row">
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 17 9">
+  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+</svg></span>
+							</div>
+							<h3 class="heading">Utilisateurs</h3>
+							<button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('user_index') }}">Gérer</a></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin"></span>
+							</div>
+							<h3 class="heading">A compléter</h3>
+							<button type="button" class="btn admin-button mb-3"><a class="admin-light" href="#">Gérer</a></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background-admin margin-event">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<div>
+								<span class="step-number-admin"></span>
+							</div>
+							<h3 class="heading">A compléter</h3>
+							<button type="button" class="btn admin-button mb-3"><a class="admin-light" href="#">Gérer</a></button>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
 		</div>
 
 		</section>
