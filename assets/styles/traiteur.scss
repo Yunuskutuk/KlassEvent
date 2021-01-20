@@ -5,21 +5,20 @@
     transition-property:background-color;
 	transition-duration:1s;
 }
+.step-background-traiteur:hover {
+	background-color:lighten($secondary,17%);
+}
 /* spacement */
 .margin-event {
     margin-bottom:30px;
     font-weight: bold;
     color: #cbd3da;	    color: #cbd3da;
 }
-
 /*h2 title index*/
 .h2-event{
     font-weight: bold;
     color: #cbd3da;
 }
-$font-secondary: 'Great Vibes', cursive;
-
-
 .nav-cta {
     > a {
         background: #1c7430;
