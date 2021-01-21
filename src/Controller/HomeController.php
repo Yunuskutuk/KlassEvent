@@ -13,7 +13,6 @@ use App\Entity\Contact;
 use App\Form\ContactType;
 use Symfony\Component\HttpFoundation\Request;
 
-
 class HomeController extends AbstractController
 {
     /**
