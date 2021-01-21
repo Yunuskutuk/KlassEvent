@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Translate index{% endblock %}
+
+{% block body %}
+    <h1>Translate index</h1>
+
+    <a href="{{ path('translate_new') }}">Create new</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>YamlKey</th>
+                <th>French</th>
+                <th>Turkish</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for translate in translates %}
+            <tr>
+                <td>{{ translate.yamlKey }}</td>
+                <td>{{ translate.french }}</td>
+                <td>{{ translate.turkish }}</td>
+                <td>
+                    <a href="{{ path('translate_show', {'id': translate.id}) }}">show</a>
+                    <a href="{{ path('translate_edit', {'id': translate.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

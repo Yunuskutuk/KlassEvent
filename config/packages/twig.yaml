@@ -4,3 +4,8 @@ twig:
         - bootstrap_4_layout.html.twig
     # globals:
     #     eventRepository: "@App\\Repository\\EventRepository"
+    debug: "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    # On déclare ci-dessous le nom de la variable globale
+    globals:
+        locales: "%app.locales%"
