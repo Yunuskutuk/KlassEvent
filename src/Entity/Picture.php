@@ -59,10 +59,16 @@ class Picture
     private $updatedAt;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="picture")
+     * @ORM\ManyToMany(targetEntity=Service::class, mappedBy="picture", cascade={"persist", "remove"})
      * @var ArrayCollection
      */
     private $services;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     * @var string|null
+     */
+    private $description;
 
     public function __construct()
     {
@@ -150,6 +156,18 @@ class Picture
         if ($this->services->removeElement($service)) {
             $service->removePicture($this);
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

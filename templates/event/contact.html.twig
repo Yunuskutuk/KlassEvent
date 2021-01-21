@@ -1,0 +1,47 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block body %}
+
+
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1167.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">Klass Event</span>
+						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Background picture -->
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+		<div class="container">
+			<div class="row d-flex align-items-stretch no-gutters">
+
+
+				<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
+					<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Nous contacter</h2>
+					{{ form_start(form) }}
+					{{ form_widget(form) }}
+					<input type="submit" value="Envoi du message" class="btn btn-primary py-3 px-5">
+					{{ form_end(form) }}
+				</div>
+
+				<div class="col-md-6 d-flex align-items-stretch" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1122.jpg') }}')"></div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

@@ -69,7 +69,7 @@ class ServiceController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('service_index');
+            return $this->redirectToRoute('admin_service_index');
         }
 
         return $this->render('admin/service/edit.html.twig', [

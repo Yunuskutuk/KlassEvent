@@ -41,19 +41,19 @@ class Service
     private $description;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Event::class, mappedBy="service")
+     * @ORM\ManyToMany(targetEntity=Event::class, mappedBy="service", cascade={"persist", "remove"})
      * @var ArrayCollection
      */
     private $event;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Option::class, inversedBy="services")
+     * @ORM\ManyToMany(targetEntity=Option::class, inversedBy="services", cascade={"persist", "remove"})
      * @var ArrayCollection
      */
     private $options;
 
     /**
-     * @ORM\ManyToMany(targetEntity=picture::class, inversedBy="services")
+     * @ORM\ManyToMany(targetEntity=picture::class, inversedBy="services", cascade={"persist", "remove"})
      * @var ArrayCollection
      */
     private $picture;
