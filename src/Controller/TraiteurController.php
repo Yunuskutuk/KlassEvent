@@ -6,16 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends AbstractController
+class TraiteurController extends AbstractController
 {
-    /**
-     * @Route("/", name="home")
-     */
-    public function index(): Response
-    {
-        return $this->render('home/index.html.twig');
-    }
-/* ---- Traiteur Routes ---- */
+    /* ---- Traiteur Routes ---- */
 
     /**
      * @Route("/traiteur", name="traiteur_index")
@@ -37,15 +30,5 @@ class HomeController extends AbstractController
     public function livraisonTraiteur(): Response
     {
         return $this->render('traiteur/livraison.html.twig');
-    }
-
-/* ---- Admin Routes ---- */
-
-    /**
-     * @Route("/admin/", name="admin_index")
-     */
-    public function indexAdmin(): Response
-    {
-        return $this->render('admin/index.html.twig');
     }
 }

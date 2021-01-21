@@ -2,93 +2,50 @@
 
 namespace App\Controller;
 
-use App\Entity\Event;
-use App\Form\EventType;
-use App\Repository\EventRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/admin/event")
- */
 class EventController extends AbstractController
 {
+/* ---- Event Routes ---- */
+
     /**
-     * @Route("/", name="admin_event_index", methods={"GET"})
+     * @Route("/event", name="event_index")
      */
-    public function index(EventRepository $eventRepository): Response
+    public function indexEvent(): Response
     {
-        return $this->render('admin/event/index.html.twig', [
-            'events' => $eventRepository->findAll(),
-        ]);
+        return $this->render('event/index.html.twig');
     }
 
     /**
-     * @Route("/new", name="admin_event_new", methods={"GET","POST"})
+     * @Route("/event/gallery/decoration", name="event_gallery_decoration")
      */
-    public function new(Request $request): Response
+    public function galleryDecoration(): Response
     {
-        $event = new Event();
-        $form = $this->createForm(EventType::class, $event);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($event);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('admin_event_index');
-        }
-
-        return $this->render('admin/event/new.html.twig', [
-            'event' => $event,
-            'form' => $form->createView(),
-        ]);
+        return $this->render('event/galleryDecoration.html.twig');
+    }
+    /**
+     * @Route("/event/gallery/mariage", name="event_gallery_mariage")
+     */
+    public function galleryMariage(): Response
+    {
+        return $this->render('event/galleryMariage.html.twig');
     }
 
     /**
-     * @Route("/{id}", name="admin_event_show", methods={"GET"})
+     * @Route("/event/gallery/henne", name="event_gallery_henne")
      */
-    public function show(Event $event): Response
+    public function galleryHenne(): Response
     {
-        return $this->render('admin/event/show.html.twig', [
-            'event' => $event,
-        ]);
+        return $this->render('event/galleryHenne.html.twig');
     }
 
     /**
-     * @Route("/{id}/edit", name="admin_event_edit", methods={"GET","POST"})
+     * @Route("/event/gallery/reception", name="event_gallery_reception")
      */
-    public function edit(Request $request, Event $event): Response
+    public function galleryReception(): Response
     {
-        $form = $this->createForm(EventType::class, $event);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('admin_event_index');
-        }
-
-        return $this->render('admin/event/edit.html.twig', [
-            'event' => $event,
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="admin_event_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, Event $event): Response
-    {
-        if ($this->isCsrfTokenValid('delete' . $event->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($event);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('admin/event_index');
+        return $this->render('event/galleryReception.html.twig');
     }
 }
