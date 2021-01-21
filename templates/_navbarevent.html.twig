@@ -34,9 +34,19 @@
 				<li class="nav-item">
 					<a href="/" class="nav-link">Accueil</a>
 				</li>
-				<li class="nav-item">
-					<a href="about.html" class="nav-link">Devis</a>
-				</li>
+				<div id="nav-options" class="btn-group pull-right hidden-xs">
+                <button type="button" class=" btn-dropdown dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                	<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                Devis
+                </button>
+                    <ul class="dropdown-menu">
+					{% for event in eventRepository.findAll() %}
+						<li><a href="{{ path('quote_quote', {'id': event.id}) }}">
+						<p class="text-center">{{ event.type }}</p></a> </li>
+                        <li role="separator" class="divider"></li>
+                    {% endfor %}
+					</ul>
+                </div>
 				<li class="nav-item">
 					<a href="menu.html" class="nav-link">Services</a>
 				</li>
@@ -55,7 +65,6 @@
                                <li><a href="{{ path('event_gallery_reception') }}"><p class="text-center">Réception</p></a></li>
                            </ul>
                        </div>
-        		</li>
 				<li class="nav-item">
 					<a href="blog.html" class="nav-link">Location</a>
 				</li>
