@@ -31,7 +31,7 @@ class QuoteController extends AbstractController
             }
             $email
                 ->from('ab2714d368-ae00ad@inbox.mailtrap.io')
-                ->to('jeff.nys@fafache.net')
+                ->to('klassevent@ymail.com')
                 ->subject($subject)
                 ->html($message);
 
