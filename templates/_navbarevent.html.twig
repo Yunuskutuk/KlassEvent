@@ -15,8 +15,13 @@
 						    <p class="mb-0 register-link"><span>Déplacements jusqu'à 350km autour de Strasbourg</span></p>
 					    </div>
 					    <div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						    <p class="mb-0 register-link"><span>Ouvert</span><span> tous les jours</span></p>
+						    <p class="mb-0 register-link"><span>Ouvert tous les jours</span></p>
 					    </div>
+						{% if is_granted('ROLE_ADMIN') %}
+						<div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						    <p class="mb-0 register-link"><a href="{{ path('admin_index') }}"><span>admin</span></a></p>
+					    </div>
+						{% endif %}
 				    </div>
 			    </div>
 		    </div>
@@ -40,11 +45,11 @@
                 Devis
                 </button>
                     <ul class="dropdown-menu">
-					{% for event in eventRepository.findAll() %}
+					{# {% for event in eventRepository.findAll() %}
 						<li><a href="{{ path('quote_quote', {'id': event.id}) }}">
 						<p class="text-center">{{ event.type }}</p></a> </li>
                         <li role="separator" class="divider"></li>
-                    {% endfor %}
+                    {% endfor %} #}
 					</ul>
                 </div>
 				<li class="nav-item">
