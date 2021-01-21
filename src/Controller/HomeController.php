@@ -73,6 +73,13 @@ class HomeController extends AbstractController
     {
         return $this->render('traiteur/menus.html.twig');
     }
+    /**
+     * @Route("/traiteur/livraison", name="traiteur_livraison")
+     */
+    public function livraisonTraiteur(): Response
+    {
+        return $this->render('traiteur/livraison.html.twig');
+    }
 
 /* ---- Admin Routes ---- */
 

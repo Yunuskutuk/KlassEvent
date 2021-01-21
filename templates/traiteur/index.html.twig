@@ -13,7 +13,7 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="titre-traiteur">Klass Traiteur</span>
+						<span class="menu-traiteur">Klass Traiteur</span>
 						<h2 class="mb-4 h2-event">
 							Choisissez votre menu pour la semaine du ... au ... :
 						</h2>
@@ -98,8 +98,11 @@
 					<h5 class="margin-traiteur">Déplacements jusqu'à 20km autour de Strasbourg</h5>
 					<div class="btn-livre">
 						<p class="margin-event">
-							<a href="#" class="btn">Détails des livraisons !</a>
+							<a href="{{ path('traiteur_livraison') }}" class="btn see">Détails des livraisons !</a>
 						</p>
 					</div>
-
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}
