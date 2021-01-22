@@ -64,9 +64,9 @@
         </tbody>
     </table>
 
-    <a class="admin-light mx-2" href="{{ path('user_index') }}">Retour</a>
+    <a class="admin-light mx-2" href="{{ path('admin_user_index') }}">Retour</a>
 
-    <a class="admin-light" href="{{ path('user_edit', {'id': user.id}) }}">Editer</a>
+    <a class="admin-light" href="{{ path('admin_user_edit', {'id': user.id}) }}">Editer</a>
 
     {{ include('user/_delete_form.html.twig') }}
 
