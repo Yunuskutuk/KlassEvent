@@ -33,7 +33,7 @@ class TraiteurController extends AbstractController
     public function livraisonTraiteur(): Response
     {
         return $this->render('traiteur/livraison.html.twig');
-        }
+    }
     /**
      * @Route("/traiteur/contact", name="traiteur_contact")
      */
