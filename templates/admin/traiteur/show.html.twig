@@ -1,0 +1,48 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Event{% endblock %}
+
+{% block body %}
+
+<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row  slider-text align-items-center justify-content-center">
+          <div class="col-md-9 text-center mt-5">
+            <h1 class="mb-2 bread">KlassEvent</h1>
+            <h2 class="breadcrumbs" style="font-size: 25px;">Evenements</h2>
+          </div>
+        </div>
+      </div>
+</section>
+
+<section class="ftco-section pt-5">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section">
+
+                <h2>Evénement :</h2>
+
+                <h3>{{ event.type }}</h3>          
+
+                <a class="admin-light mx-2" href="{{ path('admin_event_index') }}">Retour</a>
+  
+                <a class="admin-light" href="{{ path('admin_event_edit', {'id': event.id}) }}">Editer</a>
+                             
+                {{ include('admin/event/_delete_form.html.twig') }}
+               
+                </div>
+
+            </div>   
+        </div>	
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+

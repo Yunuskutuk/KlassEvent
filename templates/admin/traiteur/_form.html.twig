@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+{{ form_errors(form) }}
+<br>
+{{ form_row(form.type) }}
+<br>
+{{ form_row(form.service) }}
+<br>
+<button class="btn admin-button">{{ button_label|default('Sauvegarder') }}</button>
+{{ form_end(form) }}

@@ -113,6 +113,40 @@ class HomeController extends AbstractController
     {
         return $this->render('traiteur/menus.html.twig');
     }
+    /**
+     * @Route("/traiteur/contact", name="traiteur_contact")
+     */
+    public function contactTraiteur(Request $request, MailerInterface $mailer): Response
+    {
+
+        // Create a new Contact Object
+        $contact = new Contact();
+        // Create the associated Form
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $email = new Email();
+            if ($contact->getSubject() !== null) {
+                $subject = $contact->getSubject();
+                $message = $contact->getSenderEmail() . "-" . $contact->getNumber() . "-" . $contact->getMessage();
+                $email
+                    ->from('ab2714d368-ae00ad@inbox.mailtrap.io')
+                    ->to('david67230@gmail.com')
+                    ->subject($subject)
+                    ->html($message);
+
+                $mailer->send($email);
+                $this->addFlash('success', 'Email envoyé !');
+            }
+
+            return $this->redirectToRoute("traiteur");
+        }
+        // Render the form
+        return $this->render('traiteur/contact.html.twig', [
+            "form" => $form->createView(),
+        ]);
+    }
 
     /* ---- Admin Routes ---- */
 

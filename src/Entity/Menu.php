@@ -6,6 +6,7 @@ use App\Repository\MenuRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Boolean;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
@@ -59,19 +60,26 @@ class Menu
     private $more;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Week::class, mappedBy="menu")
-     * @var ArrayCollection
+     * @ORM\Column(type="boolean", nullable=false)
+     * @var boolean
      */
-    private $weeks;
-
-    public function __construct()
-    {
-        $this->weeks = new ArrayCollection();
-    }
+    private $menuOfWeek;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getMenuOfWeek(): ?Bool
+    {
+        return $this->menuOfWeek;
+    }
+
+    public function setMenuOfWeek(Boolean $menuOfWeek): self
+    {
+        $this->menuOfWeek = $menuOfWeek;
+
+        return $this;
     }
 
     public function getName(): ?string
@@ -119,33 +127,6 @@ class Menu
     {
         if ($more) {
             $this->more = $more;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Week[]
-     */
-    public function getWeeks(): Collection
-    {
-        return $this->weeks;
-    }
-
-    public function addWeek(Week $week): self
-    {
-        if (!$this->weeks->contains($week)) {
-            $this->weeks[] = $week;
-            $week->addMenu($this);
-        }
-
-        return $this;
-    }
-
-    public function removeWeek(Week $week): self
-    {
-        if ($this->weeks->removeElement($week)) {
-            $week->removeMenu($this);
         }
 
         return $this;
