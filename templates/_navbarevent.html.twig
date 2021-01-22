@@ -39,19 +39,7 @@
 				<li class="nav-item">
 					<a href="/" class="nav-link">Accueil</a>
 				</li>
-				<div id="nav-options" class="btn-group pull-right hidden-xs">
-                <button type="button" class=" btn-dropdown dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                	<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-                Devis
-                </button>
-                    <ul class="dropdown-menu">
-					{# {% for event in eventRepository.findAll() %}
-						<li><a href="{{ path('quote_quote', {'id': event.id}) }}">
-						<p class="text-center">{{ event.type }}</p></a> </li>
-                        <li role="separator" class="divider"></li>
-                    {% endfor %} #}
-					</ul>
-                </div>
+				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
 				<li class="nav-item">
 					<a href="menu.html" class="nav-link">Services</a>
 				</li>
