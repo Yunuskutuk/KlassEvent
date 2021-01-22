@@ -1,0 +1,13 @@
+<div id="nav-options" class="btn-group pull-right hidden-xs">
+<button type="button" class=" btn-dropdown dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+Gallerie
+</button>
+    <ul class="dropdown-menu">
+    {% for picture in pictures %}
+        <li><a href="{{ path('quote_quote', {'id': picture.id}) }}">
+        <p class="text-center">{{ picture.service.title }}</p></a> </li>
+        <li role="separator" class="divider"></li>
+    {% endfor %}
+    </ul>
+</div>

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\EventRepository;
+use App\Repository\PictureRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,9 +15,17 @@ class NavbarEventController extends AbstractController
      */
     private $eventRepository;
 
-    public function __construct(EventRepository $enventRepository)
-    {
+    /**
+     * @var mixed
+     */
+    private $pictureRepository;
+
+    public function __construct(
+        EventRepository $enventRepository,
+        PictureRepository $pictureRepository
+    ) {
         $this->eventRepository = $enventRepository;
+        $this->pictureRepository = $pictureRepository;
     }
 
     public function quoteNavbar(): Response
@@ -24,6 +33,14 @@ class NavbarEventController extends AbstractController
         $events = $this->eventRepository->findAll();
         return $this->render('event/_navbarEventQuote.html.twig', [
             'events' => $events
+        ]);
+    }
+
+    public function gallery(): Response
+    {
+        $pictures = $this->pictureRepository->findAll();
+        return $this->render('event/_navbarEventGallery.html.twig', [
+            'pictures' => $pictures
         ]);
     }
 }

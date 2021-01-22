@@ -43,21 +43,7 @@
 				<li class="nav-item">
 					<a href="menu.html" class="nav-link">Services</a>
 				</li>
-			<div id="nav-options" class="btn-group pull-right hidden-xs">
-                <button type="button" class=" btn-dropdown dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                	<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-                Gallerie
-                </button>
-                           <ul class="dropdown-menu">
-                               <li><a href="{{ path('event_gallery_decoration') }}"><p class="text-center">Décoration</p></a> </li>
-                               <li role="separator" class="divider"></li>
-                               <li><a href="{{ path('event_gallery_mariage') }}"><p class="text-center">Mariage</p></a></li>
-                               <li role="separator" class="divider"></li>
-                               <li><a href="{{ path('event_gallery_henne') }}"><p class="text-center">Hénné</p></a></li>
-							   <li role="separator" class="divider"></li>
-                               <li><a href="{{ path('event_gallery_reception') }}"><p class="text-center">Réception</p></a></li>
-                           </ul>
-                       </div>
+			{# {{ render(controller('App\\Controller\\NavbarEventController::gallery')) }} #}
 				<li class="nav-item">
 					<a href="blog.html" class="nav-link">Location</a>
 				</li>
