@@ -2,9 +2,15 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\EventRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use App\Entity\Contact;
+use App\Form\ContactType;
+use Symfony\Component\HttpFoundation\Request;
 
 class HomeController extends AbstractController
 {
@@ -15,31 +21,7 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig');
     }
-/* ---- Traiteur Routes ---- */
-
-    /**
-     * @Route("/traiteur", name="traiteur_index")
-     */
-    public function indexTraiteur(): Response
-    {
-        return $this->render('traiteur/index.html.twig');
-    }
-    /**
-     * @Route("/traiteur/menus", name="traiteur_menus")
-     */
-    public function menusTraiteur(): Response
-    {
-        return $this->render('traiteur/menus.html.twig');
-    }
-    /**
-     * @Route("/traiteur/livraison", name="traiteur_livraison")
-     */
-    public function livraisonTraiteur(): Response
-    {
-        return $this->render('traiteur/livraison.html.twig');
-    }
-
-/* ---- Admin Routes ---- */
+    /* ---- Admin Routes ---- */
 
     /**
      * @Route("/admin/", name="admin_index")

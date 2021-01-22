@@ -1,7 +1,8 @@
 {% extends 'basetraiteur.html.twig' %}
 
 
-{% block title %}KlassTraiteur{% endblock %}
+{% block title %}KlassTraiteur
+{% endblock %}
 
 {% block body %}
 
@@ -11,7 +12,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLabel">Grillade mixte</h2>
-                    <span><img src="{{ asset('build/images/Menu1.jpeg') }}" height="60px" data-overlay="gallery"></span>
+                    <span><img src="{{ asset('build/images/menu1.jpeg') }}" height="60px" data-overlay="gallery"></span>
                 </div>
                 <div class="modal-body">
                     <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
@@ -29,7 +30,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLongTitle">Beyti</h2>
-                    <span><img src="{{ asset('build/images/Menu2.jpeg') }}" height="60ox" data-overlay="gallery"></span>
+                    <span><img src="{{ asset('build/images/menu2.jpeg') }}" height="60ox" data-overlay="gallery"></span>
                 </div>
                 <div class="modal-body">
                     <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
@@ -47,7 +48,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLongTitle">Sauté d'agneau</h2>
-                    <span><img src="{{ asset('build/images/Menu3.jpeg') }}" height="60px" data-overlay="gallery"></span>
+                    <span><img src="{{ asset('build/images/menu3.jpeg') }}" height="60px" data-overlay="gallery"></span>
                 </div>
                 <div class="modal-body">
                     <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
@@ -78,7 +79,7 @@
                             <div class="col-md-4 d-flex align-self-stretch text-center">
                                 <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
                                     <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                                        <img src="{{ asset('build/images/Menu1.jpeg') }}"  alt="menu1">
+                                        <img src="{{ asset('build/images/menu1.jpeg') }}"  alt="menu1">
                                         <h3 class="heading">Grillade mixte</h3>
                                     </div>
                                     <!-- Button trigger modal -->
@@ -91,7 +92,7 @@
                             <div class="col-md-4 d-flex align-self-stretch text-center">
                                 <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
                                     <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                                        <img src="{{ asset('build/images/Menu2.jpeg') }}" alt="menu2">
+                                        <img src="{{ asset('build/images/menu2.jpeg') }}" alt="menu2">
                                         <h3 class="heading">Beyti</h3>
                                         <!-- Button trigger modal -->
                                             <button type="button" class="btn see" data-toggle="modal" data-target="#exampleModalCenter">
@@ -104,7 +105,7 @@
                             <div class="col-md-4 d-flex align-self-stretch text-center">
                                 <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
                                     <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                                        <img src="{{ asset('build/images/Menu3.jpeg') }}" alt="menu3">
+                                        <img src="{{ asset('build/images/menu3.jpeg') }}" alt="menu3">
                                         <h3 class="heading">Sauté d'agneau</h3>
                                                 </div>
                                     <!-- Button trigger modal -->
@@ -142,7 +143,7 @@
             <div class="col-md-4 d-flex align-self-stretch text-center">
                 <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
                     <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                        <img src="{{ asset('build/images/Entrée3.jpeg') }}" height="150px" alt="Entrée">
+                        <img src="{{ asset('build/images/entree3.jpeg') }}" height="150px" alt="Entrée">
                         <h3 class="mt-5 heading">Les Entrées</h3>
                     </div>
                 </div>
@@ -151,7 +152,7 @@
             <div class="col-md-4 d-flex align-self-stretch text-center">
                 <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
                     <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                        <img src="{{ asset('build/images/Plat3.jpeg') }}" height="150px" alt="Plat">
+                        <img src="{{ asset('build/images/plat3.jpeg') }}" height="150px" alt="Plat">
                         <h3 class="mt-5 heading">Les Plats</h3>
                     </div>
                 </div>
@@ -160,7 +161,7 @@
             <div class="col-md-4 d-flex align-self-stretch text-center">
                 <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
                     <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                        <img src="{{ asset('build/images/Dessert.jpeg') }}" height="150px" alt="Dessert">
+                        <img src="{{ asset('build/images/dessert.jpeg') }}" height="150px" alt="Dessert">
                         <h3 class="mt-5 heading">Les Desserts</h3>
                     </div>
                 </div>
@@ -170,5 +171,4 @@
 </section>
 
 <!-- End Step -->
-
 {% endblock %}

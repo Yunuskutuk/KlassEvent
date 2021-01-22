@@ -24,6 +24,11 @@
 			</div>
 		</div>
 	</section>
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success">
+			{{ message }}
+		</div>
+	{% endfor %}
 
 	<!-- End Background picture -->
   
@@ -44,7 +49,7 @@
 				<div class="col-md-4 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-							<img src="{{ asset('build/images/Menu1.jpeg') }}" alt="grillade">
+							<img src="{{ asset('build/images/menu1.jpeg') }}" alt="grillade">
 							<h3 class="heading">grillade mixte</h3>
 							<h3 class="heading">15 €
 							</h3>
@@ -61,7 +66,7 @@
 				<div class="col-md-4 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-							<img src="{{ asset('build/images/Menu2.jpeg') }}" alt="beyti">
+							<img src="{{ asset('build/images/menu2.jpeg') }}" alt="beyti">
 							<h3 class="heading">Beyti</h3>
 							<h3 class="heading">10 €</h3>
 							<p>Entrée</p>
@@ -77,7 +82,7 @@
 				<div class="col-md-4 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-							<img src="{{ asset('build/images/Menu3.jpeg') }}" alt="plat">
+							<img src="{{ asset('build/images/menu3.jpeg') }}" alt="plat">
 							<h3 class="heading">sauté d'agneau</h3>
 							<h3 class="heading">20 €</h3>
 							<p>Entrée</p>

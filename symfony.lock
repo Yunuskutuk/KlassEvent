@@ -123,6 +123,9 @@
     "egulias/email-validator": {
         "version": "2.1.23"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.3"
+    },
     "gitonomy/gitlib": {
         "version": "v1.2.2"
     },
@@ -631,9 +634,6 @@
         "files": [
             "config/packages/vich_uploader.yaml"
         ]
-    },
-    "webimpress/safe-writer": {
-        "version": "2.1.0"
     },
     "webmozart/assert": {
         "version": "1.9.1"

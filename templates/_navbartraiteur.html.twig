@@ -1,4 +1,4 @@
-<div class="py-1 bg-black top">
+<div class="py-1 bg-black top {{ app.session.flashbag.peek('success')|length > 0 ? '' : '' }}">
 	<div class="container">
 		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 			<div class="col-lg-12 d-block">
@@ -64,7 +64,7 @@
 					<a href="{{ path('traiteur_menus') }}" class="nav-link">Liste des menus</a>
 				</li>
 				<li class="nav-cta">
-					<a href="reservation.html" class="nav-link">Contact</a>
+					<a href="{{ path('traiteur_contact') }}" class="nav-link">Contact</a>
 				</li>
 			</ul>
 		</div>
