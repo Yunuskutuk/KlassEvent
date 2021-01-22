@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class PictureType extends AbstractType
 {
@@ -40,6 +41,14 @@ class PictureType extends AbstractType
                 'placeholder' => '-- Choisir les services --',
                 'choice_label' => 'title',
                 'class' => Service::class
+            ])
+            ->add('description', TextareaType::class, [
+                'label' => "information sur l'option dans le service",
+                'attr' => [
+                    'placeholder' => "description utile pour faire des choix dans les demandes de devis",
+                    'cols' => '30',
+                    'rows' => '7'
+                ]
             ]);
     }
 

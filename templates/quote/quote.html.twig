@@ -1,0 +1,84 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}Hello QuoteController!{% endblock %}
+
+{% block body %}
+<h1> on est dans la page des devis pour un {{ event.type }} </h1>
+{% set eventPage = event.type %}
+
+{#  // pour faire un devis, il nous faut:
+    // la date (et l'heure) de l'événement
+    // le lieu de l'évenement
+    // nombre d'invités
+    // l'évenement
+    // les services
+    // pour chaques service, les options
+    // les infos de contact #}
+    <form action="{{ path('quote_send') }}" method="POST">
+
+        <div class="form-group">
+            <label for="eventDate"> Jour et heure de l'évenement: </label>
+            <br>
+            <input class="form-control" type="datetime-local" name="eventDate" id="eventDate" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="adress">le lieu de l'évenement:</label>
+            <br>
+            <textarea class="form-control" id="adress" name="adress" rows="3"
+            cols="33" placeholder="entrez l'adresse entière" required></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="guests">nombre d'invités:</label>
+            <br>
+            <input class="form-control" type="number" name="guests" id="guests" placeholder="3" required>
+        </div>
+        <br>
+        <input class="form-control" type="hidden" name="event" value="{{ eventPage }}">
+        {% for service in event.service %}
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Service-{{ service.title }}" value="OK" id="Service" checked>
+            <label class="form-check-label" for="{{ service.title }}">Service: {{ service.title }}</label>
+        </div>
+        <br>
+        Description: {{ service.description }}
+        <br>
+        <select class="form-control" name="option-{{ service.title }}" id="option-{{ service.title }}">
+            <option value="">--Veillez voisir votre option--</option>
+            {% for option in service.options %}
+            <option value="{{ option.name }}">{{ option.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        {% endfor %}
+        <br>
+        <div class="form-group">
+            <label for="name">entrez votre nom: </label>
+            <br>
+            <input class="form-control" type="text" name="name" id="name" placeholder="Nom Prénom" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="phone">entrez votre numéro de téléphone: </label>
+            <br>
+            <input class="form-control" type="text" name="phone" id="phone" placeholder="06 .. .. .. .." required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">entrez votre email: </label>
+            <br>
+            <input class="form-control" type="email" name="email" id="email" placeholder="***@gmail.com" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="note">Remarques, instructions, questions et damandes:</label>
+            <br>
+            <textarea class="form-control" name="note" id="note" cols="33" rows="7"></textarea>
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="demander un devis">
+    </form>
+
+{% endblock %}
