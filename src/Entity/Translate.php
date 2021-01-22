@@ -54,7 +54,7 @@ class Translate
         return $this->id;
     }
 
-    public function getYamlKey(): string
+    public function getYamlKey(): ?string
     {
         return $this->yamlKey;
     }
@@ -66,7 +66,7 @@ class Translate
         return $this;
     }
 
-    public function getFrench(): string
+    public function getFrench(): ?string
     {
         return $this->french;
     }

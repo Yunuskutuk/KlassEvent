@@ -42,7 +42,7 @@ class YamlWrite
         if ($file != false) {
             foreach ($translate as $objet) {
                 $key = $objet->getYamlKey();
-                $value = $objet->getFrench();
+                $value = $objet->getTurkish();
                 fwrite($file, "$key: $value\n");
             }
             fclose($file);
