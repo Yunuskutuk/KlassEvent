@@ -47,8 +47,8 @@
                             <td>{{ user.adress }}</td>
                             <td>{{ user.adressEvent }}</td>
                             <td>
-                                <a class="btn btn-success mr-3 mb-2" href="{{ path('user_show', {'id': user.id}) }}">Voir</a>
-                                <a class="btn btn-warning" href="{{ path('user_edit', {'id': user.id}) }}">Editer</a>
+                                <a class="btn btn-success mr-3 mb-2" href="{{ path('admin_user_show', {'id': user.id}) }}">Voir</a>
+                                <a class="btn btn-warning" href="{{ path('admin_user_edit', {'id': user.id}) }}">Editer</a>
                             </td>
                         </tr>
                     {% else %}
@@ -58,7 +58,7 @@
                     {% endfor %}
                     </tbody>
                 </table>
-                <button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('user_new') }}">Ajouter un utlisateur</a></button>
+                <button type="button" class="btn admin-button mb-3"><a class="admin-light" href="{{ path('admin_user_new') }}">Ajouter un utlisateur</a></button>
 
             </div>   
         </div>	
