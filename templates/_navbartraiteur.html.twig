@@ -46,7 +46,7 @@
 					<a href="/" class="nav-link">Accueil</a>
 				</li>
 				<li class="nav-item">
-					<a href="about.html" class="nav-link">Détails des livraison</a>
+					<a href="{{ path('traiteur_livraison') }}" class="nav-link">Détails des livraison</a>
 				</li>
 				{% if app.user %}
 					<li class="nav-item">
@@ -64,7 +64,7 @@
 					<a href="{{ path('traiteur_menus') }}" class="nav-link">Liste des menus</a>
 				</li>
 				<li class="nav-cta">
-					<a href="/traiteur/contact" class="nav-link">Contact</a>
+					<a href="{{ path('traiteur_contact') }}" class="nav-link">Contact</a>
 				</li>
 			</ul>
 		</div>
