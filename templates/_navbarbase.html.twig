@@ -17,10 +17,14 @@
 					</div>
 					<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
 						<p class="mb-0 register-link">
-							<span>Horraires d'ouverture :</span>
-							<span>Tous les jours</span>
+							<span>Horraires d'ouverture : Tous les jours</span>
 						</p>
 					</div>
+					{% if is_granted('ROLE_ADMIN') %}
+						<div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						    <p class="mb-0 register-link"><a href="{{ path('admin_index') }}"><span>admin</span></a></p>
+					    </div>
+					{% endif %}
 				</div>
 			</div>
 		</div>

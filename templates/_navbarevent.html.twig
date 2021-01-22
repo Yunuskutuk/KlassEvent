@@ -15,8 +15,13 @@
 						    <p class="mb-0 register-link"><span>Déplacements jusqu'à 350km autour de Strasbourg</span></p>
 					    </div>
 					    <div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						    <p class="mb-0 register-link"><span>Ouvert</span><span> tous les jours</span></p>
+						    <p class="mb-0 register-link"><span>Ouvert tous les jours</span></p>
 					    </div>
+						{% if is_granted('ROLE_ADMIN') %}
+						<div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						    <p class="mb-0 register-link"><a href="{{ path('admin_index') }}"><span>admin</span></a></p>
+					    </div>
+						{% endif %}
 				    </div>
 			    </div>
 		    </div>
@@ -34,9 +39,7 @@
 				<li class="nav-item">
 					<a href="/" class="nav-link">Accueil</a>
 				</li>
-				<li class="nav-item">
-					<a href="about.html" class="nav-link">Devis</a>
-				</li>
+				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
 				<li class="nav-item">
 					<a href="menu.html" class="nav-link">Services</a>
 				</li>
@@ -55,7 +58,6 @@
                                <li><a href="{{ path('event_gallery_reception') }}"><p class="text-center">Réception</p></a></li>
                            </ul>
                        </div>
-        		</li>
 				<li class="nav-item">
 					<a href="blog.html" class="nav-link">Location</a>
 				</li>
