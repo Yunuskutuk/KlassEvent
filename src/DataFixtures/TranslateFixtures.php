@@ -73,7 +73,7 @@ class TranslateFixtures extends Fixture implements FixtureGroupInterface
                 }
             }
             if (!$inside) {
-                $temp = $arrayTRK[$yamlKey];
+                $temp = $arrayTRK[$yamlKey]; // yes, grumphp is my friend :-)
                 $row = new Translate();
                 $row->setYamlKey($yamlKey)
                     ->setFrench($french)
