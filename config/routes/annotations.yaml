@@ -1,7 +1,9 @@
 controllers:
     resource: ../../src/Controller/
     type: annotation
-    prefix: /{_locale}
+    prefix:
+        fr: "/"
+        trk: "/trk"
     requirements:
         _locale: fr|trk
 
