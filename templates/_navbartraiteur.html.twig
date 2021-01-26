@@ -5,9 +5,10 @@
 				<div class="row d-flex">
 					<div class="col-md-2 pr-4 d-flex topper align-items-start">
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
-							<img src="{{asset('build/images/turkey.jpeg')}}" width="40">
-							<img src="{{asset('build/images/france.jpeg')}}" width="30">
-							<img src="{{asset('build/images/allemagne.png')}}" width="30">
+							<a href="/trk/traiteur">
+							<img src="{{asset('build/images/turkey.jpeg')}}" width="40"></a>
+							<a href="/traiteur">
+							<img src="{{asset('build/images/france.jpeg')}}" width="30"></a>
 						</div>
 					</div>
 					<div class="col-md-2 pr-4 d-flex topper align-items-center">
@@ -43,7 +44,7 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a href="/" class="nav-link">Accueil</a>
+					<a href="{{ path('home') }}" class="nav-link">Accueil</a>
 				</li>
 				<li class="nav-item">
 					<a href="{{ path('traiteur_livraison') }}" class="nav-link">Détails des livraison</a>
