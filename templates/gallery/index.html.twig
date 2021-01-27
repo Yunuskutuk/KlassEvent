@@ -1,6 +1,6 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}Gallery!{% endblock %}
+{% block title %}Gallerie!{% endblock %}
 
 {% block body %}
 <!-- Background picture -->
@@ -12,7 +12,7 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
+						<span class="subheading">{{ 'event.titre'|trans }}{# Klass Event #}</span>
 						<h2 class="mb-4 h2-event">{{ services.title }}</h2>
 					</div>
 
@@ -46,7 +46,7 @@
 					</div>
 				</div>
             {% else %}
-                <p>aucune images dans les services, contactez l'administrateur</p>
+                <p>{{ 'gallery.index.rien'|trans }}{# aucune images dans les services, contactez l'administrateur #}</p>
             {% endfor %}
 			</div>
 		</div>

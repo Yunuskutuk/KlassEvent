@@ -14,8 +14,8 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
-						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+						<span class="subheading">{{ 'event.titre'|trans }} {# Klass Event #}</span>
+						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}{# Organisation d'événements clef en main #}</h2>
 					</div>
 
 				</div>
@@ -32,29 +32,29 @@
 
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
-					<span class="subheading">Mon compte</span>
-					<h2 class="mb-4">Klass Event</h2>
+					<span class="subheading">{{ 'event.account.compte'|trans }}{# Mon compte #}</span>
+					<h2 class="mb-4">{{ 'event.titre'|trans }} {# Klass Event #}</h2>
 				</div>
 			</div>
 
             <div class="container-fluid">
 
-                <h1 class="text-center">Compte associé à {{ app.user.email }}</h1>
+                <h1 class="text-center">{{ 'event.account.compteAssocie'|trans }}{# Compte associé à #} {{ app.user.email }}</h1>
 
                 <div class="text-center">
 
-                    <p>Nom : {{ app.user.name }}</p>
+                    <p>{{ 'event.account.nom'|trans }}{# Nom #} : {{ app.user.name }}</p>
 
-                    <p>Prénom : {{ app.user.firstName }}</p>
+                    <p>{{ 'event.account.prenom'|trans }}{# Prénom #} : {{ app.user.firstName }}</p>
 
-                    <p>N° de téléphone : {{ app.user.phone }} </p>
+                    <p>{{ 'event.account.phone'|trans }}{# N° de téléphone #} : {{ app.user.phone }} </p>
 
-                    <p>Adresse personelle : {{ app.user.adress }}</p>
+                    <p>{{ 'event.account.adressePerso'|trans }}{# Adresse personnelle #} : {{ app.user.adress }}</p>
 
-                    <p>Adresse de livraison : {{ app.user.adressEvent }}</p>
+                    <p>{{ 'event.account.adresseLivraison'|trans }}{# Adresse de livraison #} : {{ app.user.adressEvent }}</p>
 
                 <a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
-                <button class="btn btn-primary mt-3">{{ button_label|default('Modifier') }}</button>
+                <button class="btn btn-primary mt-3">{{ 'bouton.modifier'|trans }}{# Modifier #}</button>
                 </a>
 
                 </div>
@@ -70,12 +70,12 @@
 		<!-- End Show Account -->
 
 <a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
-<button class="btn btn-primary">{{ button_label|default('modifier') }}</button>
+<button class="btn btn-primary">{{ 'bouton.modifier'|trans }}{# Modifier #}</button>
 </a>
 <br>
 <br>
 <a href="{{ path('account_change_password', {'id': app.user.id}) }}">
-<button class="btn btn-primary">{{ button_label|default('changer le mot de passe') }}</button>
+<button class="btn btn-primary">{{ 'bouton.changer.passe'|trans }}{# changer le mot de passe #}</button>
 </a>
 <br>
 <br>
