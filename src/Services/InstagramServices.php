@@ -10,8 +10,16 @@ use Symfony\Component\HttpFoundation\Response;
 
 class InstagramServices
 {
-    private mixed $connexion;
-    private mixed $psr6Cache;
+
+    /**
+     * @var Instagram
+     */
+    private $connexion;
+
+    /**
+     * @var FilesystemAdapter
+     */
+    private $psr6Cache;
 
     public function __construct()
     {
@@ -24,7 +32,11 @@ class InstagramServices
         $this->connexion = new Instagram(new GuzzleHttp\Client());
     }
 
-    public function getImages(int $numberOfImages): Response
+    /**
+     * @param int $numberOfImages
+     * @return Instagram
+     */
+    public function getImages(int $numberOfImages): Instagram
     {
         return $this->connexion->getMediasByUserId('1463798983', $numberOfImages);
     }
