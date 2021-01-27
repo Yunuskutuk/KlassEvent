@@ -15,8 +15,8 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
-						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+						<span class="subheading"{{ 'event.titre'|trans }}{# Klass Event #}</span>
+						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}{# Organisation d'événements clef en main #}</h2>
 					</div>
 
 				</div>
@@ -32,10 +32,10 @@
 
 
 				<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
-					<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Nous contacter</h2>
+					<h2 class="h4 mb-2 mb-md-5 font-weight-bold">{{ 'contact.footer'|trans }}{# Nous contacter #}</h2>
 					{{ form_start(form) }}
 					{{ form_widget(form) }}
-					<input type="submit" value="Envoi du message" class="btn btn-primary py-3 px-5">
+					<input type="submit" value="{{ 'contact.Envoyer'|trans }}" class="btn btn-primary py-3 px-5">
 					{{ form_end(form) }}
 				</div>
 

@@ -21,6 +21,7 @@ event.account.nom: Soyadı
 event.account.phone: Telefon numarası
 event.account.prenom: İsim
 event.account.retourCompte: hesabıma dön
+event.devis: Alıntı
 event.index.perimetre: Strasbourg çevresinde 350 km'ye kadar seyahat edin
 event.index.step1.1: Size özel rüya düğününüzü yaratın
 event.index.step1.2: Çevrimiçi bir teklif tamamlayın
@@ -40,6 +41,14 @@ horaires.footer: Her gün ... h ... ila ... h ...
 livraison.footer: Teslimat detayları
 location: Kiralama
 menu.footer: Menü listesi
+security.ça_va_là: Sen
+security.connectez: Bağlan
+security.courriel: E-posta adresi
+security.creation: Hesap oluştur
+security.deconnection: oturumu Kapat
+security.deja.connecte: İle zaten bağlısın
+security.email: Oturum açmak için e-posta adresinizi ve şifrenizi giriniz
+security.password: Parola
 services: Teklif isteği
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
 traiteur.index.3livraison: Teslimat başına 3 menüden

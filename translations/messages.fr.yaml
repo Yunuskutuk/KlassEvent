@@ -21,6 +21,7 @@ event.account.nom: Nom
 event.account.phone: N° de téléphone
 event.account.prenom: Prénom
 event.account.retourCompte: retour sur mon compte
+event.devis: Devis
 event.index.perimetre: Déplacements jusqu'à 350km autour de Strasbourg
 event.index.step1.1: Créez votre mariage de rêve sur mesure
 event.index.step1.2: Remplissez un devis en ligne
@@ -40,6 +41,14 @@ horaires.footer: Tous les jours de ...h... à ...h...
 livraison.footer: Détail des livraisons
 location: Location
 menu.footer: Liste des menus
+security.ça_va_là: Vous
+security.connectez: Connectez
+security.courriel: Courriel
+security.creation: Créer un compte
+security.deconnection: Se déconnecter
+security.deja.connecte: Vous êtes déjà connecté avec
+security.email: Renseignez votre e-mail et votre mot de passe pour vous connecter
+security.password: Mot de passe
 services: Services
 traiteur.ConnexionLivraison: Connectez-vous et commander !
 traiteur.index.3livraison: A partir de 3 menus par livraison
