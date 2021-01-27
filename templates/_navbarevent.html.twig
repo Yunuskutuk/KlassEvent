@@ -51,10 +51,23 @@
 				<li class="nav-item">
 					<a href="menu.html" class="nav-link">Services</a>
 				</li>
-				{{ render(controller('App\\Controller\\NavbarEventController::gallery')) }}
-				<li class="nav-item">
-					<a href="blog.html" class="nav-link">Location</a>
-				</li>
+
+			{# {{ render(controller('App\\Controller\\NavbarEventController::gallery')) }} #}
+					
+					<div id="nav-options" class="btn-group pull-right hidden-xs">
+					<button type="button" class=" btn-dropdown dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+					Location
+					</button>
+
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="{{ path('rent_decoration') }}">Décoration de table</a></li>
+							<li><a class="dropdown-item" href="{{ path('rent_dishes') }}">Vaisselle</a></li>
+							<li><a class="dropdown-item" href="{{ path('rent_chair') }}">Décoration de chaise</a></li>
+						</ul>
+					</div>
+
+
 				{% if app.user %}
 					<li class="nav-item">
 						<a href="{{ path('account_show') }}" class="nav-link">Mon compte</a>
