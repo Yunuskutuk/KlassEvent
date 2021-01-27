@@ -30,12 +30,12 @@
           <div class="col-md-6 col-lg-3">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Instagram</h2>
-              <div class="thumb d-sm-flex">
-	            	<a href="https://www.instagram.com/klassevent/" class="thumb-menu img" style="background-image: url('{{ asset('build/images/instagram.png') }}');">
-	            	</a>
+                  {{ render(controller(
+                      'App\\Controller\\HomeController::lastInstagram',
+                      { 'number': 6 }
+                  )) }}
 	            </div>
             </div>
-          </div>
 
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
@@ -54,12 +54,13 @@
                       </svg>{{"horaires.footer"|trans}}</p></li>                    
                   </ul> 
                   </div>
+
                   <div class="col-md-12 col-lg-12">
                   <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                    <li><a href="https://fr-fr.facebook.com/klass.organizedekorasyon/"><img style="width:50px" src="{{ asset('build/images/64x64youtube.png') }}" alt="Icone Youtube"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UC1AiohhrwfNRvyEZlUP-lWA"><img style="width:50px" src="{{ asset('build/images/64x64facebook.png') }}" alt="Icone Facebook"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC1AiohhrwfNRvyEZlUP-lWA"  ><img style="width:50px" src="{{ asset('build/images/64x64youtube.png') }}" alt="Icone Youtube"></a></li>
+                    <li><a href="https://fr-fr.facebook.com/klass.organizedekorasyon/"><img style="width:50px" src="{{ asset('build/images/64x64facebook.png') }}" alt="Icone Facebook"></a></li>
                     <li><a href="https://www.instagram.com/klassevent/"><img style="width:50px" src="{{ asset('build/images/64x64instagram.png') }}" alt="Icone Instagram"></a></li>
-                  </ul>    
+                  </ul>
                  </div>  
                 </div>
               </div>
