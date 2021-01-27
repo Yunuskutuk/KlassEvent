@@ -13,11 +13,11 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="menu-traiteur">Klass Traiteur</span>
+						<span class="menu-traiteur">{{ 'traiteur.titre'|trans }} {# Klass Traiteur #}</span>
 						<h2 class="mb-4 h2-event">
-							Choisissez votre menu pour la semaine du ... au ... :
+							{{ 'traiteur.index.appelAction'|trans }}{# Choisissez votre menu pour la semaine du ... au ...  #}
 						</h2>
-						<p class="mb-4 h2-event">A partir de 3 menus par livraison</p>
+						<p class="mb-4 h2-event">{{ 'traiteur.index.3livraison'|trans }}{# A partir de 3 menus par livraison #}</p>
 					</div>
 
 				</div>
@@ -39,8 +39,8 @@
 
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
-					<span class="menu-traiteur">Les menus</span>
-					<h2 class="mb-4">De la semaine</h2>
+					<span class="menu-traiteur">{{ 'traiteur.index.menus'|trans }}{# Les menus #}</span>
+					<h2 class="mb-4">{{ 'traiteur.index.menus2'|trans }}{# De la semaine #}</h2>
 				</div>
 			</div>
 
@@ -56,8 +56,10 @@
 							<p>Entrée</p>
 							<p>Plat</p>
 							<p>Dessert</p>
-							<button type="button" onclick="document.location.href='traiteur/menus'" class="btn see">
-								Voir plus
+
+							<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">
+								{{ 'traiteur.index.plus'|trans }}{# Voir plus #}
+
 							</button>
 						</div>
 					</div>
@@ -72,8 +74,10 @@
 							<p>Entrée</p>
 							<p>Plat</p>
 							<p>Dessert</p>
-							<button type="button" onclick="document.location.href='traiteur/menus'" class="btn see">
-								Voir plus
+
+							<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">
+								{{ 'traiteur.index.plus'|trans }}{# Voir plus #}
+
 							</button>
 						</div>
 					</div>
@@ -88,8 +92,10 @@
 							<p>Entrée</p>
 							<p>Plat</p>
 							<p>Dessert</p>
-							<button type="button" onclick="document.location.href='traiteur/menus'" class="btn see">
-								Voir plus
+
+							<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">
+								{{ 'traiteur.index.plus'|trans }}{# Voir plus #}
+
 							</button>
 						</div>
 					</div>
@@ -100,10 +106,10 @@
 		<div class="d-flex align-self-stretch text-center">
 			<div class="media block-6 services d-block">
 				<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-					<h5 class="margin-traiteur">Déplacements jusqu'à 20km autour de Strasbourg</h5>
+					<h5 class="margin-traiteur">{{ 'traiteur.index.deplacements'|trans }}{# Déplacements jusqu'à 20km autour de Strasbourg #}</h5>
 					<div class="btn-livre">
 						<p class="margin-event">
-							<a href="{{ path('traiteur_livraison') }}" class="btn see">Détails des livraisons !</a>
+							<a href="{{ path('traiteur_livraison') }}" class="btn see">{{ 'traiteur.index.detailsLivraison'|trans }}{# Détails des livraisons ! #}</a>
 						</p>
 					</div>
 				</div>
