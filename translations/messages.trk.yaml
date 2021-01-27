@@ -1,5 +1,6 @@
 accueil: Ev
 contact: İletişim
+contact.Envoyer: Mesaj gönder
 contact.footer: Bize Ulaşın
 demande.devis: Teklif isteği
 event.index.perimetre: Strasbourg çevresinde 350 km'ye kadar seyahat edin
@@ -20,3 +21,20 @@ livraison.footer: Teslimat detayları
 location: Kiralama
 menu.footer: Menü listesi
 services: Teklif isteği
+traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
+traiteur.index.3livraison: Teslimat başına 3 menüden
+traiteur.index.appelAction: Haftalık menünüzü seçin ... ila ...
+traiteur.index.deplacements: Strasbourg çevresinde 20 km'ye kadar seyahat edin
+traiteur.index.detailsLivraison: Teslimat Detayları!
+traiteur.index.menus: Menüler
+traiteur.index.menus2: Haftanın
+traiteur.index.plus: Daha fazla gör
+traiteur.livraison: Strasbourg çevresinde 20 km'ye kadar teslimat
+traiteur.Livraison2: Strasbourg çevresinde 20 km'ye kadar teslimat yapıyoruz
+traiteur.LivraisonHoraires: 11.30 - 14.30 ve 18.00 - 22.30 arası haftanın 7 günü
+traiteur.LivraisonMinimum: 3 öğün yemek siparişi verin (minimum)
+traiteur.modalitesLivraison: Teslimat şartları
+traiteur.slogan: Gerçek yemek teslim et
+traiteur.titre: Klass yemek şirketi
+traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
+traiteur.VoirMenus: Menüleri görüntüle
