@@ -4,9 +4,9 @@
 Gallerie
 </button>
     <ul class="dropdown-menu">
-    {% for picture in pictures %}
-        <li><a href="{{ path('quote_quote', {'id': picture.id}) }}">
-        <p class="text-center">{{ picture.service.title }}</p></a> </li>
+    {% for service in services %}
+        <li><a href="{{ path('gallery_gallery', {'id': service.id}) }}">
+        <p class="text-center">{{ service.title }}</p></a> </li>
         <li role="separator" class="divider"></li>
     {% endfor %}
     </ul>
