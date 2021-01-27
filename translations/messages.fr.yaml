@@ -1,8 +1,26 @@
+account.back.home: Retour à l'Accueil
+account.compte: Un compte
+account.cree: Créer
+account.edit.modifier: Mes informations
 accueil: Accueil
+bouton.changer.passe: changer le mot de passe
+bouton.MAJ: Mettre à jour
+bouton.modifier: Modifier
+bouton.save: Sauvegarder
 contact: Contact
 contact.Envoyer: Envoi du message
 contact.footer: Nous contacter
 demande.devis: Demande de devis
+event.account.adresseLivraison: Adresse de livraison
+event.account.adressePerso: Adresse personnelle
+event.account.compte: Mon compte
+event.account.compteAssocie: Compte associé à
+event.account.majInfos: mise à jour des infos de votre compte
+event.account.majPass: Mise à jour du mot de passe
+event.account.nom: Nom
+event.account.phone: N° de téléphone
+event.account.prenom: Prénom
+event.account.retourCompte: retour sur mon compte
 event.index.perimetre: Déplacements jusqu'à 350km autour de Strasbourg
 event.index.step1.1: Créez votre mariage de rêve sur mesure
 event.index.step1.2: Remplissez un devis en ligne
@@ -14,6 +32,7 @@ event.index.titre: Choisissez
 event.index.titre2: Votre événement
 event.index.validation: C'est parti !
 event.slogan: Organisateur de Mariages clef en Main
+event.titre: Klass Event
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...

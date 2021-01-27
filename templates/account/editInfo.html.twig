@@ -3,7 +3,7 @@
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    <h1>mise à jour des infos de votre compte</h1>
+    <h1>{{ 'event.account.majInfos'|trans }}{# mise à jour des infos de votre compte #}</h1>
 
 	<!-- Background picture -->
 
@@ -14,8 +14,8 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
-						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+						<span class="subheading">{{ 'event.titre'|trans }} {# Klass Event #}</span>
+						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}{# Organisation d'événements clef en main #}</h2>
 					</div>
 
 				</div>
@@ -32,14 +32,14 @@
 
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
-					<span class="subheading">Modifier</span>
-					<h2 class="mb-4">Mes informations</h2>
+					<span class="subheading">{{ 'bouton.modifier'|trans }}{# Modifier #}</span>
+					<h2 class="mb-4">{{ 'account.edit.modifier'|trans }}{# Mes informations #}</h2>
 				</div>
 			</div>
  
-    {{ include('account/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+    {{ include('account/_form.html.twig', {'button_label': 'bouton.MAJ'|trans }) }}
 
-    <a href="{{ path('account_show') }}">retour sur mon compte</a>
+    <a href="{{ path('account_show') }}">{{ 'event.account.retourCompte'|trans }}{# retour sur mon compte #}</a>
 
     {{ include('user/_delete_form.html.twig') }}
 
