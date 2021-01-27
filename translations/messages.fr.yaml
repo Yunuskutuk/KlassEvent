@@ -1,5 +1,6 @@
 accueil: Accueil
 contact: Contact
+contact.Envoyer: Envoi du message
 contact.footer: Nous contacter
 demande.devis: Demande de devis
 event.index.perimetre: Déplacements jusqu'à 350km autour de Strasbourg
@@ -20,3 +21,20 @@ livraison.footer: Détail des livraisons
 location: Location
 menu.footer: Liste des menus
 services: Services
+traiteur.ConnexionLivraison: Connectez-vous et commander !
+traiteur.index.3livraison: A partir de 3 menus par livraison
+traiteur.index.appelAction: Choisissez votre menu pour la semaine du ... au ...
+traiteur.index.deplacements: Déplacements jusqu'à 20km autour de Strasbourg
+traiteur.index.detailsLivraison: Détails des livraisons !
+traiteur.index.menus: Les menus
+traiteur.index.menus2: De la semaine
+traiteur.index.plus: Voir plus
+traiteur.livraison: Livraisons jusqu'à 20 km aux alentours de Strasbourg
+traiteur.Livraison2: Nous livrons jusqu'à 20 km aux alentours de Strasbourg
+traiteur.LivraisonHoraires: À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j
+traiteur.LivraisonMinimum: Passer une commande de 3 repas (minimum)
+traiteur.modalitesLivraison: Modalités de livraison
+traiteur.slogan: Faites vous livrer de la vrai cuisine
+traiteur.titre: Klass Traiteur
+traiteur.villesLivraison: Découvrez les communes livrées
+traiteur.VoirMenus: Voir les menus

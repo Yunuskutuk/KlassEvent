@@ -3,6 +3,14 @@
     		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 	    		<div class="col-lg-12 d-block">
 		    		<div class="row d-flex">
+						<div class="col-md-2 pr-4 d-flex topper align-items-start">
+						<div class="icon mr-2 d-flex justify-content-center align-items-center">
+							<a href="/trk/event">
+							<img src="{{asset('build/images/turkey.jpeg')}}" width="40"></a>
+							<a href="/event">
+							<img src="{{asset('build/images/france.jpeg')}}" width="30"></a>
+						</div>
+					</div>
 		    			<div class="col-md-2 pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
 						    <span class="text">07 80 55 50 17</span>
@@ -37,13 +45,13 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a href="/" class="nav-link">Accueil</a>
+					<a href="{{ path('home') }}" class="nav-link">Accueil</a>
 				</li>
 				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
 				<li class="nav-item">
 					<a href="menu.html" class="nav-link">Services</a>
 				</li>
-			{# {{ render(controller('App\\Controller\\NavbarEventController::gallery')) }} #}
+				{{ render(controller('App\\Controller\\NavbarEventController::gallery')) }}
 				<li class="nav-item">
 					<a href="blog.html" class="nav-link">Location</a>
 				</li>

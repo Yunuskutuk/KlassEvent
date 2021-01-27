@@ -11,11 +11,11 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="titre-traiteur">Klass Traiteur</span>
+						<span class="titre-traiteur">{{ 'traiteur.titre'|trans }} {# Klass Traiteur #}</span>
 						<h2 class="mb-4 h2-event">
-							Choisissez votre menu pour la semaine du ... au ... :
+							{{ 'traiteur.index.appelAction'|trans }}{# Choisissez votre menu pour la semaine du ... au ...  #}
 						</h2>
-						<p class="mb-4 h2-event">A partir de 3 menus par livraison</p>
+						<p class="mb-4 h2-event">{{ 'traiteur.index.3livraison'|trans }}{# A partir de 3 menus par livraison #}</p>
 					</div>
 
 				</div>
@@ -29,10 +29,10 @@
 
 
 				<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
-					<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Nous contacter</h2>
+					<h2 class="h4 mb-2 mb-md-5 font-weight-bold">{{ 'contact.footer'|trans }}{# Nous contacter #}</h2>
 					{{ form_start(form) }}
 					{{ form_widget(form) }}
-					<input type="submit" value="Envoi du message" class="btn btn-secondary py-3 px-5">
+					<input type="submit" value="{{ 'contact.Envoyer'|trans }}{# Envoi du message #}" class="btn btn-secondary py-3 px-5">
 					{{ form_end(form) }}
 				</div>
 
