@@ -1,14 +1,15 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}Edit User{% endblock %}
+{% block title %}Edit User
+{% endblock %}
 
 {% block body %}
-    <h1>mise à jour des infos de votre compte</h1>
+	<h1>mise à jour des infos de votre compte</h1>
 
 	<!-- Background picture -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/ImgKlassEvent/IMG_1167.jpg') }}')">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1167.jpg') }}')">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -25,7 +26,7 @@
 
 	<!-- End Background picture -->
 
-    <!-- Account -->
+	<!-- Account -->
 
 	<section class="ftco-section">
 		<div class="container">
@@ -36,17 +37,17 @@
 					<h2 class="mb-4">Mes informations</h2>
 				</div>
 			</div>
- 
-    {{ include('account/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    <a href="{{ path('account_show') }}">retour sur mon compte</a>
+			{{ include('account/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    {{ include('user/_delete_form.html.twig') }}
+			<a href="{{ path('account_show') }}">retour sur mon compte</a>
 
-			</div>
+			{{ include('user/_delete_form.html.twig') }}
 
-		</section>
+		</div>
 
-		<!-- End Account -->
+	</section>
+
+	<!-- End Account -->
 
 {% endblock %}

@@ -25,36 +25,39 @@
 				<div class="col-md-8 text-center heading-section">
 					<h2 class="mb-5">Tous les menus :</h2>
 
-					<table class="table table-striped table-hover">
+					<table class="table table-striped">
 						<thead class="table-dark">
 							<tr>
-								<th>Type d'événement</th>
-								<th>Actions</th>
+								<th class="text-center">Nom du menu</th>
+								<th class="text-center">Actions</th>
 							</tr>
 						</thead>
-						<tbody class="">
+						<tbody>
 							{% for menu in menus %}
-								<tr>
+								<tr class="text-center">
 									<td>{{ menu.name }}</td>
 									<td>
-										<a class="btn btn-success mr-3" href="{{ path('admin_traiteur_show', {'id': menu.id}) }}">Voir</a>
+										<a class="btn btn-info" href="{{ path('admin_traiteur_show', {'id': menu.id}) }}">Voir</a>
 										<a class="btn btn-warning" href="{{ path('admin_traiteur_edit', {'id': menu.id}) }}">Editer</a>
+										{% if menu.menuOfWeek == false %}
+											<a class="btn btn-success mr-3" href="{{ path('admin_traiteur_addToMenuWeek', {'id': menu.id}) }}">Ajouter aux menus de la semaine</a>
+										{% else %}
+											<a class="btn btn-danger" href="{{ path('admin_traiteur_addToMenuWeek', {'id': menu.id}) }}">Retirer des menus de la semaine</a>
+										{% endif %}
 									</td>
 								</tr>
-							{% else %}
-								<tr>
-									<td colspan="3">Pas de menus trouvé</td>
-								</tr>
-							{% endfor %}
+							</td>
 						</tbody>
-					</table>
-					<button type="button" class="btn admin-button mb-3">
-						<a class="admin-light" href="{{ path('admin_traiteur_new') }}">Ajouter un nouvel événement</a>
-					</button>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="3">Pas de menus trouvé</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<a type="button" class="btn btn-dark" href="{{ path('admin_traiteur_new') }}">Ajouter un nouveau menu</a>
+		<a type="button" class="btn btn-dark" href="{{ path('admin_index') }}">Retour</a>
 
-				</div>
-			</div>
-		</div>
-	</section>
-
-{% endblock %}
+	</div>
+</div></div></section>{% endblock %}

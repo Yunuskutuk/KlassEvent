@@ -1,9 +1,6 @@
 {{ form_start(form) }}
 {{ form_errors(form) }}
-<br>
-{{ form_row(form.type) }}
-<br>
-{{ form_row(form.service) }}
-<br>
-<button class="btn admin-button">{{ button_label|default('Sauvegarder') }}</button>
+{{ form_widget(form) }}
+<a type="button" class="btn btn-dark">{{ button_label|default('Sauvegarder') }}</a>
 {{ form_end(form) }}
+<a type="button" class="btn btn-dark" href="{{ path('admin_traiteur_index') }}">Retour</a>

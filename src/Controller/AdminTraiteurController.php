@@ -24,7 +24,6 @@ class AdminTraiteurController extends AbstractController
             'menus' => $menuRepository->findAll(),
         ]);
     }
-
     /**
      * @Route("/new", name="admin_traiteur_new", methods={"GET","POST"})
      */
@@ -47,9 +46,23 @@ class AdminTraiteurController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+    /**
+     * @Route("/{id}", name="admin_traiteur_addToMenuWeek", methods={"GET"})
+     */
+    public function updateMenuWeek(Menu $menu): Response
+    {
+        if ($menu->getMenuOfWeek() === true) {
+            $menu->setMenuOfWeek(false);
+            $this->getDoctrine()->getManager()->flush();
+        } else {
+            $menu->setMenuOfWeek(true);
+            $this->getDoctrine()->getManager()->flush();
+        }
+        return $this->RedirectToRoute('admin_traiteur_index');
+    }
 
     /**
-     * @Route("/{id}", name="admin_traiteur_show", methods={"GET"})
+     * @Route("show/{id}", name="admin_traiteur_show", methods={"GET"})
      */
     public function show(Menu $menu): Response
     {

@@ -9,10 +9,13 @@ use Doctrine\ORM\Mapping as ORM;
 use phpDocumentor\Reflection\Types\Boolean;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=MenuRepository::class)
  * @UniqueEntity("name")
+ * @Vich\Uploadable
  */
 class Menu
 {
@@ -44,6 +47,18 @@ class Menu
     private $price;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string|null
+     */
+    private $path;
+
+    /**
+     * @Vich\UploadableField(mapping="upload_picture", fileNameProperty="path")
+     * @var mixed
+     */
+    private $pathFile;
+
+    /**
      * @ORM\Column(type="text")
      * @var string
      * @Assert\NotBlank(message="chaque menu doit avoir une description !")
@@ -70,12 +85,37 @@ class Menu
         return $this->id;
     }
 
-    public function getMenuOfWeek(): ?Bool
+    public function getPath(): ?string
+    {
+        return $this->path;
+    }
+
+    public function setPath(?string $path): self
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    public function setPathFile(File $image = null): self
+    {
+        $this->pathFile = $image;
+        return $this;
+    }
+
+
+    public function getPathFile(): ?File
+    {
+        return $this->pathFile;
+    }
+
+
+    public function getMenuOfWeek(): ?bool
     {
         return $this->menuOfWeek;
     }
 
-    public function setMenuOfWeek(Boolean $menuOfWeek): self
+    public function setMenuOfWeek(bool $menuOfWeek): self
     {
         $this->menuOfWeek = $menuOfWeek;
 

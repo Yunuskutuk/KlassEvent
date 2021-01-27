@@ -1,13 +1,14 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}New User{% endblock %}
+{% block title %}New User
+{% endblock %}
 
 {% block body %}
 
 	<!-- Background picture -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/ImgKlassEvent/IMG_1167.jpg') }}')">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1167.jpg') }}')">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -24,7 +25,7 @@
 
 	<!-- End Background picture -->
 
-    <!-- Account -->
+	<!-- Account -->
 
 	<section class="ftco-section">
 		<div class="container">
@@ -34,16 +35,16 @@
 					<span class="subheading">Créer</span>
 					<h2 class="mb-4">Un compte</h2>
 				</div>
-			</div>	
-
-                {{ include('user/_form.html.twig') }}
-
-                <a href="{{ path('home') }}">Retour à l'Accueil</a>                
-				
 			</div>
 
-		</section>
+			{{ include('user/_form.html.twig') }}
 
-		<!-- End Account -->
+			<a href="{{ path('home') }}">Retour à l'Accueil</a>
 
-	{% endblock %}
+		</div>
+
+	</section>
+
+	<!-- End Account -->
+
+{% endblock %}

@@ -35,7 +35,7 @@
 					<a href="{{ path('admin_index') }}" class="nav-link">Accueil</a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ path('user_index') }}" class="nav-link">Gérer les utilisateurs</a>
+					<a href="{{ path('admin_user_index') }}" class="nav-link">Gérer les utilisateurs</a>
 				</li>
 
 				<div id="nav-options" class="btn-group pull-right hidden-xs">
@@ -77,9 +77,8 @@
 					</ul>
 				</div>
 
-
 				<li class="nav-item admin-button">
-					<a href="reservation.html" class="nav-link">Se déconnecter</a>
+					<a href="{{ path('security_logout') }}" class="nav-link">Se déconnecter</a>
 				</li>
 			</ul>
 		</div>
