@@ -1,83 +1,73 @@
-<div class="py-1 bg-black top">
-	<div class="container">
-		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-			<div class="col-lg-12 d-block">
-				<div class="row d-flex">
-					<div class="col-md-2 pr-4 d-flex topper align-items-center">
-						<div class="icon mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-phone2"></span>
-						</div>
-						<span class="text">07 80 55 50 17</span>
-					</div>
-					<div class="col-md-2 pr-4 d-flex topper align-items-center">
-						<div class="icon mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-paper-plane"></span>
-						</div>
-						<span class="text">klassevent@ymail.com</span>
-					</div>
-					<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						<p class="mb-0 register-link">
-							<span>Déplacements jusqu'à 350km autour de Strasbourg</span>
-						</p>
-					</div>
-					<div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						<p class="mb-0 register-link">
-							<span>Ouvert tous les jours</span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	<div class="container">
-		<a class="navbar-brand" href="{{ path('event_index') }}">Klass Event</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="oi oi-menu"></span>
-			Menu
-		</button>
 
+    <div class="py-1 bg-black top">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+						<div class="col-md-2 pr-4 d-flex topper align-items-start">
+						<div class="icon mr-2 d-flex justify-content-center align-items-center">
+							<a href="/trk/event">
+							<img src="{{asset('build/images/turkey.jpeg')}}" width="40"></a>
+							<a href="/event">
+							<img src="{{asset('build/images/france.jpeg')}}" width="30"></a>
+						</div>
+					</div>
+		    			<div class="col-md-2 pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">07 80 55 50 17</span>
+					    </div>
+					    <div class="col-md-2 pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">klassevent@ymail.com</span>
+					    </div>
+						<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						    <p class="mb-0 register-link"><span>Déplacements jusqu'à 350km autour de Strasbourg</span></p>
+					    </div>
+					    <div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						    <p class="mb-0 register-link"><span>Ouvert tous les jours</span></p>
+					    </div>
+						{% if is_granted('ROLE_ADMIN') %}
+						<div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						    <p class="mb-0 register-link"><a href="{{ path('admin_index') }}"><span>admin</span></a></p>
+					    </div>
+						{% endif %}
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{{ path('event_index') }}">Klass Event</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<a href="{{ path('home') }}" class="nav-link">Accueil</a>
 				</li>
 				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
-				<div id="nav-options" class="btn-group pull-right hidden-xs">
+
+				<li class="nav-item">
+					<a href="menu.html" class="nav-link">Services</a>
+				</li>
+
+			{# {{ render(controller('App\\Controller\\NavbarEventController::gallery')) }} #}
+					
+					<div id="nav-options" class="btn-group pull-right hidden-xs">
 					<button type="button" class=" btn-dropdown dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-						Gallerie
+					Location
 					</button>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="{{ path('event_gallery_decoration') }}">
-								<p class="text-center">Décoration</p>
-							</a>
-						</li>
-						<li role="separator" class="divider"></li>
-						<li>
-							<a href="{{ path('event_gallery_mariage') }}">
-								<p class="text-center">Mariage</p>
-							</a>
-						</li>
-						<li role="separator" class="divider"></li>
-						<li>
-							<a href="{{ path('event_gallery_henne') }}">
-								<p class="text-center">Hénné</p>
-							</a>
-						</li>
-						<li role="separator" class="divider"></li>
-						<li>
-							<a href="{{ path('event_gallery_reception') }}">
-								<p class="text-center">Réception</p>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<li class="nav-item">
-					<a href="blog.html" class="nav-link">Location</a>
-				</li>
+
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="{{ path('rent_decoration') }}">Décoration de table</a></li>
+							<li><a class="dropdown-item" href="{{ path('rent_dishes') }}">Vaisselle</a></li>
+							<li><a class="dropdown-item" href="{{ path('rent_chair') }}">Décoration de chaise</a></li>
+						</ul>
+					</div>
+
 				{% if app.user %}
 					<li class="nav-item">
 						<a href="{{ path('account_show') }}" class="nav-link">Mon compte</a>

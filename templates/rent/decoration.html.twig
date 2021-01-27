@@ -1,0 +1,99 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block body %}
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1121.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">Klass Event Location</span>
+						<h2 class="mb-4 h2-event">Décoration de table</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- End Background picture -->
+
+	<!-- Tables -->
+		<section class="ftco-section ftco-wrap-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 d-flex">
+						<div class="img img-1 mr-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-7.jpg') }}')"></div>
+						<div class="img img-2 ml-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-8.jpeg') }}')"></div>
+					</div>
+					<div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3">
+	          			<div class="heading-section mb-4 my-5 my-md-0">
+	          				<span class="subheading">Nos</span>
+	            			<h2 class="mb-4">tables</h2>
+	          			</div>
+						<p>Nos tables rondes sont équipées de projecteur led puissants et des dernières générations 
+						sur batterie pour une superbe projection, sous la table, de lumiere colorée. Le tout piloté 
+						sans fil via une télécommande.</p>						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container">		
+            {% include 'rent/_tabletable.html.twig' %}
+		</section>
+
+	<!-- Tablecloth -->
+		<section class="ftco-section ftco-wrap-about">
+			<div class="container">
+				<div class="row" style="flex-direction: row-reverse;">
+					<div class="col-md-7 d-flex">
+						<div class="img img-1 mr-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-9.jpeg') }}')"></div>
+						<div class="img img-2 ml-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1113.jpg') }}')"></div>
+					</div>
+					<div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3">
+	          		<div class="heading-section mb-4 my-5 my-md-0">
+	          			<span class="subheading">Nos nappes</span>
+	            		<h2 class="mb-4">et accessoires</h2>
+	          		</div>
+	          		<p>Le chemin de table est idéal pour donner une note de couleur et rehausser la décoration de 
+                	vos table. Un chemin de table satiné apporte de la brillance à vos tables de mariage.</p>
+					</div>
+				</div>
+			</div>
+        </section>
+            
+        <section class="container">			
+            {% include 'rent/_tabletablecloth.html.twig' %}
+            <p><em>Astuce :</em> Il est fortement recommandé de prendre la même couleur et la même matière pour le chemin de table et les noeuds des housses de chaise.</p>
+		</section>
+
+	<!-- Décoration -->
+		<section class="ftco-section ftco-wrap-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 d-flex">
+						<div class="img img-1 mr-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1123.jpg') }}')"></div>
+						<div class="img img-2 ml-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-6.jpg') }}')"></div>
+					</div>
+					<div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3">
+	          		<div class="heading-section mb-4 my-5 my-md-0">
+	          			<span class="subheading">Nos vases</span>
+	            		<h2 class="mb-4">et accessoires</h2>
+	          		</div>
+	          		<p>Nous proposons aussi des accessoires pour décorer vos tables.</p>
+					</div>
+				</div>
+			</div>
+        </section>
+            
+        <section class="container">			
+            {% include 'rent/_tabledecoration.html.twig' %}
+			<p>PS: Nos nappes ne touchent pas le sol, cela est plus agréable pour les invités</p>
+		</section>
+
+{% endblock %}
+

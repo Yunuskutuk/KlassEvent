@@ -15,9 +15,9 @@
                     <div class="container">
                         <div class="row justify-content-center mb-5 pb-2">
                             <div class="col-md-12 text-center heading-section">
-                                <span class="menu-traiteur">Klass Traiteur</span>
-                                <h2 class="mb-4 h2-event">Offrez de la vraie cuisine à votre femme</h2>
-                                <p class="mb-4 h2-event">Livraisons jusqu'à 20 km aux alentours de Strasbourg</p>
+                                <span class="menu-traiteur">{{ 'traiteur.titre'|trans }}{# Klass traiteur #}</span>
+                                <h2 class="mb-4 h2-event">{{ 'traiteur.slogan'|trans }}{# Faites vous livrer de la vrai cuisine #}</h2>
+                                <p class="mb-4 h2-event">{{ 'traiteur.livraison'|trans }}{# Livraisons jusqu'à 20 km aux alentours de Strasbourg #}</p>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
             <img src="{{ asset('build/images/20km_strass.jpg') }}" height="650px" width="650px" alt="map">
             </div>
             <div class="categories">
-                <h3 class="communes  mr-5"><u><B>Découvrez les communes livrées</B></u> :</h3>
+                <h3 class="communes  mr-5"><u><B>{{ 'traiteur.villesLivraison'|trans }}{# Découvrez les communes livrées #}</B></u> :</h3>
                 </br>
             <h5 class="ml-5">- Strasbourg</h5>
             <h5 class="ml-5">- Souffelweyersheim</h5>
@@ -46,17 +46,17 @@
             <h5 class="ml-5">- Lingolsheim</h5>
             <h5 class="ml-5">- Ostwald</h5>
             <h5 class="ml-5">- La Wantzenau</h5>
-                <h3 class="communes mr-5"><u><B>Modalitées de livraison</B></u> :</h3>
+                <h3 class="communes mr-5"><u><B>{{ 'traiteur.modalitesLivraison'|trans }}{# Modalités de livraison #}</B></u> :</h3>
                 </br>
-                <h5 class="ml-5">- Nous livrons jusqu'à 20 km aux alentours de Strasbourg</h5>
-                <h5 class="ml-5">- Passer une commande de 3 repas (minimum)</h5>
-                <h5 class="ml-5 mb-4">- À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j</h5>
+                <h5 class="ml-5">- {{ 'traiteur.Livraison2'|trans }}{# Nous livrons jusqu'à 20 km aux alentours de Strasbourg #}</h5>
+                <h5 class="ml-5">- {{ 'traiteur.LivraisonMinimum'|trans }}{# Passer une commande de 3 repas (minimum) #}</h5>
+                <h5 class="ml-5 mb-4">- {{ 'traiteur.LivraisonHoraires'|trans }}{# À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j #}</h5>
                 <div class="row">
                     <button type="button" onclick="document.location.href='/traiteur/menus'" class="col-3 btn see ml-5">
-                        Voir les menus
+                        {{ 'traiteur.VoirMenus'|trans }}{# Voir les menus #}
                     </button>
                 <button type="button" onclick="document.location.href='/login'" class="col-6 bttn command ml-5">
-                    Connectez-vous et commander !
+                    {{ 'traiteur.ConnexionLivraison'|trans }}{# Connectez-vous et commander ! #}
                 </button>
                 </div>
             </div>
