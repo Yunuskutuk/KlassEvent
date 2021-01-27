@@ -6,11 +6,12 @@ use InstagramScraper\Instagram;
 use GuzzleHttp;
 use Symfony\Component\Cache\Adapter\Psr16Adapter;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use Symfony\Component\HttpFoundation\Response;
 
 class InstagramServices
 {
-    private $connexion;
-    private $psr6Cache;
+    private mixed $connexion;
+    private mixed $psr6Cache;
 
     public function __construct()
     {
@@ -18,13 +19,12 @@ class InstagramServices
         $this->getLogin();
     }
 
-    public function getLogin()
+    public function getLogin(): void
     {
         $this->connexion = new Instagram(new GuzzleHttp\Client());
-        return $this->connexion;
     }
 
-    public function getImages(int $numberOfImages)
+    public function getImages(int $numberOfImages): Response
     {
         return $this->connexion->getMediasByUserId('1463798983', $numberOfImages);
     }
