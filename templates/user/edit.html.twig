@@ -9,7 +9,7 @@
         <div class="row  slider-text align-items-center justify-content-center">
           <div class="col-md-9 text-center mt-5">
             <h1 class="mb-2 bread">KlassEvent</h1>
-            <h2 class="breadcrumbs" style="font-size: 25px;">Utilisateurs</h2>
+            <h2 class="breadcrumbs" style="font-size: 25px;">{{ 'user.edit'|trans }}{# Utilisateurs #}</h2>
           </div>
         </div>
       </div>
@@ -20,11 +20,11 @@
 		<div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section">
 
-            <h1>Editer un compte utilisateur</h1>
+            <h1>{{ 'user.edit.title'|trans }}{# Editer un compte utilisateur #}</h1>
 
                 {{ include('user/_form.html.twig', {'button_label': 'Editer'}) }}
 
-                <a class="admin-light" href="{{ path('admin_user_index') }}">Retour</a>
+                <a class="admin-light" href="{{ path('admin_user_index') }}">{{ 'user.edit.back'|trans }}{#Retour#}</a>
 
                 {{ include('user/_delete_form.html.twig') }}
 
