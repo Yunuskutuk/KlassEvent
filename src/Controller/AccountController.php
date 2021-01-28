@@ -90,4 +90,18 @@ class AccountController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    /**
+     * @Route("/{id}/delete", name="user_delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, User $user): Response
+    {
+        if ($this->isCsrfTokenValid('delete' . $user->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($user);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('user_index');
+    }
 }

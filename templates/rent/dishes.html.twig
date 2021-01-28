@@ -1,0 +1,94 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block body %}
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1121.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">Klass Event Location</span>
+						<h2 class="mb-4 h2-event">Vaisselle</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- End Background picture -->
+
+    <!-- Mange-debout -->
+		<section class="ftco-section ftco-wrap-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 d-flex">
+						<div class="img img-1 mr-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-11.jpeg') }}')"></div>
+						<div class="img img-2 ml-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-10.jpeg') }}')"></div>
+					</div>
+					<div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3">
+	          		<div class="heading-section mb-4 my-5 my-md-0">
+	          			<span class="subheading">Nos</span>
+	            		<h2 class="mb-4">mange debout</h2>
+	          		</div>
+	          		<p>Les mange debout sont un must indispensable du vin d’honneur à ne pas oublier de décorer ( avec un noeud satin ou organza autour par exemple).</p>	
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container">			
+            {% include 'rent/_dishesmangedebout.html.twig' %}
+		</section>
+
+	<!-- Dishes -->
+		<section class="ftco-section ftco-wrap-about">
+			<div class="container">
+				<div class="row" style="flex-direction: row-reverse;">
+					<div class="col-md-7 d-flex">
+						<div class="img img-1 mr-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1122.jpg') }}')"></div>
+						<div class="img img-2 ml-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1113.jpg') }}')"></div>
+					</div>
+					<div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3">
+	          		<div class="heading-section mb-4 my-5 my-md-0">
+	          			<span class="subheading">Nos verres</span>
+	            		<h2 class="mb-4">et couverts</h2>
+	          		</div>
+	          		<p>Retrouvez ici toute la vaisselle nécessaire à votre événement.</p>
+					</div>
+				</div>
+			</div>
+        </section>
+            
+        <section class="container">			
+            {% include 'rent/_dishesglasses.html.twig' %}
+		</section>
+
+	<!-- Lights -->
+		<section class="ftco-section ftco-wrap-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 d-flex">
+						<div class="img img-1 mr-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-2.jpg') }}')"></div>
+						<div class="img img-2 ml-md-2" style="background-image:url('{{ asset('build/images/ImgKlassEvent/Decoration/decoration-1.jpg') }}')"></div>
+					</div>
+					<div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3">
+	          		<div class="heading-section mb-4 my-5 my-md-0">
+	          			<span class="subheading">Nos décoration</span>
+	            		<h2 class="mb-4">lumineuses</h2>
+	          		</div>
+	          		<p>Nous proposons différentes ambiances lumineuses.</p>
+					</div>
+				</div>
+			</div>
+        </section>
+            
+        <section class="container">
+            {% include 'rent/_disheslights.html.twig' %}
+		</section>
+
+{% endblock %}
+

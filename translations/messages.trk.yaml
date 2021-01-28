@@ -40,6 +40,7 @@ home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıc�
 horaires.footer: Her gün ... h ... ila ... h ...
 livraison.footer: Teslimat detayları
 location: Kiralama
+mariage: Düğün
 menu.footer: Menü listesi
 mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
 security.ça_va_là: Sen
@@ -69,3 +70,22 @@ traiteur.titre: Klass yemek şirketi
 traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
 traiteur.VoirMenus: Menüleri görüntüle
 vaisselle: vaisselle
+user.delete: Hesabı kalıcı olarak silin
+user.edit: Kullanıcılar
+user.edit.back: Dönüş
+user.edit.title: Bir kullanıcı hesabını düzenleyin
+user.index.actions: Hareketler
+user.index.adressevenement: Etkinlik adresi
+user.index.couriel: E-posta adresi
+user.index.domicile: Ev adresi
+user.index.edit: Düzenle
+user.index.id: Id
+user.index.listuser: Kullanıcı listesi
+user.index.newuser: Kullanıcı Ekle
+user.index.nom: Soyadı
+user.index.prenom: İsim
+user.index.see: Görmek
+user.index.telephone: Telefon
+user.index.userfail: Kullanıcı bulunamadı
+user.show.mdp: Parola
+user.show.roles: Roller

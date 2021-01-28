@@ -40,6 +40,7 @@ home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...
 livraison.footer: Détail des livraisons
 location: Location
+mariage: Mariage
 menu.footer: Liste des menus
 mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
 security.ça_va_là: Vous
@@ -69,3 +70,22 @@ traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
 traiteur.VoirMenus: Voir les menus
 vaisselle: vaisselle
+user.delete: Supprimer définitivement le compte
+user.edit: Utilisateurs
+user.edit.back: Retour
+user.edit.title: Editer un compte utilisateur
+user.index.actions: Actions
+user.index.adressevenement: Adresse de l'evenement
+user.index.couriel: Couriel
+user.index.domicile: Adresse du domicile
+user.index.edit: Editer
+user.index.id: Id
+user.index.listuser: Liste des utilisateurs
+user.index.newuser: Ajouter un utlisateur
+user.index.nom: Nom
+user.index.prenom: Prenom
+user.index.see: Voir
+user.index.telephone: Telephone
+user.index.userfail: Pas d'utilisateur trouvé
+user.show.mdp: Mot de passe
+user.show.roles: Roles
