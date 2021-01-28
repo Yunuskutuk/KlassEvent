@@ -1,0 +1,63 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Event index
+{% endblock %}
+
+{% block body %}
+
+	<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row  slider-text align-items-center justify-content-center">
+				<div class="col-md-9 text-center mt-5">
+					<h1 class="mb-2 bread">KlassEvent</h1>
+					<h2 class="breadcrumbs" style="font-size: 25px;">
+						<Menu></Menu>
+					</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section pt-5">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section">
+					<h2 class="mb-5">Tous les menus :</h2>
+
+					<table class="table table-striped">
+						<thead class="table-dark">
+							<tr>
+								<th class="text-center">Nom du menu</th>
+								<th class="text-center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for menu in menus %}
+								<tr class="text-center">
+									<td>{{ menu.name }}</td>
+									<td>
+										<a class="btn btn-info" href="{{ path('admin_traiteur_show', {'id': menu.id}) }}">Voir</a>
+										<a class="btn btn-warning" href="{{ path('admin_traiteur_edit', {'id': menu.id}) }}">Editer</a>
+										{% if menu.menuOfWeek == false %}
+											<a class="btn btn-success mr-3" href="{{ path('admin_traiteur_addToMenuWeek', {'id': menu.id}) }}">Ajouter aux menus de la semaine</a>
+										{% else %}
+											<a class="btn btn-danger" href="{{ path('admin_traiteur_addToMenuWeek', {'id': menu.id}) }}">Retirer des menus de la semaine</a>
+										{% endif %}
+									</td>
+								</tr>
+							</td>
+						</tbody>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="3">Pas de menus trouvé</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<a type="button" class="btn btn-dark" href="{{ path('admin_traiteur_new') }}">Ajouter un nouveau menu</a>
+		<a type="button" class="btn btn-dark" href="{{ path('admin_index') }}">Retour</a>
+
+	</div>
+</div></div></section>{% endblock %}

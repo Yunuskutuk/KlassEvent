@@ -65,7 +65,7 @@
     margin-bottom: 0;
     line-height: 1;
 }
-.btn {
+.btn-traiteur {
     background: #34ce57;
     border: 1px solid #34ce57;
     color: $white;
@@ -76,7 +76,7 @@
         color: #34ce57;
     }
 }
-.step-back:hover {
+.step-back-traiteur:hover {
     background-color:lighten(#34ce57,17%);
 }
 .see {
@@ -112,4 +112,10 @@ font: normal small-caps bold 18px/1.5em Verdana, sans-serif;;
     font-family: $font-secondary;
     margin-bottom: 0;
     line-height: 1;
+}
+
+.img-menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }

@@ -1,20 +1,23 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Log in!
+{% endblock %}
 
 {% block body %}
 
 	<!-- Background picture -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/ImgKlassEvent/IMG_1167.jpg') }}')">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1167.jpg') }}')">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
-						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+						<span class="subheading">{{ 'event.titre'|trans }}
+							{# Klass Event #}
+						</span>
+						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}{# Organisation d'événements clef en main #}</h2>
 					</div>
 
 				</div>
@@ -24,59 +27,66 @@
 
 	<!-- End Background picture -->
 
-    <!-- Login form -->
+	<!-- Login form -->
 
 	<section class="ftco-section">
 		<div class="container">
 
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
-					<span class="subheading">Connectez</span>
-					<h2 class="mb-4">Vous !</h2>
+					<span class="subheading">{{ 'security.connectez'|trans }}{# Connectez #}</span>
+					<h2 class="mb-4">{{ 'security.ça_va_là'|trans }}{# Vous !#}</h2>
 				</div>
 			</div>
 
-<form method="post">
-    {% if error %}
-    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+			<form method="post">
+				{% if error %}
+					<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
 
-    {% if app.user %}
-    <div class="mb-3">
-        Vous êtes déjà connecté avec {{ app.user.username }} ! <a href="{{ path('security_logout') }}">Se déconnecter</a>
-    </div>
-    {% endif %}
+				{% if app.user %}
+					<div class="mb-3">
+						{{ 'security.deja.connecte'|trans }}
+						{# Vous êtes déjà connecté avec #}
+						{{ app.user.username }}
+						!
+						<a href="{{ path('security_logout') }}">{{ 'security.deconnection'|trans }}{# Se déconnecter #}</a>
+					</div>
+				{% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal text-center">Renseignez votre e-mail et votre mot de passe pour vous connecter</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
-        autofocus>
-    <br>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" required>
+				<h1 class="h3 mb-3 font-weight-normal text-center">{{ 'security.email'|trans }}{# Renseignez votre e-mail et votre mot de passe pour vous connecter #}</h1>
+				<label for="inputEmail">{{ 'security.courriel'|trans }}{# Courriel #}</label>
+				<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+				<br>
+				<label for="inputPassword">{{ 'security.password'|trans }}{# Mot de passe #}</label>
+				<input type="password" name="password" id="inputPassword" class="form-control" required>
 
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+				<input
+				type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-    {#
-    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-    See https://symfony.com/doc/current/security/remember_me.html
+				{#
+				    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+				    See https://symfony.com/doc/current/security/remember_me.html
+				
+				    <div class="checkbox mb-3">
+				        <label>
+				            <input type="checkbox" name="_remember_me"> Remember me
+				        </label>
+				    </div>
+				    #}
+				<br>
+				<button class="btn btn-lg btn-primary" type="submit">
+					{{ 'security.connecter'|trans }}
+					{# Se connecter #}
+				</button>
+			</form>
 
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" name="_remember_me"> Remember me
-        </label>
-    </div>
-    #}
-    <br>
-    <button class="btn btn-lg btn-primary" type="submit">
-        Se connecter
-    </button>
-</form>
+			<a href="{{ path('account_create') }}">
+				<button class="btn btn-lg btn-warning">{{ 'security.creation'|trans }}{# Créer un compte #}</button>
+			</a>
+		</div>
 
-<a href="{{ path('account_create') }}"><button class="btn btn-lg btn-warning">Créer un compte</button></a>
-			</div>
+	</section>
 
-		</section>
-
-		<!-- End Login -->
+	<!-- End Login -->
 {% endblock %}

@@ -6,12 +6,16 @@ use App\Repository\MenuRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Boolean;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=MenuRepository::class)
  * @UniqueEntity("name")
+ * @Vich\Uploadable
  */
 class Menu
 {
@@ -43,6 +47,18 @@ class Menu
     private $price;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string|null
+     */
+    private $path;
+
+    /**
+     * @Vich\UploadableField(mapping="upload_picture", fileNameProperty="path")
+     * @var mixed
+     */
+    private $pathFile;
+
+    /**
      * @ORM\Column(type="text")
      * @var string
      * @Assert\NotBlank(message="chaque menu doit avoir une description !")
@@ -59,19 +75,51 @@ class Menu
     private $more;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Week::class, mappedBy="menu")
-     * @var ArrayCollection
+     * @ORM\Column(type="boolean", nullable=false)
+     * @var boolean
      */
-    private $weeks;
-
-    public function __construct()
-    {
-        $this->weeks = new ArrayCollection();
-    }
+    private $menuOfWeek;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getPath(): ?string
+    {
+        return $this->path;
+    }
+
+    public function setPath(?string $path): self
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    public function setPathFile(File $image = null): self
+    {
+        $this->pathFile = $image;
+        return $this;
+    }
+
+
+    public function getPathFile(): ?File
+    {
+        return $this->pathFile;
+    }
+
+
+    public function getMenuOfWeek(): ?bool
+    {
+        return $this->menuOfWeek;
+    }
+
+    public function setMenuOfWeek(bool $menuOfWeek): self
+    {
+        $this->menuOfWeek = $menuOfWeek;
+
+        return $this;
     }
 
     public function getName(): ?string
@@ -119,33 +167,6 @@ class Menu
     {
         if ($more) {
             $this->more = $more;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Week[]
-     */
-    public function getWeeks(): Collection
-    {
-        return $this->weeks;
-    }
-
-    public function addWeek(Week $week): self
-    {
-        if (!$this->weeks->contains($week)) {
-            $this->weeks[] = $week;
-            $week->addMenu($this);
-        }
-
-        return $this;
-    }
-
-    public function removeWeek(Week $week): self
-    {
-        if ($this->weeks->removeElement($week)) {
-            $week->removeMenu($this);
         }
 
         return $this;
