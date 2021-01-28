@@ -10,17 +10,20 @@ use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Contact;
 use App\Form\ContactType;
+use App\Repository\EventRepository;
 
 class EventController extends AbstractController
 {
-/* ---- Event Routes ---- */
+    /* ---- Event Routes ---- */
 
     /**
      * @Route("/event", name="event_index")
      */
-    public function indexEvent(): Response
+    public function indexEvent(EventRepository $eventRepository): Response
     {
-        return $this->render('event/index.html.twig');
+        return $this->render('event/index.html.twig', [
+            'events' => $eventRepository->findAll(),
+        ]);
     }
 
     /**

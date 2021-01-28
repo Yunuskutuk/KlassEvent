@@ -10,7 +10,7 @@
         <div class="row  slider-text align-items-center justify-content-center">
           <div class="col-md-9 text-center mt-5">
             <h1 class="mb-2 bread">KlassEvent</h1>
-            <h2 class="breadcrumbs" style="font-size: 25px;">Utilisateurs</h2>
+            <h2 class="breadcrumbs" style="font-size: 25px;">{{ 'user.edit'|trans }}{# Utilisateurs #}</h2>
           </div>
         </div>
       </div>
@@ -21,52 +21,52 @@
 		<div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section">
 
-                <h2 class="mb-5">Utilisateur</h2>
+                <h2 class="mb-5">{{ 'user.edit'|trans }}{# Utilisateur #}</h2>
  
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>{{ 'user.index.id'|trans }}{# Id #}</th>
                 <td>{{ user.id }}</td>
             </tr>
             <tr>
-                <th>Email</th>
+                <th>{{ 'user.index.couriel'|trans }}{# Email #}</th>
                 <td>{{ user.email }}</td>
             </tr>
             <tr>
-                <th>Roles</th>
+                <th>{{ 'user.show.roles'|trans }} {# Roles #}</th>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
             </tr>
             <tr>
-                <th>Password</th>
+                <th>{{ 'user.show.mdp'|trans }}{# Mot de passe #}</th>
                 <td>{{ user.password }}</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th>{{ 'user.index.nom'|trans }}{# Nom #}</th>
                 <td>{{ user.name }}</td>
             </tr>
             <tr>
-                <th>FirstName</th>
+                <th>{{ 'user.index.prenom'|trans }}{# Prenom #}</th>
                 <td>{{ user.firstName }}</td>
             </tr>
             <tr>
-                <th>Phone</th>
+                <th>{{ 'user.index.telephone'|trans }}{# Telephone #}</th>
                 <td>{{ user.phone }}</td>
             </tr>
             <tr>
-                <th>Adress</th>
+                <th>{{ 'user.index.domicile'|trans }}{# Adresse du domicile #}</th>
                 <td>{{ user.adress }}</td>
             </tr>
             <tr>
-                <th>AdressEvent</th>
+                <th>{{ 'user.index.adressevenement'|trans }}{# Adresse de l'evenement #}</th>
                 <td>{{ user.adressEvent }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a class="admin-light mx-2" href="{{ path('admin_user_index') }}">Retour</a>
+    <a class="admin-light mx-2" href="{{ path('admin_user_index') }}">{{ 'user.edit.back'|trans }}{# Retour #}</a>
 
-    <a class="admin-light" href="{{ path('admin_user_edit', {'id': user.id}) }}">Editer</a>
+    <a class="admin-light" href="{{ path('admin_user_edit', {'id': user.id}) }}">{{ 'user.index.edit'|trans }}{# Editer #}</a>
 
     {{ include('user/_delete_form.html.twig') }}
 

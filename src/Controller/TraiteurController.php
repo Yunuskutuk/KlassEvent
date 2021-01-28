@@ -61,7 +61,7 @@ class TraiteurController extends AbstractController
                 $this->addFlash('success', 'Email envoyé !');
             }
 
-            return $this->redirectToRoute("traiteur");
+            return $this->redirectToRoute("traiteur_index");
         }
         // Render the form
         return $this->render('traiteur/contact.html.twig', [

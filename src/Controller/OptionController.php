@@ -4,11 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Option;
 use App\Form\OptionType;
+use App\Services\YamlWrite;
 use App\Repository\OptionRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("admin/option")
@@ -28,7 +29,7 @@ class OptionController extends AbstractController
     /**
      * @Route("/new", name="admin_option_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, YamlWrite $yamlWrite): Response
     {
         $option = new Option();
         $form = $this->createForm(OptionType::class, $option);
@@ -38,6 +39,7 @@ class OptionController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($option);
             $entityManager->flush();
+            $yamlWrite->option2Yaml();
 
             return $this->redirectToRoute('admin_option_index');
         }
@@ -61,13 +63,14 @@ class OptionController extends AbstractController
     /**
      * @Route("/{id}/edit", name="admin_option_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Option $option): Response
+    public function edit(Request $request, Option $option, YamlWrite $yamlWrite): Response
     {
         $form = $this->createForm(OptionType::class, $option);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $yamlWrite->option2Yaml();
 
             return $this->redirectToRoute('admin_option_index');
         }

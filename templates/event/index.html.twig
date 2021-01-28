@@ -15,7 +15,7 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
+						<span class="subheading">{{ 'event.titre'|trans }}{# Klass Event #}</span>
 						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}</h2>
 					</div>
 
@@ -89,18 +89,7 @@
 			<div class="media block-6 services d-block">
 				<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 					<h5 class="margin-event">{{'event.index.perimetre'|trans}}</h5>
-										<table>
-						{% for event in events %}
-						<tr>
-							<td>{{ event.type }} </td>
-							<td><a href="{{ path('quote_quote', {'id': event.id}) }} ">
-							<button class="btn btn-primary">{{ button_label|default('faire un devis') }}</button>
-							</a></td>
-						</tr>
-							{% else %}
-							<p>aucun evenement possible, contactez l'administrateur</p>
-						{% endfor %}
-					</table>
+
 					<p class="margin-event">
 						<a href="#" class="btn btn-primary btn-lg">{{'event.index.validation'|trans}}</a>
 					</p>
@@ -108,8 +97,8 @@
 			</div>
 		</div>
 
-		</section>
+	</section>
 
-		<!-- End Step -->
+	<!-- End Step -->
 
-	{% endblock %}
+{% endblock %}
