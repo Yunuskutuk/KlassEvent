@@ -4,11 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Picture;
 use App\Form\PictureType;
+use App\Services\YamlWrite;
 use App\Repository\PictureRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("admin/picture")
@@ -28,7 +29,7 @@ class PictureController extends AbstractController
     /**
      * @Route("/new", name="admin_picture_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, YamlWrite $yamlWrite): Response
     {
         $picture = new Picture();
         $form = $this->createForm(PictureType::class, $picture);
@@ -39,6 +40,7 @@ class PictureController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($picture);
             $entityManager->flush();
+            $yamlWrite->picture2Yaml();
 
             return $this->redirectToRoute('admin_picture_index');
         }
@@ -62,13 +64,14 @@ class PictureController extends AbstractController
     /**
      * @Route("/{id}/edit", name="admin_picture_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Picture $picture): Response
+    public function edit(Request $request, Picture $picture, YamlWrite $yamlWrite): Response
     {
         $form = $this->createForm(PictureType::class, $picture);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $yamlWrite->picture2Yaml();
 
             return $this->redirectToRoute('admin_picture_index');
         }

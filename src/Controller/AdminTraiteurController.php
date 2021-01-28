@@ -2,13 +2,14 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Menu;
 use App\Form\MenuType;
+use App\Services\YamlWrite;
 use App\Repository\MenuRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/admin/traiteur")
@@ -27,7 +28,7 @@ class AdminTraiteurController extends AbstractController
     /**
      * @Route("/new", name="admin_traiteur_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, YamlWrite $yamlWrite): Response
     {
         $menu = new Menu();
         $form = $this->createForm(MenuType::class, $menu);
@@ -37,6 +38,7 @@ class AdminTraiteurController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($menu);
             $entityManager->flush();
+            $yamlWrite->menu2Yaml();
 
             return $this->redirectToRoute('admin_traiteur_index');
         }
@@ -74,13 +76,14 @@ class AdminTraiteurController extends AbstractController
     /**
      * @Route("/{id}/edit", name="admin_traiteur_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Menu $menu): Response
+    public function edit(Request $request, Menu $menu, YamlWrite $yamlWrite): Response
     {
         $form = $this->createForm(MenuType::class, $menu);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $yamlWrite->menu2Yaml();
 
             return $this->redirectToRoute('admin_menu_index');
         }

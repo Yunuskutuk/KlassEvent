@@ -4,11 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Service;
 use App\Form\ServiceType;
+use App\Services\YamlWrite;
 use App\Repository\ServiceRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/admin/service")
@@ -28,7 +29,7 @@ class ServiceController extends AbstractController
     /**
      * @Route("/new", name="admin_service_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, YamlWrite $yamlWrite): Response
     {
         $service = new Service();
         $form = $this->createForm(ServiceType::class, $service);
@@ -38,6 +39,7 @@ class ServiceController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($service);
             $entityManager->flush();
+            $yamlWrite->service2Yaml();
 
             return $this->redirectToRoute('admin_service_index');
         }
@@ -61,13 +63,14 @@ class ServiceController extends AbstractController
     /**
      * @Route("/{id}/edit", name="admin_service_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Service $service): Response
+    public function edit(Request $request, Service $service, YamlWrite $yamlWrite): Response
     {
         $form = $this->createForm(ServiceType::class, $service);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $yamlWrite->service2Yaml();
 
             return $this->redirectToRoute('admin_service_index');
         }
