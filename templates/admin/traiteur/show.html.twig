@@ -1,0 +1,51 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Event
+{% endblock %}
+
+{% block body %}
+
+	<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row  slider-text align-items-center justify-content-center">
+				<div class="col-md-9 text-center mt-5">
+					<h1 class="mb-2 bread">KlassTraiteur</h1>
+					<h2 class="breadcrumbs" style="font-size: 25px;">Menus</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12 justify-content-center text-center">
+					<div class="media block-6 services d-block step-background margin-traiteur">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<img src="/images/uploads/{{ menu.path }}" class="img-menu">
+							<h3 class="heading">Menu :
+								{{ menu.name }}</h3>
+							<h3 class="heading">Prix :
+								{{ menu.price }}
+							</h3>
+							<p>Description:
+								{{ menu.description }}</p>
+							<p>Plus :
+								{{ menu.more }}</p>
+
+							<p>Plus :
+								{{ menu.more }}</p>
+
+							<a class="btn btn-warning" href="{{ path('admin_traiteur_edit', {'id': menu.id}) }}">Editer</a>
+
+							{{ include('admin/traiteur/_delete_form.html.twig') }}
+							<a type="button" class="btn btn-dark" href="{{ path('admin_traiteur_index') }}">Retour</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

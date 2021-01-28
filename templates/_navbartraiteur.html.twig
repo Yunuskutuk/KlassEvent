@@ -49,6 +49,9 @@
 				<li class="nav-item">
 					<a href="{{ path('traiteur_livraison') }}" class="nav-link">Détails des livraison</a>
 				</li>
+				<li class="nav-item">
+					<a href="{{ path('traiteur_menus') }}" class="nav-link">Liste des menus</a>
+				</li>
 				{% if app.user %}
 					<li class="nav-item">
 						<a href="{{ path('account_show') }}" class="nav-link">mon compte</a>
@@ -61,9 +64,11 @@
 						<a href="{{ path('security_login') }}" class="nav-link">Login</a>
 					</li>
 				{% endif %}
-				<li class="nav-item">
-					<a href="{{ path('traiteur_menus') }}" class="nav-link">Liste des menus</a>
-				</li>
+				{% if is_granted('ROLE_ADMIN') %}
+					<li class="nav-item">
+						<a href="{{ path('admin_index') }}" class="nav-link">Admin</a>
+					</li>
+				{% endif %}
 				<li class="nav-cta">
 					<a href="{{ path('traiteur_contact') }}" class="nav-link">Contact</a>
 				</li>

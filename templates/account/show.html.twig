@@ -8,13 +8,15 @@
 	<!-- Background picture -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/ImgKlassEvent/IMG_1167.jpg') }}')">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1167.jpg') }}')">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">{{ 'event.titre'|trans }} {# Klass Event #}</span>
+						<span class="subheading">{{ 'event.titre'|trans }}
+							{# Klass Event #}
+						</span>
 						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}{# Organisation d'événements clef en main #}</h2>
 					</div>
 
@@ -25,7 +27,7 @@
 
 	<!-- End Background picture -->
 
-    <!-- Show Account -->
+	<!-- Show Account -->
 
 	<section class="ftco-section">
 		<div class="container">
@@ -33,51 +35,61 @@
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
 					<span class="subheading">{{ 'event.account.compte'|trans }}{# Mon compte #}</span>
-					<h2 class="mb-4">{{ 'event.titre'|trans }} {# Klass Event #}</h2>
+					<h2 class="mb-4">{{ 'event.titre'|trans }}
+						{# Klass Event #}
+					</h2>
 				</div>
 			</div>
 
-            <div class="container-fluid">
+			<div class="container-fluid">
 
-                <h1 class="text-center">{{ 'event.account.compteAssocie'|trans }}{# Compte associé à #} {{ app.user.email }}</h1>
+				<h1 class="text-center">{{ 'event.account.compteAssocie'|trans }}
+					{# Compte associé à #}
+					{{ app.user.email }}</h1>
 
-                <div class="text-center">
+				<div class="text-center">
 
-                    <p>{{ 'event.account.nom'|trans }}{# Nom #} : {{ app.user.name }}</p>
+					<p>{{ 'event.account.nom'|trans }}
+						{# Nom #}
+						:
+						{{ app.user.name }}</p>
 
-                    <p>{{ 'event.account.prenom'|trans }}{# Prénom #} : {{ app.user.firstName }}</p>
+					<p>{{ 'event.account.prenom'|trans }}
+						{# Prénom #}
+						:
+						{{ app.user.firstName }}</p>
 
-                    <p>{{ 'event.account.phone'|trans }}{# N° de téléphone #} : {{ app.user.phone }} </p>
+					<p>{{ 'event.account.phone'|trans }}
+						{# N° de téléphone #}
+						:
+						{{ app.user.phone }}
+					</p>
 
-                    <p>{{ 'event.account.adressePerso'|trans }}{# Adresse personnelle #} : {{ app.user.adress }}</p>
+					<p>{{ 'event.account.adressePerso'|trans }}
+						{# Adresse personnelle #}
+						:
+						{{ app.user.adress }}</p>
 
-                    <p>{{ 'event.account.adresseLivraison'|trans }}{# Adresse de livraison #} : {{ app.user.adressEvent }}</p>
+					<p>{{ 'event.account.adresseLivraison'|trans }}
+						{# Adresse de livraison #}
+						:
+						{{ app.user.adressEvent }}</p>
 
-                <a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
-                <button class="btn btn-primary mt-3">{{ 'bouton.modifier'|trans }}{# Modifier #}</button>
-                </a>
+					<a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
+						<button class="btn btn-primary mt-3">{{ 'bouton.modifier'|trans }}{# Modifier #}</button>
+					</a>
 
-                </div>
+					<a href="{{ path('account_change_password', {'id': app.user.id}) }}">
+						<button class="btn btn-primary mt-3">{{ button_label|default('changer le mot de passe') }}</button>
+					</a>
+				</div>
 
 
-            
-            </div>
+			</div>
 
 		</div>
 
 	</section>
 
-		<!-- End Show Account -->
-
-<a href="{{ path('account_edit_info', {'id': app.user.id}) }}">
-<button class="btn btn-primary">{{ 'bouton.modifier'|trans }}{# Modifier #}</button>
-</a>
-<br>
-<br>
-<a href="{{ path('account_change_password', {'id': app.user.id}) }}">
-<button class="btn btn-primary">{{ 'bouton.changer.passe'|trans }}{# changer le mot de passe #}</button>
-</a>
-<br>
-<br>
-<br>
+	<<<<<<<HEAD<!--EndShowAccount-->=======<!--EndShowAccount--><ahref="{{path('account_edit_info',{'id':app.user.id})}}"><buttonclass="btnbtn-primary">{{'bouton.modifier'|trans}}</button></a><br><br><ahref="{{path('account_change_password',{'id':app.user.id})}}"><buttonclass="btnbtn-primary">{{'bouton.changer.passe'|trans}}{#changerlemotdepasse#}</button></a><br><br><br>>> {# Modifier #}>>>>> c0d59107191f0f31498d32572d2f3d7a27b89c46
 {% endblock %}
