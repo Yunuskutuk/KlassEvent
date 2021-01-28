@@ -6,7 +6,7 @@
     <ul class="dropdown-menu">
     {% for event in events %}
         <li><a href="{{ path('quote_quote', {'id': event.id}) }}">
-        <p class="text-center">{{ event.type }}</p></a> </li>
+        <p class="text-center">{{ event.type|trans }}</p></a> </li>
         <li role="separator" class="divider"></li>
     {% endfor %}
     </ul>
