@@ -245,4 +245,58 @@ class YamlWrite
         $this->yamlWriteFrench();
         $this->yamlWriteTurkish();
     }
+
+    public function menu2Yaml(): void
+    {
+        // to see how it's working look in event2Yaml()
+        // but for this one, we do the 3 in one time
+        $menus = $this->menuRepository->findAll();
+        $translations = $this->translateRepository->findAll();
+        foreach ($menus as $menu) {
+            $nameInside = false;
+            $theName = $menu->getName();
+            $descriptioInside = false;
+            $theDescription = $menu->getDescription();
+            $moreInside = false;
+            $theMore = $menu->getMore();
+            foreach ($translations as $translate) {
+                if ($theName == $translate->getYamlKey()) {
+                    $nameInside = true;
+                }
+                if ($theDescription == $translate->getYamlKey()) {
+                    $descriptioInside = true;
+                }
+                if ($theMore == $translate->getYamlKey()) {
+                    $moreInside = true;
+                }
+            }
+            if (!$nameInside) {
+                $newTranslate = new Translate();
+                $newTranslate
+                    ->setYamlKey("$theName")
+                    ->setFrench("$theName")
+                    ->setTurkish("$theName");
+                $this->manager->persist($newTranslate);
+            }
+            if (!$descriptioInside) {
+                $newTranslate = new Translate();
+                $newTranslate
+                    ->setYamlKey("$theDescription")
+                    ->setFrench("$theDescription")
+                    ->setTurkish("$theDescription");
+                $this->manager->persist($newTranslate);
+            }
+            if (!$moreInside) {
+                $newTranslate = new Translate();
+                $newTranslate
+                    ->setYamlKey("$theMore")
+                    ->setFrench("$theMore")
+                    ->setTurkish("$theMore");
+                $this->manager->persist($newTranslate);
+            }
+        }
+        $this->manager->flush();
+        $this->yamlWriteFrench();
+        $this->yamlWriteTurkish();
+    }
 }
