@@ -25,12 +25,12 @@
 					</div>
 					<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
 						<p class="mb-0 register-link">
-							<span>Déplacements jusqu'à 350km autour de Strasbourg</span>
+							<span>{{ event.index.perimetre|trans }}{# Déplacements jusqu'à 350km autour de Strasbourg #}</span>
 						</p>
 					</div>
 					<div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
 						<p class="mb-0 register-link">
-							<span>Ouvert tous les jours</span>
+							<span>{{ event.ouverture|trans }}{# Ouvert tous les jours #}</span>
 						</p>
 					</div>
 					{% if is_granted('ROLE_ADMIN') %}
@@ -57,38 +57,36 @@
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a href="{{ path('home') }}" class="nav-link">Accueil</a>
+					<a href="{{ path('home') }}" class="nav-link">{{ acceuil|trans }}{# Accueil #}</a>
 				</li>
 				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
 				<li class="nav-item">
-					<a href="menu.html" class="nav-link">Services</a>
+					<a href="menu.html" class="nav-link">{{ services|trans }}{# Services #}</a>
 				</li>
-
-				{# {{ render(controller('App\\Controller\\NavbarEventController::gallery')) }} #}
-
+				{{ render(controller('App\\Controller\\NavbarEventController::gallery')) }}
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<li>
-						<a class="dropdown-item" href="{{ path('rent_decoration') }}">Décoration de table</a>
+						<a class="dropdown-item" href="{{ path('rent_decoration') }}">{{ rent.deco|trans }}{# Décoration de table #}</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{ path('rent_dishes') }}">Vaisselle</a>
+						<a class="dropdown-item" href="{{ path('rent_dishes') }}">{{ rent.Vaisselle|trans }}{# La vaisselle #}</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{ path('rent_chair') }}">Décoration de chaise</a>
+						<a class="dropdown-item" href="{{ path('rent_chair') }}">{{ rent.deco2|trans }}{# Décoration de chaise #}</a>
 					</li>
 				</ul>
 			</div>
 
 			{% if app.user %}
 				<li class="nav-item">
-					<a href="{{ path('account_show') }}" class="nav-link">Mon compte</a>
+					<a href="{{ path('account_show') }}" class="nav-link">{{ event.account.compte|trans }}{# Mon compte #}</a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ path('security_logout') }}" class="nav-link">Logout</a>
+					<a href="{{ path('security_logout') }}" class="nav-link">{{ account.logout|trans }}{# Logout #}</a>
 				</li>
 			{% else %}
 				<li class="nav-item">
-					<a href="{{ path('security_login') }}" class="nav-link">Login</a>
+					<a href="{{ path('security_login') }}" class="nav-link">{{ account.login|trans }}{# Login #}</a>
 				</li>
 			{% endif %}
 			{% if is_granted('ROLE_ADMIN') %}
@@ -98,7 +96,7 @@
 			{% endif %}
 
 			<li class="nav-item cta">
-				<a href="{{ path('event_contact') }}" class="nav-link">Contact</a>
+				<a href="{{ path('event_contact') }}" class="nav-link">{{ contact|trans }}{# Contact #}</a>
 			</li>
 		</ul>
 	</div>
