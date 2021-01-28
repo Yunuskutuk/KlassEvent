@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Event;
 use App\Form\EventType;
 use App\Repository\EventRepository;
+use App\Services\YamlWrite;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,7 +29,7 @@ class AdminEventController extends AbstractController
     /**
      * @Route("/new", name="admin_event_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, YamlWrite $yamlWrite): Response
     {
         $event = new Event();
         $form = $this->createForm(EventType::class, $event);
@@ -38,6 +39,7 @@ class AdminEventController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($event);
             $entityManager->flush();
+            $yamlWrite->event2Yaml();
 
             return $this->redirectToRoute('admin_event_index');
         }
@@ -61,13 +63,14 @@ class AdminEventController extends AbstractController
     /**
      * @Route("/{id}/edit", name="admin_event_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Event $event): Response
+    public function edit(Request $request, Event $event, YamlWrite $yamlWrite): Response
     {
         $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $yamlWrite->event2Yaml();
 
             return $this->redirectToRoute('admin_event_index');
         }

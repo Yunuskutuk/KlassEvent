@@ -1,8 +1,28 @@
+account.back.home: Eve geri dön
+account.compte: Bir hesap
+account.cree: Oluşturmak
+account.edit.modifier: Benim bilgim
 accueil: Ev
+boom: Parti
+bouton.changer.passe: şifreyi değiştirmek için
+bouton.MAJ: Güncelleme
+bouton.modifier: Düzenle
+bouton.save: Kayıt etmek
 contact: İletişim
 contact.Envoyer: Mesaj gönder
 contact.footer: Bize Ulaşın
 demande.devis: Teklif isteği
+event.account.adresseLivraison: Teslimat adresi
+event.account.adressePerso: Kişisel adres
+event.account.compte: Hesabım
+event.account.compteAssocie: İle ilişkili hesap
+event.account.majInfos: hesap bilgilerinizi güncelleyin
+event.account.majPass: Şifre güncelle
+event.account.nom: Soyadı
+event.account.phone: Telefon numarası
+event.account.prenom: İsim
+event.account.retourCompte: hesabıma dön
+event.devis: Alıntı
 event.index.perimetre: Strasbourg çevresinde 350 km'ye kadar seyahat edin
 event.index.step1.1: Size özel rüya düğününüzü yaratın
 event.index.step1.2: Çevrimiçi bir teklif tamamlayın
@@ -14,12 +34,23 @@ event.index.titre: Seç
 event.index.titre2: Senin olay
 event.index.validation: Hadi gidelim !
 event.slogan: Anahtar teslimi düğün planlayıcısı
+event.titre: Klass Event
+gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
 horaires.footer: Her gün ... h ... ila ... h ...
 livraison.footer: Teslimat detayları
 location: Kiralama
 menu.footer: Menü listesi
+mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
+security.ça_va_là: Sen
+security.connectez: Bağlan
+security.courriel: E-posta adresi
+security.creation: Hesap oluştur
+security.deconnection: oturumu Kapat
+security.deja.connecte: İle zaten bağlısın
+security.email: Oturum açmak için e-posta adresinizi ve şifrenizi giriniz
+security.password: Parola
 services: Teklif isteği
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
 traiteur.index.3livraison: Teslimat başına 3 menüden
@@ -38,3 +69,4 @@ traiteur.slogan: Gerçek yemek teslim et
 traiteur.titre: Klass yemek şirketi
 traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
 traiteur.VoirMenus: Menüleri görüntüle
+vaisselle: vaisselle
