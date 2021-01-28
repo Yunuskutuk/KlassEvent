@@ -1,6 +1,6 @@
 {% extends 'baseadmin.html.twig' %}
 
-{% block title %}Edit Service
+{% block title %}Editer le menu
 {% endblock %}
 
 {% block body %}
@@ -10,8 +10,8 @@
 		<div class="container">
 			<div class="row  slider-text align-items-center justify-content-center">
 				<div class="col-md-9 text-center mt-5">
-					<h1 class="mb-2 bread">KlassEvent</h1>
-					<h2 class="breadcrumbs" style="font-size: 25px;">Evenements</h2>
+					<h1 class="mb-2 bread">KlassTraiteur</h1>
+					<h2 class="breadcrumbs" style="font-size: 25px;">Menu</h2>
 				</div>
 			</div>
 		</div>
@@ -20,15 +20,12 @@
 	<section class="ftco-section pt-5">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
-				<div class="col-md-6 text-center heading-section">
+				<div class="col-md-8 text-center heading-section">
 
-					<h1>Editer le service</h1>
+					<h1>Editer le menu</h1>
 
-					{{ include('admin/service/_form.html.twig', {'button_label': 'Editer'}) }}
-
-					<a class="admin-light" href="{{ path('admin_service_index') }}">Retour</a>
-
-					{{ include('admin/service/_delete_form.html.twig') }}
+					{{ include('admin/traiteur/_form.html.twig', {'button_label ': 'Editer'}) }}
+					{{ include('admin/traiteur/_delete_form.html.twig') }}
 
 				</div>
 			</div>

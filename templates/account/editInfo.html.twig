@@ -1,21 +1,24 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}Edit User{% endblock %}
+{% block title %}Edit User
+{% endblock %}
 
 {% block body %}
-    <h1>mise à jour des infos de votre compte</h1>
+	<h1>{{ 'event.account.majInfos'|trans }}{# mise à jour des infos de votre compte #}</h1>
 
 	<!-- Background picture -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/ImgKlassEvent/IMG_1167.jpg') }}')">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1167.jpg') }}')">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
-						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+						<span class="subheading">{{ 'event.titre'|trans }}
+							{# Klass Event #}
+						</span>
+						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}{# Organisation d'événements clef en main #}</h2>
 					</div>
 
 				</div>
@@ -25,28 +28,27 @@
 
 	<!-- End Background picture -->
 
-    <!-- Account -->
+	<!-- Account -->
 
 	<section class="ftco-section">
 		<div class="container">
 
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
-					<span class="subheading">Modifier</span>
-					<h2 class="mb-4">Mes informations</h2>
+					<span class="subheading">{{ 'bouton.modifier'|trans }}{# Modifier #}</span>
+					<h2 class="mb-4">{{ 'account.edit.modifier'|trans }}{# Mes informations #}</h2>
 				</div>
 			</div>
- 
-    {{ include('account/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+			<<<<<<<HEAD{{include('account/_form.html.twig',{'button_label':'Mettreàjour'})}}======={{include('account/_form.html.twig',{'button_label':'bouton.MAJ'|trans})}}<ahref="{{path('account_show')}}">{{'event.account.retourCompte'|trans}}</a>>> {# retour sur mon compte #}>>>>> c0d59107191f0f31498d32572d2f3d7a27b89c46
 
-    <a href="{{ path('account_show') }}">retour sur mon compte</a>
+			<a href="{{ path('account_show') }}">retour sur mon compte</a>
 
-    {{ include('user/_delete_form.html.twig') }}
+			{{ include('user/_delete_form.html.twig') }}
 
-			</div>
+		</div>
 
-		</section>
+	</section>
 
-		<!-- End Account -->
+	<!-- End Account -->
 
 {% endblock %}

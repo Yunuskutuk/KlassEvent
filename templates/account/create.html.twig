@@ -1,20 +1,23 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}New User{% endblock %}
+{% block title %}New User
+{% endblock %}
 
 {% block body %}
 
 	<!-- Background picture -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_10542.jpg') }}')">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_1167.jpg') }}')">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 col-sm-12 text-center">
-						<span class="subheading">Klass Event</span>
-						<h2 class="mb-4 h2-event">Organisation d'événements clef en main</h2>
+						<span class="subheading">{{ 'event.titre'|trans }}
+							{# Klass Event #}
+						</span>
+						<h2 class="mb-4 h2-event">{{ 'event.slogan'|trans }}{# Organisation d'événements clef en main #}</h2>
 					</div>
 
 				</div>
@@ -24,26 +27,26 @@
 
 	<!-- End Background picture -->
 
-    <!-- Account -->
+	<!-- Account -->
 
 	<section class="ftco-section">
 		<div class="container">
 
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-12 text-center heading-section">
-					<span class="subheading">Créer</span>
-					<h2 class="mb-4">Un compte</h2>
+					<span class="subheading">{{ 'account.cree'|trans }}{# Créer #}</span>
+					<h2 class="mb-4">{{ 'account.compte'|trans }}{# Un compte #}</h2>
 				</div>
-			</div>	
-
-                {{ include('user/_form.html.twig') }}
-
-                <a href="{{ path('home') }}">Retour à l'Accueil</a>                
-				
 			</div>
 
-		</section>
+			{{ include('user/_form.html.twig') }}
 
-		<!-- End Account -->
+			<a href="{{ path('home') }}">{{ 'account.back.home'|trans }}{# Retour à l'Accueil #}</a>
 
-	{% endblock %}
+		</div>
+
+	</div>
+
+</section>
+
+<!-- End Account -->{% endblock %}

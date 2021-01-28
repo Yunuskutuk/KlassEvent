@@ -14,7 +14,7 @@ use App\Repository\EventRepository;
 
 class EventController extends AbstractController
 {
-/* ---- Event Routes ---- */
+    /* ---- Event Routes ---- */
 
     /**
      * @Route("/event", name="event_index")
