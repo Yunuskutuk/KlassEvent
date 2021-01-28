@@ -64,6 +64,7 @@ home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...
 Klass.courriel: klassevent@ymail.com
+Klass.phone: 07 80 55 50 17
 livraison.footer: Détail des livraisons
 location: Location
 menu: Menu
@@ -72,6 +73,17 @@ mise à disposition des couverts, verres, et assiettes: mise à disposition des 
 navbar.gallerie: Gallerie
 navbar.livraison: Détails des livraison
 navbar.ouverture: Horaires d'ouverture - Tous les jours
+quote.choix.option: --Veillez choisir votre option--
+quote.dateEvenement: Jour et heure de l’événement
+quote.demandes: Remarques, instructions, questions et demandes
+quote.description: Description
+quote.devis: demander un devis
+quote.email: entrez votre email
+quote.lieu: le lieu de l’événement
+quote.nbrInvites: nombre d'invités
+quote.nom: entrez votre nom
+quote.phone: entrez votre numéro de téléphone
+quote.service: Service
 rent.deco: Décoration de table
 rent.Vaisselle: La vaisselle
 sauvegarder: Sauvegarder

@@ -64,6 +64,7 @@ home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
 horaires.footer: Her gün ... h ... ila ... h ...
 Klass.courriel: klassevent@ymail.com
+Klass.phone: 07 80 55 50 17
 livraison.footer: Teslimat detayları
 location: Kiralama
 menu: Menü
@@ -72,6 +73,17 @@ mise à disposition des couverts, verres, et assiettes: mise à disposition des 
 navbar.gallerie: Fotoğraf Galerisi
 navbar.livraison: Teslimat Detayları.
 navbar.ouverture: Açılış saatleri - Her gün
+quote.choix.option: --Lütfen seçeneğinizi seçin --
+quote.dateEvenement: Etkinliğin günü ve saati
+quote.demandes: Notlar, talimatlar, sorular ve istekler
+quote.description: Açıklama
+quote.devis: teklif istemek
+quote.email: E-postanızı giriniz
+quote.lieu: olayın yeri
+quote.nbrInvites: ziyaretçi sayısı
+quote.nom: adınızı giriniz
+quote.phone: telefon numaranızı girin
+quote.service: Hizmet
 rent.deco: Masa dekorasyonu
 rent.Vaisselle: Bulaşık yıkama
 sauvegarder: Kayıt etmek

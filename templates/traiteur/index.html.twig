@@ -29,7 +29,7 @@
 	</section>
 	{% for message in app.flashes('success') %}
 		<div class="alert alert-success">
-			{{ message }}
+			{{ message|trans }}
 		</div>
 	{% endfor %}
 
@@ -53,14 +53,14 @@
 						<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 								<img src="/images/uploads/{{ menu.path }}" alt="grillade">
-								<h3 class="heading">{{menu.name}}</h3>
-								<h3 class="heading">Prix :
+								<h3 class="heading">{{menu.name|trans}}</h3>
+								<h3 class="heading">{{ 'menu.prix'|trans }}{# Prix #} :
 									{{menu.price}}
 									€
 								</h3>
-								<p>Description :
-									{{menu.description}}</p>
-								<p>{{menu.more}}</p>
+								<p>{{ 'menu.description'|trans }}{# Description #} :
+									{{menu.description|trans}}</p>
+								<p>{{menu.more|trans}}</p>
 								<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">
 									{{ 'traiteur.index.plus'|trans }}
 									{# Voir plus #}

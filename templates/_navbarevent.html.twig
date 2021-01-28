@@ -15,7 +15,7 @@
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
 							<span class="icon-phone2"></span>
 						</div>
-						<span class="text">07 80 55 50 17</span>
+						<span class="text">{{ 'Klass.phone'|trans }}{# 07 80 55 50 17 #}</span>
 					</div>
 					<div class="col-md-2 pr-4 d-flex topper align-items-center">
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
@@ -52,7 +52,7 @@
 		<a class="navbar-brand" href="{{ path('event_index') }}">Klass Event</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="oi oi-menu"></span>
-			Menu
+			{{ 'Menu'|trans }}{# Menu #}
 		</button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
@@ -96,7 +96,7 @@
 			{% endif %}
 
 			<li class="nav-item cta">
-				<a href="{{ path('event_contact') }}" class="nav-link">{{ contact|trans }}{# Contact #}</a>
+				<a href="{{ path('event_contact') }}" class="nav-link">{{ 'contact'|trans }}{# Contact #}</a>
 			</li>
 		</ul>
 	</div>
