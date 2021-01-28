@@ -6,6 +6,7 @@
   ],
 
   "content-hash": "19d37f29bf501af7983d654eeeedf0f0",
+
   "packages": [
     {
       "name": "composer/package-versions-deprecated",
@@ -9008,6 +9009,7 @@
         "shasum": ""
       },
       "require": {
+=======
     "_readme": [
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
@@ -18758,7 +18760,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-      
+
         "php": ">=7.2.5",
         "symfony/polyfill-ctype": "~1.8",
         "symfony/polyfill-mbstring": "~1.0",
