@@ -1,4 +1,5 @@
 {{ form_start(form) }}
-{{ form_widget(form) }}
+{{ form_row(form.password, {'label': 'form.editpassword'|trans,'attr': {'placeholder': 'form.placeholder.editpassword'|trans}}) }}
+
 <button class="btn btn-primary">{{ button_label|default('Sauvegarder') }}</button>
 {{ form_end(form) }}

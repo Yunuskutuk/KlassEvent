@@ -5,8 +5,8 @@
 {% block body %}
     <h1>Mise à jour du mot de passe</h1>
 
-    {{ include('account/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('account/_form.html.twig', {'button_label': 'form.edit'|trans }) }}
 
-    <a href="{{ path('account_show') }}">retour sur mon compte</a>
+    <a href="{{ path('account_show') }}">{{'form.account.back'|trans}}</a>
 <br>
 {% endblock %}

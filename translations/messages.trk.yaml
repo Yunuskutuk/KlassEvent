@@ -1,4 +1,6 @@
 accueil: Ev
+anniversaire: yıldönümü
+baptême: vaftiz
 contact: İletişim
 contact.Envoyer: Mesaj gönder
 contact.footer: Bize Ulaşın
@@ -14,6 +16,26 @@ event.index.titre: Seç
 event.index.titre2: Senin olay
 event.index.validation: Hadi gidelim !
 event.slogan: Anahtar teslimi düğün planlayıcısı
+form.account: Hesap oluştur
+form.account.back: Hesabıma dön
+form.adress: Senin adresin
+form.adressevent: Etkinliğin yeri veya adresi
+form.connection: Giriş yapmak
+form.edit: Düzenle
+form.editpassword: Yeni parolanız
+form.email: E-posta adresiniz
+form.firstname: Adın
+form.name: Adınız
+form.password: Şifreniz
+form.phone: Telefon numaran
+form.placeholder.adress: 31 Route de Strasbourg 67610 La Wantzenau
+form.placeholder.adressevent: Kabul yeri
+form.placeholder.editpassword: Yeni Şifre
+form.placeholder.email: exemple@exemple.com
+form.placeholder.firstname: Dupont
+form.placeholder.name: Pierre
+form.placeholder.password: Parola
+form.placeholder.phone: 0699999999
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
 horaires.footer: Her gün ... h ... ila ... h ...
@@ -21,6 +43,7 @@ livraison.footer: Teslimat detayları
 location: Kiralama
 mariage: Düğün
 menu.footer: Menü listesi
+sauvegarder: Kayıt etmek
 services: Teklif isteği
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
 traiteur.index.3livraison: Teslimat başına 3 menüden

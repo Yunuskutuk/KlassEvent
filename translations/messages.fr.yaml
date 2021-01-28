@@ -1,4 +1,6 @@
 accueil: Accueil
+anniversaire: Anniversaire
+baptême: Baptême
 contact: Contact
 contact.Envoyer: Envoi du message
 contact.footer: Nous contacter
@@ -14,6 +16,26 @@ event.index.titre: Choisissez
 event.index.titre2: Votre événement
 event.index.validation: C'est parti !
 event.slogan: Organisateur de Mariages clef en Main
+form.account: Créer un compte
+form.account.back: Retour sur mon compte
+form.adress: Votre adresse
+form.adressevent: Lieu ou adresse de l'événement
+form.connection: Se connecter
+form.edit: Editer
+form.editpassword: Votre nouveau mot de passe
+form.email: Votre email
+form.firstname: Votre prénom
+form.name: Votre nom
+form.password: Votre mot de passe
+form.phone: Votre numéro de téléphone
+form.placeholder.adress: 31 Route de Strasbourg 67610 La Wantzenau
+form.placeholder.adressevent: Lieu de la réception
+form.placeholder.editpassword: Nouveau mot de passe
+form.placeholder.email: exemple@exemple.com
+form.placeholder.firstname: Dupont
+form.placeholder.name: Pierre
+form.placeholder.password: Mot de passe
+form.placeholder.phone: 0699999999
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...
@@ -21,6 +43,7 @@ livraison.footer: Détail des livraisons
 location: Location
 mariage: Mariage
 menu.footer: Liste des menus
+sauvegarder: Sauvegarder
 services: Services
 traiteur.ConnexionLivraison: Connectez-vous et commander !
 traiteur.index.3livraison: A partir de 3 menus par livraison
