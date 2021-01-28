@@ -6,6 +6,7 @@ use InstagramScraper\Instagram;
 use GuzzleHttp;
 use Symfony\Component\Cache\Adapter\Psr16Adapter;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use App\Controller\HomeController;
 
 class InstagramServices
 {
@@ -37,6 +38,6 @@ class InstagramServices
      */
     public function getImages(int $numberOfImages): array
     {
-        return $this->connexion->getMediasByUserId(1463798983);
+        return $this->connexion->getMediasByUserId(1463798983, $numberOfImages);
     }
 }
