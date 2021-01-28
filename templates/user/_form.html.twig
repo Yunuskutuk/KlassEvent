@@ -1,4 +1,20 @@
 {{ form_start(form) }}
-{{ form_widget(form) }}
-<button class="btn btn-primary">{{ button_label|default('Sauvegarder') }}</button>
+
+{{ form_row(form.email, {'label': 'form.email'|trans,'attr': {'placeholder': 'form.placeholder.email'|trans}}) }}
+
+{{ form_row(form.password, {'label': 'form.password'|trans,'attr': {'placeholder': 'form.placeholder.password'|trans}}) }}
+
+{{ form_row(form.name, {'label': 'form.name'|trans,'attr': {'placeholder': 'form.placeholder.name'|trans}}) }}
+
+{{ form_row(form.firstName, {'label': 'form.firstname'|trans,'attr': {'placeholder': 'form.placeholder.firstname'|trans}}) }}
+
+{{ form_row(form.phone, {'label': 'form.phone'|trans,'attr': {'placeholder': 'form.placeholder.phone'|trans}}) }}
+
+{{ form_row(form.adress, {'label': 'form.adress'|trans,'attr': {'placeholder': 'form.placeholder.adress'|trans}}) }}
+
+{{ form_row(form.adressEvent, {'label': 'form.adressevent'|trans,'attr': {'placeholder': 'form.placeholder.adressevent'|trans}}) }}
+
+<button class="btn btn-primary">{{ button_label|default('sauvegarder'|trans) }}</button>
 {{ form_end(form) }}
+
+
