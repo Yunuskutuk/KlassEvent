@@ -38,6 +38,7 @@ event.index.titre2: Votre événement
 event.index.validation: C'est parti !
 event.ouverture: Ouvert tous les jours
 event.slogan: Organisateur de Mariages clef en Main
+event.titre: Klass Event
 form.account: Créer un compte
 form.account.back: Retour sur mon compte
 form.adress: Votre adresse
@@ -58,11 +59,11 @@ form.placeholder.firstname: Dupont
 form.placeholder.name: Pierre
 form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
-event.titre: Klass Event
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...
+Klass.courriel: klassevent@ymail.com
 livraison.footer: Détail des livraisons
 location: Location
 menu: Menu

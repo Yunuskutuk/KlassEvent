@@ -38,6 +38,7 @@ event.index.titre2: Senin olay
 event.index.validation: Hadi gidelim !
 event.ouverture: Her gün açık
 event.slogan: Anahtar teslimi düğün planlayıcısı
+event.titre: Klass Event
 form.account: Hesap oluştur
 form.account.back: Hesabıma dön
 form.adress: Senin adresin
@@ -58,11 +59,11 @@ form.placeholder.firstname: Dupont
 form.placeholder.name: Pierre
 form.placeholder.password: Parola
 form.placeholder.phone: 0699999999
-event.titre: Klass Event
 gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
 horaires.footer: Her gün ... h ... ila ... h ...
+Klass.courriel: klassevent@ymail.com
 livraison.footer: Teslimat detayları
 location: Kiralama
 menu: Menü
