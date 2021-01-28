@@ -5,6 +5,8 @@ account.edit.modifier: Benim bilgim
 account.login: Oturum aç
 account.logout: Çıkış Yap
 accueil: Ev
+anniversaire: yıldönümü
+baptême: vaftiz
 bouton.changer.passe: şifreyi değiştirmek için
 bouton.MAJ: Güncelleme
 bouton.modifier: Düzenle
@@ -36,6 +38,26 @@ event.index.titre2: Senin olay
 event.index.validation: Hadi gidelim !
 event.ouverture: Her gün açık
 event.slogan: Anahtar teslimi düğün planlayıcısı
+form.account: Hesap oluştur
+form.account.back: Hesabıma dön
+form.adress: Senin adresin
+form.adressevent: Etkinliğin yeri veya adresi
+form.connection: Giriş yapmak
+form.edit: Düzenle
+form.editpassword: Yeni parolanız
+form.email: E-posta adresiniz
+form.firstname: Adın
+form.name: Adınız
+form.password: Şifreniz
+form.phone: Telefon numaran
+form.placeholder.adress: 31 Route de Strasbourg 67610 La Wantzenau
+form.placeholder.adressevent: Kabul yeri
+form.placeholder.editpassword: Yeni Şifre
+form.placeholder.email: exemple@exemple.com
+form.placeholder.firstname: Dupont
+form.placeholder.name: Pierre
+form.placeholder.password: Parola
+form.placeholder.phone: 0699999999
 event.titre: Klass Event
 gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
 home.event: İşletmeler ve bireyler için yemek teslimi
@@ -51,6 +73,7 @@ navbar.livraison: Teslimat Detayları.
 navbar.ouverture: Açılış saatleri - Her gün
 rent.deco: Masa dekorasyonu
 rent.Vaisselle: Bulaşık yıkama
+sauvegarder: Kayıt etmek
 security.ça_va_là: Sen
 security.connectez: Bağlan
 security.courriel: E-posta adresi

@@ -5,6 +5,8 @@ account.edit.modifier: Mes informations
 account.login: Login
 account.logout: Logout
 accueil: Accueil
+anniversaire: Anniversaire
+baptême: Baptême
 bouton.changer.passe: changer le mot de passe
 bouton.MAJ: Mettre à jour
 bouton.modifier: Modifier
@@ -36,6 +38,26 @@ event.index.titre2: Votre événement
 event.index.validation: C'est parti !
 event.ouverture: Ouvert tous les jours
 event.slogan: Organisateur de Mariages clef en Main
+form.account: Créer un compte
+form.account.back: Retour sur mon compte
+form.adress: Votre adresse
+form.adressevent: Lieu ou adresse de l'événement
+form.connection: Se connecter
+form.edit: Editer
+form.editpassword: Votre nouveau mot de passe
+form.email: Votre email
+form.firstname: Votre prénom
+form.name: Votre nom
+form.password: Votre mot de passe
+form.phone: Votre numéro de téléphone
+form.placeholder.adress: 31 Route de Strasbourg 67610 La Wantzenau
+form.placeholder.adressevent: Lieu de la réception
+form.placeholder.editpassword: Nouveau mot de passe
+form.placeholder.email: exemple@exemple.com
+form.placeholder.firstname: Dupont
+form.placeholder.name: Pierre
+form.placeholder.password: Mot de passe
+form.placeholder.phone: 0699999999
 event.titre: Klass Event
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
 home.event: Livraison de repas pour Entreprises et Particuliers
@@ -51,6 +73,7 @@ navbar.livraison: Détails des livraison
 navbar.ouverture: Horaires d'ouverture - Tous les jours
 rent.deco: Décoration de table
 rent.Vaisselle: La vaisselle
+sauvegarder: Sauvegarder
 security.ça_va_là: Vous
 security.connectez: Connectez
 security.courriel: Courriel

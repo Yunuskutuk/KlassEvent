@@ -79,17 +79,14 @@
 						<button class="btn btn-primary mt-3">{{ 'bouton.modifier'|trans }}{# Modifier #}</button>
 					</a>
 
-					<a href="{{ path('account_change_password', {'id': app.user.id}) }}">
-						<button class="btn btn-primary mt-3">{{ button_label|default('changer le mot de passe') }}</button>
-					</a>
-				</div>
+				<a href="{{ path('account_change_password', {'id': app.user.id}) }}">
+				<button class="btn btn-danger mt-3">{{ button_label|default('Changer le mot de passe') }}</button>
+				</a>
 
-
-			</div>
-
+                </div>            
+            </div>
 		</div>
-
 	</section>
 
-	<<<<<<<HEAD<!--EndShowAccount-->=======<!--EndShowAccount--><ahref="{{path('account_edit_info',{'id':app.user.id})}}"><buttonclass="btnbtn-primary">{{'bouton.modifier'|trans}}</button></a><br><br><ahref="{{path('account_change_password',{'id':app.user.id})}}"><buttonclass="btnbtn-primary">{{'bouton.changer.passe'|trans}}{#changerlemotdepasse#}</button></a><br><br><br>>> {# Modifier #}>>>>> c0d59107191f0f31498d32572d2f3d7a27b89c46
+	<a href="{{path('account_edit_info',{'id':app.user.id})}}"><buttonclass="btnbtn-primary">{{'bouton.modifier'|trans}}</button></a><br><br><ahref="{{path('account_change_password',{'id':app.user.id})}}"><buttonclass="btnbtn-primary">{{'bouton.changer.passe'|trans}}{#changerlemotdepasse#}</button></a> {# Modifier #}
 {% endblock %}
