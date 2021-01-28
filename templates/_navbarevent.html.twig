@@ -15,22 +15,22 @@
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
 							<span class="icon-phone2"></span>
 						</div>
-						<span class="text">07 80 55 50 17</span>
+						<span class="text">{{ 'Klass.phone'|trans }}{# 07 80 55 50 17 #}</span>
 					</div>
 					<div class="col-md-2 pr-4 d-flex topper align-items-center">
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
 							<span class="icon-paper-plane"></span>
 						</div>
-						<span class="text">klassevent@ymail.com</span>
+						<span class="text">{{ 'Klass.courriel'|trans }}klassevent@ymail.com</span>
 					</div>
 					<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
 						<p class="mb-0 register-link">
-							<span>{{ event.index.perimetre|trans }}{# Déplacements jusqu'à 350km autour de Strasbourg #}</span>
+							<span>{{ 'event.index.perimetre'|trans }}{# Déplacements jusqu'à 350km autour de Strasbourg #}</span>
 						</p>
 					</div>
 					<div class="col-md-3 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
 						<p class="mb-0 register-link">
-							<span>{{ event.ouverture|trans }}{# Ouvert tous les jours #}</span>
+							<span>{{ 'event.ouverture'|trans }}{# Ouvert tous les jours #}</span>
 						</p>
 					</div>
 					{% if is_granted('ROLE_ADMIN') %}
@@ -52,41 +52,41 @@
 		<a class="navbar-brand" href="{{ path('event_index') }}">Klass Event</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="oi oi-menu"></span>
-			Menu
+			{{ 'Menu'|trans }}{# Menu #}
 		</button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a href="{{ path('home') }}" class="nav-link">{{ acceuil|trans }}{# Accueil #}</a>
+					<a href="{{ path('home') }}" class="nav-link">{{ 'acceuil'|trans }}{# Accueil #}</a>
 				</li>
 				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
 				<li class="nav-item">
-					<a href="menu.html" class="nav-link">{{ services|trans }}{# Services #}</a>
+					<a href="menu.html" class="nav-link">{{ 'services'|trans }}{# Services #}</a>
 				</li>
 				{{ render(controller('App\\Controller\\NavbarEventController::gallery')) }}
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<li>
-						<a class="dropdown-item" href="{{ path('rent_decoration') }}">{{ rent.deco|trans }}{# Décoration de table #}</a>
+						<a class="dropdown-item" href="{{ path('rent_decoration') }}">{{ 'rent.deco'|trans }}{# Décoration de table #}</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{ path('rent_dishes') }}">{{ rent.Vaisselle|trans }}{# La vaisselle #}</a>
+						<a class="dropdown-item" href="{{ path('rent_dishes') }}">{{ 'rent.Vaisselle'|trans }}{# La vaisselle #}</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{ path('rent_chair') }}">{{ rent.deco2|trans }}{# Décoration de chaise #}</a>
+						<a class="dropdown-item" href="{{ path('rent_chair') }}">{{ 'rent.deco2'|trans }}{# Décoration de chaise #}</a>
 					</li>
 				</ul>
 			</div>
 
 			{% if app.user %}
 				<li class="nav-item">
-					<a href="{{ path('account_show') }}" class="nav-link">{{ event.account.compte|trans }}{# Mon compte #}</a>
+					<a href="{{ path('account_show') }}" class="nav-link">{{ 'event.account.compte'|trans }}{# Mon compte #}</a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ path('security_logout') }}" class="nav-link">{{ account.logout|trans }}{# Logout #}</a>
+					<a href="{{ path('security_logout') }}" class="nav-link">{{ 'account.logout'|trans }}{# Logout #}</a>
 				</li>
 			{% else %}
 				<li class="nav-item">
-					<a href="{{ path('security_login') }}" class="nav-link">{{ account.login|trans }}{# Login #}</a>
+					<a href="{{ path('security_login') }}" class="nav-link">{{ 'account.login'|trans }}{# Login #}</a>
 				</li>
 			{% endif %}
 			{% if is_granted('ROLE_ADMIN') %}
@@ -96,7 +96,7 @@
 			{% endif %}
 
 			<li class="nav-item cta">
-				<a href="{{ path('event_contact') }}" class="nav-link">{{ contact|trans }}{# Contact #}</a>
+				<a href="{{ path('event_contact') }}" class="nav-link">{{ 'contact'|trans }}{# Contact #}</a>
 			</li>
 		</ul>
 	</div>
