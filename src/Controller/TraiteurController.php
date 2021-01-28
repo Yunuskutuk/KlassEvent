@@ -10,22 +10,42 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mime\Email;
 use App\Entity\Contact;
 use App\Form\ContactType;
+use App\Entity\Menu;
+use App\Form\MenuType;
+use App\Repository\MenuRepository;
 
 class TraiteurController extends AbstractController
 {
     /**
      * @Route("/traiteur", name="traiteur_index")
      */
-    public function indexTraiteur(): Response
+    public function indexTraiteur(MenuRepository $menuRepository): Response
     {
-        return $this->render('traiteur/index.html.twig');
+        $menus = $menuRepository->findBy(
+            ['menuOfWeek' => true]
+        );
+        return $this->render(
+            'traiteur/index.html.twig',
+            [
+                'menus' => $menus
+            ]
+        );
     }
+
     /**
      * @Route("/traiteur/menus", name="traiteur_menus")
      */
-    public function menusTraiteur(): Response
+    public function menusTraiteur(MenuRepository $menuRepository): Response
     {
-        return $this->render('traiteur/menus.html.twig');
+        $menus = $menuRepository->findBy(
+            ['menuOfWeek' => true]
+        );
+        return $this->render(
+            'traiteur/menus.html.twig',
+            [
+                'menus' => $menus
+            ]
+        );
     }
     /**
      * @Route("/traiteur/livraison", name="traiteur_livraison")
