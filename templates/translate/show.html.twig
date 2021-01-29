@@ -1,34 +1,54 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
 {% block title %}Translate{% endblock %}
 
 {% block body %}
-    <h1>Translate</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ translate.id }}</td>
-            </tr>
-            <tr>
-                <th>YamlKey</th>
-                <td>{{ translate.yamlKey }}</td>
-            </tr>
-            <tr>
-                <th>French</th>
-                <td>{{ translate.french }}</td>
-            </tr>
-            <tr>
-                <th>Turkish</th>
-                <td>{{ translate.turkish }}</td>
-            </tr>
-        </tbody>
-    </table>
+<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row  slider-text align-items-center justify-content-center">
+          <div class="col-md-9 text-center mt-5">
+            <h1 class="mb-2 bread">KlassEvent</h1>
+            <h2 class="breadcrumbs" style="font-size: 25px;">Traduction</h2>
+          </div>
+        </div>
+      </div>
+</section>
 
-    <a href="{{ path('translate_index') }}">back to list</a>
+<section class="ftco-section pt-5">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section">
 
-    <a href="{{ path('translate_edit', {'id': translate.id}) }}">edit</a>
+             <h1>Traduction :</h1>
 
-    {{ include('translate/_delete_form.html.twig') }}
+                <table class="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <th>YamlKey</th>
+                            <td>{{ translate.yamlKey }}</td>
+                        </tr>
+                        <tr>
+                            <th>French</th>
+                            <td>{{ translate.french }}</td>
+                        </tr>
+                        <tr>
+                            <th>Turkish</th>
+                            <td>{{ translate.turkish }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a class="btn btn-success mr-3"  href="{{ path('translate_index') }}">Retour</a>
+
+                <a class="btn btn-warning" href="{{ path('translate_edit', {'id': translate.id}) }}">Editer</a>
+
+                {{ include('translate/_delete_form.html.twig') }}
+
+                </div>
+            </div>   
+        </div>	
+    </div>
+</section>
 {% endblock %}
