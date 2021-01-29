@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Services\YamlWrite;
 
 /**
- * @Route("/translate")
+ * @Route("/admin/translate")
  */
 class TranslateController extends AbstractController
 {
