@@ -37,6 +37,6 @@ class InstagramServices
      */
     public function getImages(int $numberOfImages): array
     {
-        return $this->connexion->getMediasByUserId(1463798983);
+        return $this->connexion->getMediasByUserId(1463798983, $numberOfImages);
     }
 }

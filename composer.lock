@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a741517a0aefc91c492e03a18942eda",
+    "content-hash": "164443111aa1d2be278e45bbe04269fd",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -2739,6 +2739,11 @@
                 "instagram",
                 "scraper"
             ],
+            "support": {
+                "email": "r.kapishev@gmail.com",
+                "issues": "https://github.com/postaddictme/instagram-php-scraper/issues",
+                "source": "https://github.com/postaddictme/instagram-php-scraper/tree/v0.11.0"
+            },
             "time": "2021-01-18T13:53:46+00:00"
         },
         {
@@ -9545,7 +9550,6 @@
                 "issues": "https://github.com/phpstan/phpstan-symfony/issues",
                 "source": "https://github.com/phpstan/phpstan-symfony/tree/0.12.16"
             },
-
             "time": "2021-01-25T12:30:55+00:00"
         },
         {

@@ -23,4 +23,12 @@ class HomeController extends AbstractController
     {
         return $this->render('home/instagram.html.twig', ['instagram' => $instagramServices-> getImages($number)]);
     }
+
+    /**
+     * @Route("/admin/", name="admin_index")
+     */
+    public function indexAdmin(): Response
+    {
+        return $this->render('admin/index.html.twig');
+    }
 }
