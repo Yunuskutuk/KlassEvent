@@ -65,6 +65,9 @@ home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
+langue: Langue
+langue.fr: Français
+langue.tr: Turc
 livraison.footer: Détail des livraisons
 location: Location
 menu: Menu
@@ -85,6 +88,7 @@ quote.nom: entrez votre nom
 quote.phone: entrez votre numéro de téléphone
 quote.service: Service
 rent.deco: Décoration de table
+rent.deco2: Décoration de chaise
 rent.Vaisselle: La vaisselle
 sauvegarder: Sauvegarder
 security.ça_va_là: Vous

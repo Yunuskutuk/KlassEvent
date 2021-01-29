@@ -1,4 +1,4 @@
-<div class="py-1 bg-black top">
+<div class="py-1 bg-black top {{ app.session.flashbag.peek('success')|length > 0 ? '' : '' }}">
 	<div class="container">
 		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 			<div class="col-lg-12 d-block">
@@ -6,9 +6,9 @@
 					<div class="col-md-2 pr-4 d-flex topper align-items-start">
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
 							<a href="/trk/event">
-								<img src="{{asset('build/images/turkey.jpeg')}}" width="40"></a>
+								<img class="nav-flag" src="{{asset('build/images/Flag_of_Turkey.png')}}" width="36"></a>
 							<a href="/event">
-								<img src="{{asset('build/images/france.jpeg')}}" width="30"></a>
+								<img class="nav-flag" src="{{asset('build/images/Flag_of_France.png')}}" width="36"></a>
 						</div>
 					</div>
 					<div class="col-md-2 pr-4 d-flex topper align-items-center">
@@ -34,7 +34,7 @@
 	</div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	<div class="container">
+	<div class="container align-items-center">
 		<a class="navbar-brand" href="{{ path('event_index') }}">Klass Event</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="oi oi-menu"></span>
@@ -43,26 +43,48 @@
 		</button>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<div class="navbar-nav ml-auto">
+				<li class="flag align-items-start">
+					<div class="icon mr-2 d-flex  align-items-center contact-g flag">
+						<a href="/trk/event">
+							<img class="nav-flag" src="{{asset('build/images/Flag_of_Turkey.png')}}" width="36"></a>
+						<a href="/event">
+							<img class="nav-flag " src="{{asset('build/images/Flag_of_France.png')}}" width="36"></a>
+					</div>
+				</li>
 				<li class="nav-item">
 					<a href="{{ path('home') }}" class="nav-link">{{ 'accueil'|trans }}{# Accueil #}</a>
 				</li>
-				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
-				<li class="nav-item">
-					<a href="menu.html" class="nav-link">{{ 'services'|trans }}{# Services #}</a>
-				</li>
-				{{ render(controller('App\\Controller\\NavbarEventController::gallery')) }}
-				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<li>
-						<a class="dropdown-item" href="{{ path('rent_decoration') }}">{{ 'rent.deco'|trans }}{# Décoration de table #}</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="{{ path('rent_dishes') }}">{{ 'rent.Vaisselle'|trans }}{# La vaisselle #}</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="{{ path('rent_chair') }}">{{ 'rent.deco2'|trans }}{# Décoration de chaise #}</a>
-					</li>
-				</ul>
 
+				{{ render(controller('App\\Controller\\NavbarEventController::quoteNavbar')) }}
+				{# menu déroulant Devis #}
+
+				{{ render(controller('App\\Controller\\NavbarEventController::gallery')) }}
+				{# menu déroulant gallery #}
+
+				<div id="nav-options" class="btn-group pull-right hidden-xs">
+					<button type="button" class=" btn-dropdown dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+						{{ 'location'|trans }}
+						{# Location #}
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{{ path('rent_decoration') }}">
+								<p class="text-center">{{ 'rent.deco'|trans }}{# Décoration de table #}</p>
+							</a>
+						</li>
+						<li>
+							<a href="{{ path('rent_dishes') }}">
+								<p class="text-center">{{ 'rent.Vaisselle'|trans }}{# La vaisselle #}</p>
+							</a>
+						</li>
+						<li>
+							<a href="{{ path('rent_chair') }}">
+								<p class="text-center">{{ 'rent.deco2'|trans }}{# Décoration de chaise #}</p>
+							</a>
+						</li>
+					</ul>
+				</div>
 
 				{% if app.user %}
 					<li class="nav-item">
@@ -81,11 +103,13 @@
 						<a href="{{ path('admin_index') }}" class="nav-link">Admin</a>
 					</li>
 				{% endif %}
-
-				<li class="nav-item cta">
-					<a href="{{ path('event_contact') }}" class="nav-link">{{ 'contact'|trans }}{# Contact #}</a>
-				</li>
-			</div>
+			</li>
+			<li class="nav-item cta contact-g">
+				<a href="{{ path('event_contact') }}" class="nav-link">{{ 'contact'|trans }}{# Contact #}</a>
+			</li>
+			<li class="nav-item contact-p">
+				<a href="{{ path('event_contact') }}" class="nav-link">{{ 'contact'|trans }}{# Contact #}</a>
+			</li>
 		</div>
 	</div>
-</nav>
+</div></nav>

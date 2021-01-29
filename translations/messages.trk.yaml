@@ -65,6 +65,9 @@ home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıc�
 horaires.footer: Her gün ... h ... ila ... h ...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
+langue: Dil
+langue.fr: Fransızca
+langue.tr: Türk
 livraison.footer: Teslimat detayları
 location: Kiralama
 menu: Menü
@@ -85,6 +88,7 @@ quote.nom: adınızı giriniz
 quote.phone: telefon numaranızı girin
 quote.service: Hizmet
 rent.deco: Masa dekorasyonu
+rent.deco2: Sandalye dekorasyonu
 rent.Vaisselle: Bulaşık yıkama
 sauvegarder: Kayıt etmek
 security.ça_va_là: Sen
