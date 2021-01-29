@@ -2,6 +2,8 @@ account.back.home: Retour à l'Accueil
 account.compte: Un compte
 account.cree: Créer
 account.edit.modifier: Mes informations
+account.login: Login
+account.logout: Logout
 accueil: Accueil
 anniversaire: Anniversaire
 baptême: Baptême
@@ -34,7 +36,9 @@ event.index.step3.2: Vous êtes pleinement disponible le jour J
 event.index.titre: Choisissez
 event.index.titre2: Votre événement
 event.index.validation: C'est parti !
+event.ouverture: Ouvert tous les jours
 event.slogan: Organisateur de Mariages clef en Main
+event.titre: Klass Event
 form.account: Créer un compte
 form.account.back: Retour sur mon compte
 form.adress: Votre adresse
@@ -55,16 +59,33 @@ form.placeholder.firstname: Dupont
 form.placeholder.name: Pierre
 form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
-event.titre: Klass Event
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...
+Klass.courriel: klassevent@ymail.com
+Klass.phone: 07 80 55 50 17
 livraison.footer: Détail des livraisons
 location: Location
-mariage: Mariage
+menu: Menu
 menu.footer: Liste des menus
 mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
+navbar.gallerie: Gallerie
+navbar.livraison: Détails des livraison
+navbar.ouverture: Horaires d'ouverture - Tous les jours
+quote.choix.option: --Veillez choisir votre option--
+quote.dateEvenement: Jour et heure de l’événement
+quote.demandes: Remarques, instructions, questions et demandes
+quote.description: Description
+quote.devis: demander un devis
+quote.email: entrez votre email
+quote.lieu: le lieu de l’événement
+quote.nbrInvites: nombre d'invités
+quote.nom: entrez votre nom
+quote.phone: entrez votre numéro de téléphone
+quote.service: Service
+rent.deco: Décoration de table
+rent.Vaisselle: La vaisselle
 sauvegarder: Sauvegarder
 security.ça_va_là: Vous
 security.connectez: Connectez
@@ -93,22 +114,3 @@ traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
 traiteur.VoirMenus: Voir les menus
 vaisselle: vaisselle
-user.delete: Supprimer définitivement le compte
-user.edit: Utilisateurs
-user.edit.back: Retour
-user.edit.title: Editer un compte utilisateur
-user.index.actions: Actions
-user.index.adressevenement: Adresse de l'evenement
-user.index.couriel: Couriel
-user.index.domicile: Adresse du domicile
-user.index.edit: Editer
-user.index.id: Id
-user.index.listuser: Liste des utilisateurs
-user.index.newuser: Ajouter un utlisateur
-user.index.nom: Nom
-user.index.prenom: Prenom
-user.index.see: Voir
-user.index.telephone: Telephone
-user.index.userfail: Pas d'utilisateur trouvé
-user.show.mdp: Mot de passe
-user.show.roles: Roles
