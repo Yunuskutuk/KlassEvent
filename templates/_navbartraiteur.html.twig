@@ -5,10 +5,10 @@
 				<div class="row d-flex">
 					<div class="col-md-2 pr-4 d-flex topper align-items-start">
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
-							<a href="/trk/traiteur">
-								<img src="{{asset('build/images/turkey.jpeg')}}" width="40"></a>
-							<a href="/traiteur">
-								<img src="{{asset('build/images/france.jpeg')}}" width="30"></a>
+							<a href="/trk/event">
+								<img class="nav-flag" src="{{asset('build/images/Flag_of_Turkey.png')}}" width="36"></a>
+							<a href="/event">
+								<img class="nav-flag" src="{{asset('build/images/Flag_of_France.png')}}" width="36"></a>
 						</div>
 					</div>
 					<div class="col-md-2 pr-4 d-flex topper align-items-center">
@@ -21,11 +21,11 @@
 						<div class="icon mr-2 d-flex justify-content-center align-items-center">
 							<span class="icon-paper-plane"></span>
 						</div>
-						<span class="text">klassevent@ymail.com</span>
+						<span class="text">{{ 'Klass.courriel'|trans }}</span>
 					</div>
-					<div class="col-md-5 pr-4 d-flex topper align-items-end">
+					<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
 						<p class="mb-0 register-link">
-							<span>{{ 'traiteur.livraison'|trans }}{# Livraison: 20 km autour de Strasbourg #}</span>
+							<span>{{ 'event.index.perimetre'|trans }}{# Déplacements jusqu'à 350km autour de Strasbourg #}</span>
 						</p>
 					</div>
 				</div>
@@ -44,6 +44,14 @@
 
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
+				<li class="flag align-items-start">
+					<div class="icon mr-2 d-flex  align-items-center contact-g flag">
+						<a href="/trk/event">
+							<img class="nav-flag" src="{{asset('build/images/Flag_of_Turkey.png')}}" width="36"></a>
+						<a href="/event">
+							<img class="nav-flag " src="{{asset('build/images/Flag_of_France.png')}}" width="36"></a>
+					</div>
+				</li>
 				<li class="nav-item">
 					<a href="{{ path('home') }}" class="nav-link">{{ 'accueil'|trans }}{# Accueil #}</a>
 				</li>
@@ -70,7 +78,11 @@
 						<a href="{{ path('admin_index') }}" class="nav-link">Admin</a>
 					</li>
 				{% endif %}
-				<li class="nav-cta">
+
+				<li class="nav-cta contact-g">
+					<a href="{{ path('traiteur_contact') }}" class="nav-link">{{ 'contact'|trans }}{# Contact #}</a>
+				</li>
+				<li class="nav-item contact-p">
 					<a href="{{ path('traiteur_contact') }}" class="nav-link">{{ 'contact'|trans }}{# Contact #}</a>
 				</li>
 			</ul>

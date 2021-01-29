@@ -1,9 +1,10 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}Gallerie!{% endblock %}
+{% block title %}Gallerie!
+{% endblock %}
 
 {% block body %}
-<!-- Background picture -->
+	<!-- Background picture -->
 
 	<section class="home-slider owl-carousel">
 		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_10542.jpg') }}')">
@@ -29,25 +30,22 @@
 		<div class="container">
 
 			<div class="row mt-5">
-            {% for picture in services.picture %}
-				<div class="col-md-4 ">
-					<div class="blog-entry">
-						<div class="zoom-gallery">
-							<p
-                            class="block-20 picture-gallery"
-                            style="background-image:url('/images/uploads/{{ picture.path }}')">
-                            </p>
-						</div>
-						<div class="text pt-3 pb-4 px-4">
-							<h3 class="heading">
-								{{ picture.description|trans }}
-							</h3>
+				{% for picture in services.picture %}
+					<div class="col-md-4 ">
+						<div class="blog-entry">
+							<div class="zoom-gallery">
+								<p class="block-20 picture-gallery" style="background-image:url('/images/uploads/{{ picture.path }}')"></p>
+							</div>
+							<div class="text pt-3 pb-4 px-4">
+								<h3 class="heading">
+									{{ 'picture.description'|trans }}
+								</h3>
+							</div>
 						</div>
 					</div>
-				</div>
-            {% else %}
-                <p>{{ 'gallery.index.rien'|trans }}{# aucune images dans les services, contactez l'administrateur #}</p>
-            {% endfor %}
+				{% else %}
+					<p>{{ 'gallery.index.rien'|trans }}{# aucune images dans les services, contactez l'administrateur #}</p>
+				{% endfor %}
 			</div>
 		</div>
 	</section>

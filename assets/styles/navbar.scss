@@ -4,6 +4,24 @@
     background :none;
     color : $light;
 }
+.nav-flag {
+    margin-left: 10px;
+    margin-top: 3px;
+}
 
-
-
+@media screen and (min-width: 991px) {
+    .traduction {
+        display: none;
+      }
+      .contact-p {
+        display: none;
+      }
+      .flag {
+        display: none;
+      }
+}
+@media screen and (max-width: 991px) {
+      .contact-g {
+        display: none;
+      }
+}
