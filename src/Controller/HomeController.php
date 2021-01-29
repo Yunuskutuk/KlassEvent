@@ -16,7 +16,13 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig');
     }
-
+    /**
+     * @Route("/admin/", name="admin_index")
+     */
+    public function indexAdmin(): Response
+    {
+        return $this->render('admin/index.html.twig');
+    }
     public function lastInstagram(InstagramServices $instagramServices, int $number): Response
     {
         return $this->render('home/instagram.html.twig', ['instagram' => $instagramServices->getImages($number)]);
