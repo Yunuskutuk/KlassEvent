@@ -3,7 +3,29 @@
 {% block title %}Hello QuoteController!{% endblock %}
 
 {% block body %}
-<h1> on est dans la page des devis pour un {{ event.type }} </h1>
+
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_10542.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">{{ 'event.titre'|trans }}{# Klass Event #}</span>
+						<h2 class="mb-4 h2-event">Les Devis</h2>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Background picture -->
+
+<div class="container">
+<h1>{{ 'quote.for'|trans }}{# devis pour un #} {{ event.type }} </h1>
 {% set eventPage = event.type %}
 
     <form action="{{ path('quote_send') }}" method="POST">
@@ -15,7 +37,7 @@
         </div>
         <br>
         <div class="form-group">
-            <label for="adress">{#{{ 'quote.lieu'|trans }}#} le lieu de l'évenement :</label>
+            <label for="adress">{{ 'quote.lieu.event'|trans }}{# le lieu de l'événement #}:</label>
             <br>
             <textarea class="form-control" id="adress" name="adress" rows="3"
             cols="33" placeholder="entrez l'adresse entière" required></textarea>
@@ -70,7 +92,9 @@
         </div>
         <br>
         <br>
-        <input type="submit" value="{{ 'quote.devis'|trans }}{# demander un devis #}">
+        <input class="btn btn-primary" type="submit" value="{{ 'quote.devis'|trans }}{# demander un devis #}">
     </form>
+    <br>
+    </div>
 
 {% endblock %}
