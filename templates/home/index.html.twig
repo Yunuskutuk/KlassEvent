@@ -1,50 +1,48 @@
-{% extends 'base.html.twig' %}
+{% extends 'basehome.html.twig' %}
 
-{% block title %}Home
-{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
 
-	<!-- Background picture -->
+	<!-- Step 1, 2, 3 -->
 
-	<section class="home-slider owl-carousel">
-		<section class="home-slider bg-light">
-			<div class="container">
-				<div class="row justify-content-center mb-3">
-					<div class="col-md-6 text-center heading-section">
-						<img src="{{ asset('build/images/logo_klass.png') }}" style="margin-top:5px" alt="Logo klass Event">
-					</div>
-					<div>
-					</div>
+	<section class="ftco-section div-home">
+		<div class="container">
 
-
-
-
-
-					<div class="row">
-						<div class="col-md-6 d-flex align-self-stretch text-center">
-							<div class="media block-6 services d-block step-background margin-event">
-								<a href="{{ path('traiteur_index') }}" class="block-20" style="background-image:url('{{ asset('build/images/ImgKlassEvent/accueil_traiteur.jpg') }}')"></a>
-								<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-									<h3 class="heading">Klass Traiteur</h3>
-									<p>{{ 'home.event'|trans }}</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 d-flex align-self-stretch text-center">
-							<div class="media block-6 services d-block step-background margin-event">
-								<a href="{{ path('event_index') }}" class="block-20" style="background-image:url('{{ asset('build/images/ImgKlassEvent/accueil_event.jpg') }}')"></a>
-								<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-									<h3 class="heading">Klass Event</h3>
-									<p styles="color: black;">{{ 'home.traiteur'|trans }}</p>
-								</div>
-							</div>
-						</div>
-					</div>
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-12 text-center heading-section">
+					<img src="{{ asset('build/images/logo_klass.png') }}" style="margin-top:5px" alt="Logo klass Event">
 				</div>
 			</div>
-		</section>
+
+			<div class="row">
+
+					<div class="col-md-6 d-flex align-self-stretch text-center">
+						<div class="media block-6 services d-block step-background margin-home">
+							<a href="{{ path('traiteur_index') }}" class="block-20" style="background-image:url('{{ asset('build/images/ImgKlassEvent/accueil_traiteur.jpg') }}')"></a>
+							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+								<h3 class="heading">Klass Traiteur</h3>
+								<p><em>{{ 'home.event'|trans }}</em></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 d-flex align-self-stretch text-center">
+						<div class="media block-6 services d-block step-background margin-home">
+							<a href="{{ path('event_index') }}" class="block-20" style="background-image:url('{{ asset('build/images/ImgKlassEvent/accueil_event.jpg') }}')"></a>
+							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+								<h3 class="heading">Klass Event</h3>
+								<p><em>{{ 'home.traiteur'|trans }}</em></p>
+							</div>
+						</div>
+					</div>	
+
+			</div>
+
+		</div>
 
 	</section>
-	<!-- End Background picture -->
+
+	<!-- End Step -->
+
 {% endblock %}
