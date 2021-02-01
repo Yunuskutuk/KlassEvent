@@ -1,0 +1,69 @@
+{% extends 'baseevent.html.twig' %}
+
+{% block title %}Hello QuoteController!{% endblock %}
+
+{% block body %}
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/ImgKlassEvent/IMG_10542.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+					<div class="col-md-12 col-sm-12 text-center">
+						<span class="subheading">{{ 'event.titre'|trans }}{# Klass Event #}</span>
+						<h2 class="mb-4 h2-event">Les Devis</h2>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Background picture -->
+
+<section class="ftco-section">
+		<div class="container">
+
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-12 text-center heading-section">
+					<span class="subheading">{{'event.index.titre'|trans}}</span>
+					<h2 class="mb-4">{{'event.index.titre2'|trans}}</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h2>{{'quote.question1'|trans}}{# Comment ça marche? #}</h2>
+
+                <p>{{'quote.p1'|trans}}{# Bien en général, le principe nous organisons divers type d'événements
+                et nous sommes souples sur l'organisation #}</p>
+
+                <p>{{'quote.p2'|trans}}{# A ce stade d'avancement, nous avons besoin d'en apprendre un peu plus #}</p>
+
+                <h2>{{'quote.question2'|trans}}{# mais je ne sais pas comment m'y prendre #}</h2>
+
+                <p>{{'quote.p3'|trans}}{# rassurez vous, rien n'est définitif, c'est juste pour avoir une base de discussion #}</p>
+
+                <p>{{'quote.p4'|trans}}{# donc, resseignez les choses selon ce que vous savez pour le moment, ensuite, un vrai humanin
+                expérimenté va prendre en charge le pré-devis et discuter avec vous au téléphone (ou par e-mail,
+                si vous le demandez) pour regler tout les petits détails auquel on ne pense pas toujours #}</p>
+
+                <p>{{'quote.p5'|trans}}{# donc, première étape #}:</p>
+
+                <h2>{{'quote.question3'|trans}}{# Choisissez votre événement #}:</h2>
+
+                <ul>
+                    {% for event in events %}
+                        <li><a href="{{ path('quote_quote', {'id': event.id}) }}">
+                        <p class="text-center">{{ event.type|trans }}</p></a> </li>
+                    {% endfor %}
+                </ul>
+			</div>
+		</div>
+
+	</section>
+
+{% endblock %}

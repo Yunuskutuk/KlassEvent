@@ -53,4 +53,15 @@ class QuoteController extends AbstractController
             'event' => $eventSelected
         ]);
     }
+
+    /**
+     * @Route("/quote", name="quote_start")
+     */
+    public function start(EventRepository $eventRepository): Response
+    {
+        $events = $eventRepository->findAll();
+        return $this->render('quote/start.html.twig', [
+            'events' => $events
+        ]);
+    }
 }
