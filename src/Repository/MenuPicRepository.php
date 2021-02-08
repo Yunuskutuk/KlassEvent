@@ -12,7 +12,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method MenuPicture[]    findAll()
  * @method MenuPicture[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class MenuPictureRepository extends ServiceEntityRepository
+class MenuPicRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {

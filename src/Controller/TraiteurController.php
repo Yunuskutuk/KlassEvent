@@ -14,7 +14,7 @@ use App\Form\ContactType;
 use App\Entity\Menu;
 use App\Form\MenuType;
 use App\Repository\MenuRepository;
-use App\Repository\MenuPictureRepository;
+use App\Repository\MenuPicRepository;
 
 class TraiteurController extends AbstractController
 {
@@ -39,7 +39,7 @@ class TraiteurController extends AbstractController
      */
     public function menusTraiteur(
         MenuRepository $menuRepository,
-        MenuPictureRepository $menupictureRepository
+        MenuPicRepository $menupicRepository
     ): Response {
         $menus = $menuRepository->findBy(
             ['menuOfWeek' => true]
@@ -49,7 +49,7 @@ class TraiteurController extends AbstractController
             [
                 'menus' => $menus,
 
-                'pictures' => $menupictureRepository->findAll()
+                'pictures' => $menupicRepository->findAll()
             ]
         );
     }
@@ -98,9 +98,9 @@ class TraiteurController extends AbstractController
     /**
      * @Route("/traiteur/show/{type}", name="traiteur_showpicture", methods={"GET"})
      */
-    public function show(MenuPictureRepository $menupictureRepository, string $type): Response
+    public function show(MenuPicRepository $menupicRepository, string $type): Response
     {
-        $picture = $menupictureRepository->findBy(
+        $picture = $menupicRepository->findBy(
             ['type' => $type]
         );
         return $this->render(
