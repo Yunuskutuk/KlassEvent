@@ -10,44 +10,44 @@
 			<div class="row  slider-text align-items-center justify-content-center">
 				<div class="col-md-9 text-center mt-5">
 					<h1 class="mb-2 bread">KlassTraiteur</h1>
-					<h2 class="breadcrumbs" style="font-size: 25px;">Traiteur</h2>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<h1>Menu Picture index</h1>
+	<section class="ftco-section pt-5">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section">
+					<h2 class="mb-5">Toutes les images :</h2>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>Path</th>
-				<th>Alt</th>
-				<th>Name</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for picture in pictures %}
-				<tr>
-					<td>{{ picture.id }}</td>
-					<td>{{ picture.path }}</td>
-					<td>{{ picture.alt }}</td>
-					<td>{{ picture.name }}</td>
-					<td>
-						<a href="{{ path('admin_menupicture_show', {'id': picture.id}) }}">show</a>
-						<a href="{{ path('admin_menupicture_edit', {'id': picture.id}) }}">edit</a>
-						{{ include('admin/menuPicture/_delete_form.html.twig') }}
-					</td>
-				</tr>
-			{% else %}
-				<tr>
-					<td colspan="5">aucunes images trouvées</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-
-	<a href="{{ path('admin_menupicture_new') }}">Création d'une nouvelle image</a>
+					<table class="table table-striped">
+						<thead class="table-dark">
+							<tr>
+								<th class="text-center">Nom du menu</th>
+								<th class="text-center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for picture in pictures %}
+								<tr>
+									<td class="text-admin text-center">{{ picture.name }}</td>
+									<td class="text-admin text-center">
+										<a class="btn btn-info" href="{{ path('admin_menupicture_show', {'id': picture.id}) }}">Voir</a>
+										<a class="btn btn-warning" href="{{ path('admin_menupicture_edit', {'id': picture.id}) }}">Editer</a>
+									</td>
+								</tr>
+							{% else %}
+								<tr>
+									<td colspan="3">Pas de menus trouvé</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					<a type="button" class="btn btn-success" href="{{ path('admin_menupicture_new') }}">Ajouter une nouvelle photo</a>
+					<a type="button" class="btn btn-dark" href="{{ path('admin_index') }}">Retour</a>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

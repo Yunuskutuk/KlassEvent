@@ -32,7 +32,7 @@
 			<ul class="navbar-nav ml-auto">
 
 				<li class="nav-item">
-					<a href="{{ path('home') }}" class="nav-link">Accueil</a>
+					<a href="{{ path('admin_index') }}" class="nav-link">Accueil</a>
 				</li>
 				<li class="nav-item">
 					<a href="{{ path('admin_user_index') }}" class="nav-link">Utilisateurs</a>
@@ -71,13 +71,17 @@
 						<li>
 							<a class="dropdown-item" href="{{ path('admin_traiteur_index') }}">Gérer les menus</a>
 						</li>
+						<li>
+							<a class="dropdown-item" href="{{ path('admin_menupicture_index') }}">Gérer les photos vitrines</a>
+						</li>
 					</ul>
 				</div>
 				<li class="nav-item">
 					<a href="{{ path('translate_index') }}" class="nav-link">Traduction</a>
 				</li>
-				<li class="nav-item admin-button">
-					<a href="{{ path('security_logout') }}" class="nav-link">Se déconnecter</a>
+
+				<li class="nav-item">
+					<a type="button" class="btn btn-dark nav-link" href="{{ path('security_logout') }}">Se déconnecter</a>
 				</li>
 			</ul>
 		</div>

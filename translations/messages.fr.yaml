@@ -63,14 +63,17 @@ form.placeholder.name: Pierre
 form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
-hjihk: hjihk
 garde d'enfants: garde d'enfants
+hjihk: hjihk
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 hop, buffet froid, histoire de voir: hop, buffet froid, histoire de voir
 horaires.footer: Tous les jours de ...h... à ...h...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
+langue: Langue
+langue.fr: Français
+langue.tr: Turc
 le big truc: le big truc
 Le super menu: Le super menu
 les photos de l'évenement: les photos de l'évenement
@@ -85,12 +88,12 @@ navbar.gallerie: Gallerie
 navbar.livraison: Détails des livraison
 navbar.ouverture: Horaires d'ouverture - Tous les jours
 nos.menus: Nos menus
-prix.general: Prix
 petit banquet: petit banquet
 photo de base: photo de base
 Photo Souvenir: Photo Souvenir
 photographe pro: photographe pro
 Plat 01: Plat 01
+prix.general: Prix
 quote.choix.option: --Veillez choisir votre option--
 quote.dateEvenement: Jour et heure de l’événement
 quote.demandes: Remarques, instructions, questions et demandes
@@ -98,6 +101,7 @@ quote.description: Description
 quote.devis: demander un devis
 quote.email: entrez votre email
 quote.for: devis pour un
+quote.lieu: le lieu de l’événement
 quote.lieu.event: le lieu de l’événement
 quote.nbrInvites: nombre d'invités
 quote.nom: entrez votre nom
@@ -112,6 +116,7 @@ quote.question2: mais je ne sais pas comment m'y prendre
 quote.question3: Choisissez votre événement
 quote.service: Service
 rent.deco: Décoration de table
+rent.deco2: Décoration de chaise
 rent.Vaisselle: La vaisselle
 retour.general: Retour
 sauvegarder: Sauvegarder
@@ -124,6 +129,7 @@ security.deja.connecte: Vous êtes déjà connecté avec
 security.email: Renseignez votre e-mail et votre mot de passe pour vous connecter
 security.password: Mot de passe
 services: Services
+table pour les mariés: table pour les mariés
 traiteur.aperitif: Les apéritifs
 traiteur.ConnexionLivraison: Connectez-vous et commander !
 traiteur.desserts: Les Desserts et fruits

@@ -1,51 +1,60 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
-{% block title %}Picture index{% endblock %}
+{% block title %}Picture index
+{% endblock %}
 
 {% block body %}
-    <section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row  slider-text align-items-center justify-content-center">
-          <div class="col-md-9 text-center mt-5">
-            <h1 class="mb-2 bread">KlassEvent</h1>
-            <h2 class="breadcrumbs" style="font-size: 25px;">Evenements</h2>
-          </div>
-        </div>
-      </div>
-</section>
-    
-    <h1>Picture index</h1>
+	<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row  slider-text align-items-center justify-content-center">
+				<div class="col-md-9 text-center mt-5">
+					<h1 class="mb-2 bread">KlassEvent</h1>
+					<h2 class="breadcrumbs" style="font-size: 25px;">Images mariages</h2>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Path</th>
-                <th>Alt</th>
-                <th>Name</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for picture in pictures %}
-            <tr>
-                <td>{{ picture.id }}</td>
-                <td>{{ picture.path }}</td>
-                <td>{{ picture.alt }}</td>
-                <td>{{ picture.name }}</td>
-                <td>
-                    <a href="{{ path('admin_picture_show', {'id': picture.id}) }}">show</a>
-                    <a href="{{ path('admin_picture_edit', {'id': picture.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+	<section class="ftco-section pt-5">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section">
+					<h2 class="mb-5">Toutes les images mariage :</h2>
 
-    <a href="{{ path('admin_picture_new') }}">Create new</a>
+					<table class="table table-striped">
+						<thead class="table-dark">
+							<tr>
+								<th class="text-center">Nom</th>
+								<th class="text-center">Description</th>
+								{# <th class="text-center">Service</th> #}
+								<th class="text-center">Actions</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{% for picture in pictures %}
+								<tr>
+									<td class="text-admin-3 text-center">{{ picture.name }}</td>
+									<td class="text-admin text-center">{{ picture.description }}</td>
+									{# <td class="text-admin text-center">{{ picture.services }}</td> #}
+									<td class="text-admin text-center">
+										<a class="btn btn-info" href="{{ path('admin_picture_show', {'id': picture.id}) }}">Voir</a>
+										<a class="btn btn-warning" href="{{ path('admin_picture_edit', {'id': picture.id}) }}">Editer</a>
+									</td>
+								</tr>
+							{% else %}
+								<tr>
+									<td colspan="4">Pas d'image trouvé</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					<a type="button" class="btn btn-success" href="{{ path('admin_picture_new') }}">Ajouter une nouvelle image</a>
+					<a type="button" class="btn btn-dark" href="{{ path('admin_index') }}">Retour</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
 {% endblock %}

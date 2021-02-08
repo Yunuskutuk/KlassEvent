@@ -1,16 +1,35 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
-{% block title %}Edit Menu picture
+{% block title %}Edit Image
 {% endblock %}
 
 {% block body %}
-	<h1>Edit Menu Picture</h1>
 
-	<img src="/images/uploads/{{ picture.path }}" alt="{{ picture.alt }}">
+	<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row  slider-text align-items-center justify-content-center">
+				<div class="col-md-9 text-center mt-5">
+					<h1 class="mb-2 bread">KlassTraiteur</h1>
+					<h2 class="breadcrumbs" style="font-size: 25px;">Image vitrine</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section pt-5">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section">
 
-	{{ include('admin/menuPicture/_form.html.twig', {'button_label': 'Update'}) }}
+					<h1>Editer l'image</h1>
 
-	<a href="{{ path('admin_menupicture_index') }}">retour à la liste</a>
+					{{ include('admin/menuPicture/_form.html.twig') }}
 
-	{{ include('admin/menuPicture/_delete_form.html.twig') }}
+					{{ include('admin/menuPicture/_delete_form.html.twig') }}
+
+				</div>
+			</div>
+		</div>
+	</section>
+
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'baseadmin.html.twig' %}
 
-{% block title %}Event index
+{% block title %}Menu index
 {% endblock %}
 
 {% block body %}
@@ -10,10 +10,7 @@
 		<div class="container">
 			<div class="row  slider-text align-items-center justify-content-center">
 				<div class="col-md-9 text-center mt-5">
-					<h1 class="mb-2 bread">KlassEvent</h1>
-					<h2 class="breadcrumbs" style="font-size: 25px;">
-						<Menu></Menu>
-					</h2>
+					<h1 class="mb-2 bread">KlassTraiteur</h1>
 				</div>
 			</div>
 		</div>
@@ -34,8 +31,8 @@
 						</thead>
 						<tbody>
 							{% for menu in menus %}
-								<tr class="text-center">
-									<td>{{ menu.name }}</td>
+								<tr {# class="text-center" #}>
+									<td class="text-admin text-center">{{ menu.name }}</td>
 									<td>
 										<a class="btn btn-info" href="{{ path('admin_traiteur_show', {'id': menu.id}) }}">Voir</a>
 										<a class="btn btn-warning" href="{{ path('admin_traiteur_edit', {'id': menu.id}) }}">Editer</a>
@@ -46,18 +43,17 @@
 										{% endif %}
 									</td>
 								</tr>
-							</td>
+							{% else %}
+								<tr>
+									<td colspan="3">Pas de menus trouvé</td>
+								</tr>
+							{% endfor %}
 						</tbody>
-					</tr>
-				{% else %}
-					<tr>
-						<td colspan="3">Pas de menus trouvé</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-		<a type="button" class="btn btn-dark" href="{{ path('admin_traiteur_new') }}">Ajouter un nouveau menu</a>
-		<a type="button" class="btn btn-dark" href="{{ path('admin_index') }}">Retour</a>
-
-	</div>
-</div></div></section>{% endblock %}
+					</table>
+					<a type="button" class="btn btn-success" href="{{ path('admin_traiteur_new') }}">Ajouter un nouveau menu</a>
+					<a type="button" class="btn btn-dark" href="{{ path('admin_index') }}">Retour</a>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
