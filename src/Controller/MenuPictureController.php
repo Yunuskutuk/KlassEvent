@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\MenuPicture;
 use App\Form\MenuPictureType;
 use App\Services\YamlWrite;
-use App\Repository\MenuPicRepository;
+use App\Repository\MenuPictureRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,7 +19,7 @@ class MenuPictureController extends AbstractController
     /**
      * @Route("/", name="admin_menupicture_index", methods={"GET"})
      */
-    public function index(MenuPicRepository $menupicRepository): Response
+    public function index(MenuPictureRepository $menupicRepository): Response
     {
         return $this->render('admin/menuPicture/index.html.twig', [
             'pictures' => $menupicRepository->findAll(),

@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Repository\MenuPicRepository;
+use App\Repository\MenuPictureRepository;
 use Doctrine\ORM\Mapping as ORM;
 use DateTime;
 use Symfony\Component\HttpFoundation\File\File;
@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Entity(repositoryClass=MenuPicRepository::class)
+ * @ORM\Entity(repositoryClass=MenuPictureRepository::class)
  * @UniqueEntity("path")
  * @Vich\Uploadable
  */
