@@ -9,10 +9,12 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mime\Email;
 use App\Entity\Contact;
+use App\Entity\MenuPicture;
 use App\Form\ContactType;
 use App\Entity\Menu;
 use App\Form\MenuType;
 use App\Repository\MenuRepository;
+use App\Repository\MenuPictureRepository;
 
 class TraiteurController extends AbstractController
 {
@@ -35,15 +37,19 @@ class TraiteurController extends AbstractController
     /**
      * @Route("/traiteur/menus", name="traiteur_menus")
      */
-    public function menusTraiteur(MenuRepository $menuRepository): Response
-    {
+    public function menusTraiteur(
+        MenuRepository $menuRepository,
+        MenuPictureRepository $menupictureRepository
+    ): Response {
         $menus = $menuRepository->findBy(
             ['menuOfWeek' => true]
         );
         return $this->render(
             'traiteur/menus.html.twig',
             [
-                'menus' => $menus
+                'menus' => $menus,
+
+                'pictures' => $menupictureRepository->findAll()
             ]
         );
     }
@@ -87,5 +93,21 @@ class TraiteurController extends AbstractController
         return $this->render('traiteur/contact.html.twig', [
             "form" => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/traiteur/show/{type}", name="traiteur_showpicture", methods={"GET"})
+     */
+    public function show(MenuPictureRepository $menupictureRepository, string $type): Response
+    {
+        $picture = $menupictureRepository->findBy(
+            ['type' => $type]
+        );
+        return $this->render(
+            'traiteur/show.html.twig',
+            [
+                'picture' => $picture
+            ]
+        );
     }
 }
