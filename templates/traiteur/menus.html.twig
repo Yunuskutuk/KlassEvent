@@ -6,169 +6,134 @@
 
 {% block body %}
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLabel">Grillade mixte</h2>
-                    <span><img src="{{ asset('build/images/menu1.jpeg') }}" height="60px" data-overlay="gallery"></span>
-                </div>
-                <div class="modal-body">
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                </div>
-                <button type="button" value="Retour" onclick="document.location.href='menus'" class="btn see">Retour</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Beyti</h2>
-                    <span><img src="{{ asset('build/images/menu2.jpeg') }}" height="60ox" data-overlay="gallery"></span>
-                </div>
-                <div class="modal-body">
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                </div>
-                <button type="button" value="Retour" onclick="document.location.href='menus'" class="btn see">Retour</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalEnd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Sauté d'agneau</h2>
-                    <span><img src="{{ asset('build/images/menu3.jpeg') }}" height="60px" data-overlay="gallery"></span>
-                </div>
-                <div class="modal-body">
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                    <h5 class="mr-5 modal-title" id="exampleModalLabel">- (détail)</h5>
-                </div>
-                <button type="button" value="Retour" onclick="document.location.href='menus'" class="btn see">Retour</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Background picture -->
-<section class="home-slider owl-carousel">
-    <div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/lunch-4.jpg') }}')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-                <section class="ftco-section">
-                    <div class="container">
-                        <div class="row justify-content-center mb-5 pb-2">
-                            <div class="col-md-12 text-center heading-section">
-                                <span class="menu-traiteur">Nos menus</span>
-                                <h2 class="mb-4 h2-event">De la semaine</h2>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4 d-flex align-self-stretch text-center">
-                                <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
-                                    <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                                        <img src="{{ asset('build/images/menu1.jpeg') }}"  alt="menu1">
-                                        <h3 class="heading">Grillade mixte</h3>
-                                    </div>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn see" data-toggle="modal" data-target="#exampleModal">
-                                        Voir le menu
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 d-flex align-self-stretch text-center">
-                                <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
-                                    <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                                        <img src="{{ asset('build/images/menu2.jpeg') }}" alt="menu2">
-                                        <h3 class="heading">Beyti</h3>
-                                        <!-- Button trigger modal -->
-                                            <button type="button" class="btn see" data-toggle="modal" data-target="#exampleModalCenter">
-                                            Voir le menu
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 d-flex align-self-stretch text-center">
-                                <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
-                                    <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                                        <img src="{{ asset('build/images/menu3.jpeg') }}" alt="menu3">
-                                        <h3 class="heading">Sauté d'agneau</h3>
-                                                </div>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn see" data-toggle="modal" data-target="#exampleModalEnd">
-                                        Voir le menu
-                                    </button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
+	<!-- Modal -->
+	{% for menu in menus %}
+		<div class="modal fade" id="exampleModal{{menu.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title" id="exampleModalLongTitle">{{menu.name|trans}}</h2>
+						<span><img src="/images/uploads/{{ menu.path }}" class="size-img" data-overlay="gallery"></span>
+					</div>
+					<div class="modal-body">
+						<h5 class="mr-5 modal-title" id="exampleModalLabel">
+							{{"quote.description"|trans}}
+							:
+						</h5>
+						<p>
+							{{menu.description|trans}}
+						</p>
+						<h5 class="mr-5 modal-title" id="exampleModalLabel">
+							{{"detail.general"|trans}}
+							:
+						</h5>
+						<p>
+							{{menu.more|trans}}
+						</p>
+						<h5 class="mr-5 modal-title" id="exampleModalLabel">{{"prix.general"|trans}}
+							:</h5>
+						<p>
+							{{menu.price}}
+							€
+						</p>
+					</div>
+					<button type="button" value="Retour" onclick="document.location.href='menus'" class="btn see">{{"retour.general"|trans}}</button>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
 
 
-            </div>
-        </div>
-    </div>
-</section>
+	<!-- Background picture -->
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/lunch-4.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+					<section class="ftco-section">
+						<div class="container">
+							<div class="row justify-content-center mb-5 pb-2">
+								<div class="col-md-12 text-center heading-section">
+									<span class="menu-traiteur">{{"nos.menus"|trans}}</span>
+									<h2 class="mb-4 h2-event">{{"traiteur.index.menus2"|trans}}</h2>
+								</div>
+							</div>
+							<div class="row">
+								{% for menu in menus %}
+									<div class="col-md-4 d-flex align-self-stretch text-center">
+										<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
+											<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+												<img src="/images/uploads/{{ menu.path }}" class="size-img">
+												<h3 class="heading">{{menu.name|trans}}</h3>
+											</div>
+											<!-- Button trigger modal -->
+											<button type="button" class="btn see" data-toggle="modal" data-target="#exampleModal{{menu.id}}">
+												{{"traiteur.voirlemenu"|trans}}
+											</button>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<!-- End Background picture -->
+	<!-- End Background picture -->
 
+	<!-- Détails menu -->
 
-<!-- Menu 1, 2, 3 -->
-
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-12 text-center heading-section">
-                <span class="menu-traiteur">Notre carte</span>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 d-flex align-self-stretch text-center">
-                <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
-                    <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                        <img src="{{ asset('build/images/entree3.jpeg') }}" height="150px" alt="Entrée">
-                        <h3 class="mt-5 heading">Les Entrées</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 d-flex align-self-stretch text-center">
-                <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
-                    <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                        <img src="{{ asset('build/images/plat3.jpeg') }}" height="150px" alt="Plat">
-                        <h3 class="mt-5 heading">Les Plats</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 d-flex align-self-stretch text-center">
-                <div class="media block-6 services d-block step-background-traiteur margin-traiteur">
-                    <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                        <img src="{{ asset('build/images/dessert.jpeg') }}" height="150px" alt="Dessert">
-                        <h3 class="mt-5 heading">Les Desserts</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- End Step -->
-{% endblock %}
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-12 text-center heading-section">
+					<span class="menu-traiteur">{{"traiteur.menu.savoirfaire"|trans}}
+						:</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background margin-event">
+						<a href="{{ path('traiteur_showpicture', {'type': 'aperitif'} )}}" class="block-20" style="background-image:url({{ asset('build/images/entree3.jpeg') }})"></a>
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<h3 class="heading">{{"traiteur.aperitif"|trans}}</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background margin-event">
+						<a href="{{ path('traiteur_showpicture', {'type': 'entree'} )}}" class="block-20" style="background-image:url({{ asset('build/images/entree3.jpeg') }})"></a>
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<h3 class="heading">{{"traiteur.entree"|trans}}</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background margin-event">
+						<a href="{{ path('traiteur_showpicture', {'type': 'plat'} )}}" class="block-20" style="background-image:url({{ asset('build/images/plat3.jpeg') }})"></a>
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<h3 class="heading">{{"traiteur.plats"|trans}}</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background margin-event">
+						<a href="{{ path('traiteur_showpicture', {'type': 'dessert'} )}}" class="block-20" style="background-image:url({{ asset('build/images/dessert.jpeg') }})"></a>
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<h3 class="heading">{{"traiteur.desserts"|trans}}</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-self-stretch text-center">
+					<div class="media block-6 services d-block step-background margin-event">
+						<a href="{{ path('traiteur_showpicture', {'type': 'gateaux'}) }}" class="block-20" style="background-image:url({{ asset('build/images/dessert.jpeg') }})"></a>
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<h3 class="heading">{{"traiteur.gateaux"|trans}}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- End Step -->{% endblock %}

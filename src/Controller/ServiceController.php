@@ -92,6 +92,6 @@ class ServiceController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('service_index');
+        return $this->redirectToRoute('admin_service_index');
     }
 }

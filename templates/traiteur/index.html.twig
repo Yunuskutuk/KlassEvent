@@ -52,13 +52,17 @@
 					<div class="col-md-4 d-flex align-self-stretch text-center">
 						<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-								<img src="/images/uploads/{{ menu.path }}" alt="grillade">
+								<img src="/images/uploads/{{ menu.path }}" alt="grillade" class="size-img">
 								<h3 class="heading">{{menu.name|trans}}</h3>
-								<h3 class="heading">{{ 'menu.prix'|trans }}{# Prix #} :
+								<h3 class="heading">{{ 'menu.prix'|trans }}
+									{# Prix #}
+									:
 									{{menu.price}}
 									€
 								</h3>
-								<p>{{ 'menu.description'|trans }}{# Description #} :
+								<p>{{ 'menu.description'|trans }}
+									{# Description #}
+									:
 									{{menu.description|trans}}</p>
 								<p>{{menu.more|trans}}</p>
 								<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">

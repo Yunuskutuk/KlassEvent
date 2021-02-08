@@ -17,6 +17,7 @@ contact: Contact
 contact.Envoyer: Envoi du message
 contact.footer: Nous contacter
 demande.devis: Demande de devis
+detail.general: Détails
 event.account.adresseLivraison: Adresse de livraison
 event.account.adressePerso: Adresse personnelle
 event.account.compte: Mon compte
@@ -62,6 +63,7 @@ form.placeholder.name: Pierre
 form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
+hjihk: hjihk
 garde d'enfants: garde d'enfants
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
@@ -82,6 +84,8 @@ mise à disposition des couverts, verres, et assiettes: mise à disposition des 
 navbar.gallerie: Gallerie
 navbar.livraison: Détails des livraison
 navbar.ouverture: Horaires d'ouverture - Tous les jours
+nos.menus: Nos menus
+prix.general: Prix
 petit banquet: petit banquet
 photo de base: photo de base
 Photo Souvenir: Photo Souvenir
@@ -109,6 +113,7 @@ quote.question3: Choisissez votre événement
 quote.service: Service
 rent.deco: Décoration de table
 rent.Vaisselle: La vaisselle
+retour.general: Retour
 sauvegarder: Sauvegarder
 security.ça_va_là: Vous
 security.connectez: Connectez
@@ -119,7 +124,11 @@ security.deja.connecte: Vous êtes déjà connecté avec
 security.email: Renseignez votre e-mail et votre mot de passe pour vous connecter
 security.password: Mot de passe
 services: Services
+traiteur.aperitif: Les apéritifs
 traiteur.ConnexionLivraison: Connectez-vous et commander !
+traiteur.desserts: Les Desserts et fruits
+traiteur.entree: Les Entrées
+traiteur.gateaux: Les Gâteaux
 traiteur.index.3livraison: A partir de 3 menus par livraison
 traiteur.index.appelAction: Choisissez votre menu pour la semaine du ... au ...
 traiteur.index.deplacements: Déplacements jusqu'à 20km autour de Strasbourg
@@ -131,10 +140,13 @@ traiteur.livraison: Livraisons jusqu'à 20 km aux alentours de Strasbourg
 traiteur.Livraison2: Nous livrons jusqu'à 20 km aux alentours de Strasbourg
 traiteur.LivraisonHoraires: À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j
 traiteur.LivraisonMinimum: Passer une commande de 3 repas (minimum)
+traiteur.menu.savoirfaire: Notre savoir faire
 traiteur.modalitesLivraison: Modalités de livraison
+traiteur.plats: Les Plats
 traiteur.slogan: Faites vous livrer de la vrai cuisine
 traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
+traiteur.voirlemenu: Voir le menu
 traiteur.VoirMenus: Voir les menus
 un vrai pro de la photo va couvrir l'évenement: un vrai pro de la photo va couvrir l'évenement
 une garderie pour les petits, pour que les adultes puissent profiter de la fête: une garderie pour les petits, pour que les adultes puissent profiter de la fête

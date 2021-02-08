@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle image
+{% endblock %}
+
+{% block body %}
+	<h1>Création d'une image</h1>
+
+	{{ include('admin/menuPicture/_form.html.twig') }}
+
+	<a href="{{ path('admin_menupicture_index') }}">Retour à la liste</a>
+{% endblock %}

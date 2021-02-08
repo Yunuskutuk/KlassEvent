@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Menu picture
+{% endblock %}
+
+{% block body %}
+	<h1>Edit Menu Picture</h1>
+
+	<img src="/images/uploads/{{ picture.path }}" alt="{{ picture.alt }}">
+
+	{{ include('admin/menuPicture/_form.html.twig', {'button_label': 'Update'}) }}
+
+	<a href="{{ path('admin_menupicture_index') }}">retour à la liste</a>
+
+	{{ include('admin/menuPicture/_delete_form.html.twig') }}
+{% endblock %}
