@@ -12,14 +12,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * fields = {"yamlKey"},
  * message = "Cette clé existe déjà."
  * )
- * @UniqueEntity(
- * fields = {"french"},
- * message = "Cette traduction française existe déjà."
- * )
- * @UniqueEntity(
- * fields = {"turkish"},
- * message = "Cette traduction turque existe déjà."
- * )
  */
 class Translate
 {
