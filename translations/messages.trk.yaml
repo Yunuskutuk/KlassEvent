@@ -9,20 +9,10 @@ bouton.changer.passe: şifreyi değiştirmek için
 bouton.MAJ: Güncelleme
 bouton.modifier: Düzenle
 bouton.save: Kayıt etmek
-buffet froid.17: buffet froid
-chinoise.5: chinoise
 contact: İletişim
 contact.Envoyer: Mesaj gönder
 contact.footer: Bize Ulaşın
-cuisine asiatique.5: cuisine asiatique
-cuisine hallal.5: cuisine hallal
-cuisine respectueuse.6: cuisine respectueuse
-cuisine.5: cuisine
 demande.devis: Teklif isteği
-des menus à l’assiette.18: des menus à l’assiette
-des plat en service libre.17: des plat en service libre
-des plats chaud, dans l'assiette, avec une belle présentation, et chaud, comme au restaurant.18: des plats chaud, dans l'assiette, avec une belle présentation, et chaud, comme au restaurant
-équipe de cuisinier qui vous prépare le meilleur menu.6: équipe de cuisinier qui vous prépare le meilleur menu
 event.account.adresseLivraison: Teslimat adresi
 event.account.adressePerso: Kişisel adres
 event.account.compte: Hesabım
@@ -68,18 +58,13 @@ form.placeholder.name: Pierre
 form.placeholder.password: Parola
 form.placeholder.phone: 0699999999
 gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
-hallal.5: hallal
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
 horaires.footer: Her gün ... h ... ila ... h ...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
-la cuisine ... chaude!.5: la cuisine ... chaude!
-la cuisine et la nourriture.6: la cuisine et la nourriture
 livraison.footer: Teslimat detayları
 location: Kiralama
-mariage.6: mariage
-mariage.8: mariage
 menu: Menü
 menu.footer: Menü listesi
 navbar.gallerie: Fotoğraf Galerisi
@@ -134,5 +119,4 @@ traiteur.slogan: Gerçek yemek teslim et
 traiteur.titre: Klass yemek şirketi
 traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
 traiteur.VoirMenus: Menüleri görüntüle
-vagan.6: vagan
 vaisselle: bulaşıklar

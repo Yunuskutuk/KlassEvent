@@ -9,20 +9,10 @@ bouton.changer.passe: changer le mot de passe
 bouton.MAJ: Mettre à jour
 bouton.modifier: Modifier
 bouton.save: Sauvegarder
-buffet froid.17: buffet froid
-chinoise.5: chinoise
 contact: Contact
 contact.Envoyer: Envoi du message
 contact.footer: Nous contacter
-cuisine asiatique.5: cuisine asiatique
-cuisine hallal.5: cuisine hallal
-cuisine respectueuse.6: cuisine respectueuse
-cuisine.5: cuisine
 demande.devis: Demande de devis
-des menus à l’assiette.18: des menus à l’assiette
-des plat en service libre.17: des plat en service libre
-des plats chaud, dans l'assiette, avec une belle présentation, et chaud, comme au restaurant.18: des plats chaud, dans l'assiette, avec une belle présentation, et chaud, comme au restaurant
-équipe de cuisinier qui vous prépare le meilleur menu.6: équipe de cuisinier qui vous prépare le meilleur menu
 event.account.adresseLivraison: Adresse de livraison
 event.account.adressePerso: Adresse personnelle
 event.account.compte: Mon compte
@@ -68,18 +58,13 @@ form.placeholder.name: Pierre
 form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
-hallal.5: hallal
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de ...h... à ...h...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
-la cuisine ... chaude!.5: la cuisine ... chaude!
-la cuisine et la nourriture.6: la cuisine et la nourriture
 livraison.footer: Détail des livraisons
 location: Location
-mariage.6: mariage
-mariage.8: mariage
 menu: Menu
 menu.footer: Liste des menus
 navbar.gallerie: Gallerie
@@ -134,5 +119,4 @@ traiteur.slogan: Faites vous livrer de la vrai cuisine
 traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
 traiteur.VoirMenus: Voir les menus
-vagan.6: vagan
 vaisselle: vaisselle
