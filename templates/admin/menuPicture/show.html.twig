@@ -1,43 +1,45 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
-{% block title %}Picture
+{% block title %}Image
 {% endblock %}
 
 {% block body %}
-	<h1>Picture</h1>
 
-	<table class="table">
-		<tbody>
-			<tr>
-				<th>Id</th>
-				<td>{{ picture.id }}</td>
-			</tr>
-			<tr>
-				<th>View</th>
-				<td><img src="/images/uploads/{{ picture.path }}" alt="{{ picture.alt }}"></td>
-			</tr>
-			<tr>
-				<th>Path</th>
-				<td>{{ picture.path }}</td>
-			</tr>
-			<tr>
-				<th>Alt</th>
-				<td>{{ picture.alt }}</td>
-			</tr>
-			<tr>
-				<th>Name</th>
-				<td>{{ picture.name }}</td>
-			</tr>
-			<tr>
-				<th>Description</th>
-				<td>{{ picture.description }}</td>
-			</tr>
-		</tbody>
-	</table>
 
-	<a href="{{ path('admin_menupicture_index') }}">Retour à la liste</a>
+	<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row  slider-text align-items-center justify-content-center">
+				<div class="col-md-9 text-center mt-5">
+					<h1 class="mb-2 bread">KlassTraiteur</h1>
+					<h2 class="breadcrumbs" style="font-size: 25px;">Image vitrine</h2>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	<a href="{{ path('admin_menupicture_edit', {'id': picture.id}) }}">edit</a>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
 
-	{{ include('admin/menuPicture/_delete_form.html.twig') }}
+				<div class="col-md-12 justify-content-center text-center">
+					<div class="media block-6 services d-block step-background margin-traiteur">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+							<img src="/images/uploads/{{ picture.path }}" class="size-img-admin">
+							<h3 class="heading">Image :</h3>
+							<p>{{ picture.name }}</p>
+							<h3 class="heading">Type :</h3>
+							<p>{{ picture.type }}</p>
+							<h3 class="heading">Description :</h3>
+							<p>{{ picture.description }}</p>
+							<a class="btn btn-warning" href="{{ path('admin_menupicture_edit', {'id': picture.id}) }}">Editer</a>
+
+							{{ include('admin/menuPicture/_delete_form.html.twig') }}
+							<a type="button" class="btn btn-dark" href="{{ path('admin_menupicture_index') }}">Retour</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

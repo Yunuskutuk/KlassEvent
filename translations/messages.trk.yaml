@@ -70,6 +70,7 @@ form.placeholder.password: Parola
 form.placeholder.phone: 0699999999
 gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
 garde d'enfants: garde d'enfants
+hjihk: hjihk
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
 hop, buffet froid, histoire de voir: hop, buffet froid, histoire de voir
@@ -77,6 +78,9 @@ horaires.footer: Her gün ... h ... ila ... h ...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
 Le big menu: Le big menu
+langue: Dil
+langue.fr: Fransızca
+langue.tr: Türk
 le big truc: le big truc
 le buffet froid: le buffet froid
 Le super menu: Le super menu
@@ -92,11 +96,13 @@ navbar.gallerie: Fotoğraf Galerisi
 navbar.livraison: Teslimat Detayları.
 navbar.ouverture: Açılış saatleri - Her gün
 On s'occupe d'emballer tout les cadeaux: On s'occupe d'emballer tout les cadeaux
+nos.menus: Menülerimiz
 petit banquet: petit banquet
 photo de base: photo de base
 Photo Souvenir: Photo Souvenir
 photographe pro: photographe pro
 Plat 01: Plat 01
+prix.general: Fiyat
 quote.choix.option: --Lütfen seçeneğinizi seçin --
 quote.dateEvenement: Etkinliğin günü ve saati
 quote.demandes: Notlar, talimatlar, sorular ve istekler
@@ -104,6 +110,7 @@ quote.description: Açıklama
 quote.devis: teklif istemek
 quote.email: E-postanızı giriniz
 quote.for: için alıntı
+quote.lieu: olayın yeri
 quote.lieu.event: olayın yeri
 quote.nbrInvites: ziyaretçi sayısı
 quote.nom: adınızı giriniz
@@ -118,6 +125,7 @@ quote.question2: ama nasıl devam edeceğimi bilmiyorum
 quote.question3: Etkinliğinizi seçin
 quote.service: Hizmet
 rent.deco: Masa dekorasyonu
+rent.deco2: Sandalye dekorasyonu
 rent.Vaisselle: Bulaşık yıkama
 sauvegarder: Kayıt etmek
 security.ça_va_là: Sen
@@ -129,6 +137,8 @@ security.deja.connecte: İle zaten bağlısın
 security.email: Oturum açmak için e-posta adresinizi ve şifrenizi giriniz
 security.password: Parola
 services: Teklif isteği
+table pour les mariés: table pour les mariés
+traiteur.aperitif: Mezeler
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
 traiteur.index.3livraison: Teslimat başına 3 menüden
 traiteur.index.appelAction: Haftalık menünüzü seçin ... ila ...

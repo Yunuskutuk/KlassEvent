@@ -70,6 +70,7 @@ form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
 garde d'enfants: garde d'enfants
+hjihk: hjihk
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 hop, buffet froid, histoire de voir: hop, buffet froid, histoire de voir
@@ -77,6 +78,9 @@ horaires.footer: Tous les jours de ...h... à ...h...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
 Le big menu: Le big menu
+langue: Langue
+langue.fr: Français
+langue.tr: Turc
 le big truc: le big truc
 le buffet froid: le buffet froid
 Le super menu: Le super menu
@@ -92,11 +96,13 @@ navbar.gallerie: Gallerie
 navbar.livraison: Détails des livraison
 navbar.ouverture: Horaires d'ouverture - Tous les jours
 On s'occupe d'emballer tout les cadeaux: On s'occupe d'emballer tout les cadeaux
+nos.menus: Nos menus
 petit banquet: petit banquet
 photo de base: photo de base
 Photo Souvenir: Photo Souvenir
 photographe pro: photographe pro
 Plat 01: Plat 01
+prix.general: Prix
 quote.choix.option: --Veillez choisir votre option--
 quote.dateEvenement: Jour et heure de l’événement
 quote.demandes: Remarques, instructions, questions et demandes
@@ -104,6 +110,7 @@ quote.description: Description
 quote.devis: demander un devis
 quote.email: entrez votre email
 quote.for: devis pour un
+quote.lieu: le lieu de l’événement
 quote.lieu.event: le lieu de l’événement
 quote.nbrInvites: nombre d'invités
 quote.nom: entrez votre nom
@@ -118,6 +125,7 @@ quote.question2: mais je ne sais pas comment m'y prendre
 quote.question3: Choisissez votre événement
 quote.service: Service
 rent.deco: Décoration de table
+rent.deco2: Décoration de chaise
 rent.Vaisselle: La vaisselle
 sauvegarder: Sauvegarder
 security.ça_va_là: Vous
@@ -129,6 +137,8 @@ security.deja.connecte: Vous êtes déjà connecté avec
 security.email: Renseignez votre e-mail et votre mot de passe pour vous connecter
 security.password: Mot de passe
 services: Services
+table pour les mariés: table pour les mariés
+traiteur.aperitif: Les apéritifs
 traiteur.ConnexionLivraison: Connectez-vous et commander !
 traiteur.index.3livraison: A partir de 3 menus par livraison
 traiteur.index.appelAction: Choisissez votre menu pour la semaine du ... au ...
