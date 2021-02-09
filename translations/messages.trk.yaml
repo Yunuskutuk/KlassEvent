@@ -17,6 +17,7 @@ contact: İletişim
 contact.Envoyer: Mesaj gönder
 contact.footer: Bize Ulaşın
 demande.devis: Teklif isteği
+detail.general: Detaylar
 event.account.adresseLivraison: Teslimat adresi
 event.account.adressePerso: Kişisel adres
 event.account.compte: Hesabım
@@ -62,12 +63,16 @@ form.placeholder.password: Parola
 form.placeholder.phone: 0699999999
 gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
 garde d'enfants: garde d'enfants
+hjihk: hjihk
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
 hop, buffet froid, histoire de voir: hop, buffet froid, histoire de voir
 horaires.footer: Her gün ... h ... ila ... h ...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
+langue: Dil
+langue.fr: Fransızca
+langue.tr: Türk
 le big truc: le big truc
 Le super menu: Le super menu
 les photos de l'évenement: les photos de l'évenement
@@ -81,11 +86,13 @@ mise à disposition des couverts, verres, et assiettes: mise à disposition des 
 navbar.gallerie: Fotoğraf Galerisi
 navbar.livraison: Teslimat Detayları.
 navbar.ouverture: Açılış saatleri - Her gün
+nos.menus: Menülerimiz
 petit banquet: petit banquet
 photo de base: photo de base
 Photo Souvenir: Photo Souvenir
 photographe pro: photographe pro
 Plat 01: Plat 01
+prix.general: Fiyat
 quote.choix.option: --Lütfen seçeneğinizi seçin --
 quote.dateEvenement: Etkinliğin günü ve saati
 quote.demandes: Notlar, talimatlar, sorular ve istekler
@@ -93,6 +100,7 @@ quote.description: Açıklama
 quote.devis: teklif istemek
 quote.for: için alıntı
 quote.lieu: olayın yeri
+quote.lieu.event: olayın yeri
 quote.nbrInvites: ziyaretçi sayısı
 quote.nom: adınızı giriniz
 quote.p1: Genel olarak, çeşitli etkinlikler düzenlememiz ilkesi ve organizasyon konusunda esneğiz
@@ -105,7 +113,9 @@ quote.question2: ama nasıl devam edeceğimi bilmiyorum
 quote.question3: Etkinliğinizi seçin
 quote.service: Hizmet
 rent.deco: Masa dekorasyonu
+rent.deco2: Sandalye dekorasyonu
 rent.Vaisselle: Bulaşık yıkama
+retour.general: Dönüş
 sauvegarder: Kayıt etmek
 security.ça_va_là: Sen
 security.connectez: Bağlan
@@ -116,7 +126,12 @@ security.deja.connecte: İle zaten bağlısın
 security.email: Oturum açmak için e-posta adresinizi ve şifrenizi giriniz
 security.password: Parola
 services: Teklif isteği
+table pour les mariés: table pour les mariés
+traiteur.aperitif: Mezeler
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
+traiteur.desserts: Pasta ve yemek cesitleri
+traiteur.entree: Meze
+traiteur.gateaux: Dugun pastalari
 traiteur.index.3livraison: Teslimat başına 3 menüden
 traiteur.index.appelAction: Haftalık menünüzü seçin ... ila ...
 traiteur.index.deplacements: Strasbourg çevresinde 20 km'ye kadar seyahat edin
@@ -128,10 +143,13 @@ traiteur.livraison: Strasbourg çevresinde 20 km'ye kadar teslimat
 traiteur.Livraison2: Strasbourg çevresinde 20 km'ye kadar teslimat yapıyoruz
 traiteur.LivraisonHoraires: 11.30 - 14.30 ve 18.00 - 22.30 arası haftanın 7 günü
 traiteur.LivraisonMinimum: 3 öğün yemek siparişi verin (minimum)
+traiteur.menu.savoirfaire: Bizim uzmanlığımız
 traiteur.modalitesLivraison: Teslimat şartları
+traiteur.plats: Ana yemek
 traiteur.slogan: Gerçek yemek teslim et
 traiteur.titre: Klass yemek şirketi
 traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
+traiteur.voirlemenu: Menüyü görüntüle
 traiteur.VoirMenus: Menüleri görüntüle
 un vrai pro de la photo va couvrir l'évenement: un vrai pro de la photo va couvrir l'évenement
 une garderie pour les petits, pour que les adultes puissent profiter de la fête: une garderie pour les petits, pour que les adultes puissent profiter de la fête

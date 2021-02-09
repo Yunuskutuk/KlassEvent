@@ -1,0 +1,64 @@
+{% extends 'basetraiteur.html.twig' %}
+
+
+{% block title %}KlassTraiteur
+{% endblock %}
+
+{% block body %}
+	<!-- Background picture -->
+
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/lunch-4.jpg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+					<section class="ftco-section">
+						<div class="container">
+							<div class="row justify-content-center mb-5 pb-2">
+								<div class="col-md-12 text-center heading-section">
+
+									<span class="menu-traiteur">{{ 'traiteur.titre'|trans }}{# Klass traiteur #}</span>
+									<p class="mb-4 h2-event">{{ 'traiteur.livraison'|trans }}{# Livraisons jusqu'à 20 km aux alentours de Strasbourg #}</p>
+
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success">
+			{{ message|trans }}
+		</div>
+	{% endfor %}
+
+	<!-- End Background picture -->
+	<section class="ftco-section">
+		<div class="container">
+
+			<div class="row">
+				{% for pictures in picture %}
+					<div class="col-md-4 d-flex align-self-stretch text-center">
+						<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
+							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
+								<img src="/images/uploads/{{ pictures.path }}" alt="grillade" class="size-img">
+								<h3 class="heading">{{pictures.name}}</h3>
+
+								<p>Description :
+									{{pictures.description}}</p>
+								<p>{{pictures.datetime}}</p>
+								<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">
+									{{ 'traiteur.index.plus'|trans }}
+									{# Voir plus #}
+								</button>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+{% endblock %}

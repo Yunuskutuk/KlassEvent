@@ -92,6 +92,6 @@ class AdminEventController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin/event_index');
+        return $this->redirectToRoute('admin_event_index');
     }
 }
