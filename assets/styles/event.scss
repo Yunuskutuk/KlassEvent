@@ -53,6 +53,11 @@
     color:$white;
 }
 
+/*p index*/
+.text-black{
+    color:$black;    
+}
+
 
 
 /* ---- Pictures Gallery ---- */
@@ -83,3 +88,13 @@
 	transform: scale(1.2);
 }
 
+
+/* ---- Quote ---- */
+
+.li-quote{
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-shadow: 1px 1px  rgb(63, 63, 63);
+    
+}

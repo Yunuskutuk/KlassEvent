@@ -24,77 +24,88 @@
 
 	<!-- End Background picture -->
 
-<div class="container">
-<h1>{{ 'quote.for'|trans }}{# devis pour un #} {{ event.type }} </h1>
-{% set eventPage = event.type %}
+<section class="ftco-section">
+	<div class="container">
 
-    <form action="{{ path('quote_send') }}" method="POST">
+		<div class="row justify-content-center mb-5 pb-2">
+			<div class="col-md-12 text-center heading-section">
+				<span class="subheading">{{ 'quote.for'|trans }}{# devis pour un #}</span>
+				<h2 class="mb-4">{{ event.type }} </h2>
+			</div>
+		</div>
 
-        <div class="form-group">
-            <label for="eventDate">{{ 'quote.dateEvenement'|trans }}{#Jour et heure de l'évenement #}: </label>
-            <br>
-            <input class="form-control" type="datetime-local" name="eventDate" id="eventDate" required>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="adress">{{ 'quote.lieu.event'|trans }}{# le lieu de l'événement #}:</label>
-            <br>
-            <textarea class="form-control" id="adress" name="adress" rows="3"
-            cols="33" placeholder="entrez l'adresse entière" required></textarea>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="guests">{{ 'quote.nbrInvites'|trans }}{# nombre d'invités #}:</label>
-            <br>
-            <input class="form-control" type="number" name="guests" id="guests" placeholder="3" required>
-        </div>
-        <br>
-        <input class="form-control" type="hidden" name="event" value="{{ eventPage }}">
-        {% for service in event.service %}
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="Service-{{ service.title }}" value="OK" id="Service" checked>
-            <label class="form-check-label" for="{{ service.title }}">{{ 'quote.service'|trans }}{# Service #}: {{ (service.title~'.'~service.id)|trans }}</label>
-        </div>
-        <br>
-        {{ 'quote.description'|trans }}{# Description #}: {{ (service.description~'.'~service.id)|trans }}
-        <br>
-        <select class="form-control" name="option-{{ service.title|trans }}" id="option-{{ service.title|trans }}">
-            <option value="">{{ 'quote.choix.option'|trans }}{# --Veillez choisir votre option-- #}</option>
-            {% for option in service.options %}
-            <option value="{{ option.name }}">{{ (option.name~'.'~option.id)|trans }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        {% endfor %}
-        <br>
-        <div class="form-group">
-            <label for="name">{{ 'quote.nom'|trans }}{# entrez votre nom #}: </label>
-            <br>
-            <input class="form-control" type="text" name="name" id="name" placeholder="Nom Prénom" required>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="phone">{{ 'quote.phone'|trans }}{# entrez votre numéro de téléphone #}: </label>
-            <br>
-            <input class="form-control" type="text" name="phone" id="phone" placeholder="06 .. .. .. .." required>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="email">{{ 'quote.email'|trans }}{# entrez votre email #}: </label>
-            <br>
-            <input class="form-control" type="email" name="email" id="email" placeholder="***@gmail.com" required>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="note">{{ 'quote.demandes'|trans }}{# Remarques, instructions, questions et damandes #}:</label>
-            <br>
-            <textarea class="form-control" name="note" id="note" cols="33" rows="7"></textarea>
-        </div>
-        <br>
-        <br>
-        <input class="btn btn-primary" type="submit" value="{{ 'quote.devis'|trans }}{# demander un devis #}">
-    </form>
-    <br>
+        <div class="row justify-content-center">
+            <div class="col-8">
+
+            {% set eventPage = event.type %}
+
+            <form action="{{ path('quote_send') }}" method="POST">
+
+                <div class="form-group">
+                    <label for="eventDate">{{ 'quote.dateEvenement'|trans }}{#Jour et heure de l'évenement #}:  </label>          
+                    <input class="form-control" placeholder="01/01/2020 14h00" type="datetime-local" name="eventDate" id="eventDate" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="adress">{{ 'quote.lieu'|trans }}{# le lieu de l'événement #} :</label>            
+                    <textarea class="form-control" id="adress" name="adress" rows="3"
+                    cols="33" placeholder="Entrez l'adresse complète" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">{{ 'quote.nbrInvites'|trans }}{# nombre d'invités #} :</label>          
+                    <input class="form-control" type="number" name="guests" id="guests" placeholder="3" required>
+                </div>
+            
+                <input class="form-control" type="hidden" name="event" value="{{ eventPage }}">
+                {% for service in event.service %}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Service-{{ service.title }}" value="OK" id="Service" checked>
+                    <label class="form-check-label" for="{{ service.title }}">{{ 'quote.service'|trans }}Service: {{ (service.title~'.'~service.id)|trans }}</label>
+                </div>
+            
+                {{ 'quote.description'|trans }}{# Description #} : {{ (service.description~'.'~service.id)|trans }}
+                
+                <select class="form-control" name="option-{{ service.title|trans }}" id="option-{{ service.title|trans }}">
+                    <option value="">{{ 'quote.choix.option'|trans }}{# --Veillez choisir votre option-- #}</option>
+                    {% for option in service.options %}
+                    <option value="{{ option.name|trans }}">{{ (option.name~'.'~option.id)|trans }}</option>
+                    {% endfor %}
+                </select>
+            
+                {% endfor %}
+                
+                <div class="form-group">
+                    <label for="name">{{ 'quote.nom'|trans }}{# entrez votre nom #} : </label>
+                
+                    <input class="form-control" type="text" name="name" id="name" placeholder="Nom Prénom" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="phone">{{ 'form.phone'|trans }}{# entrez votre numéro de téléphone #} : </label>
+                
+                    <input class="form-control" type="text" name="phone" id="phone" placeholder="0699999999" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">{{ 'form.email'|trans }}{# entrez votre email #} : </label>
+                
+                    <input class="form-control" type="email" name="email" id="email" placeholder="***@gmail.com" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="note">{{ 'quote.demandes'|trans }}{# Remarques, instructions, questions et damandes #} :</label>
+                
+                    <textarea class="form-control" name="note" id="note" cols="33" rows="7"></textarea>
+                </div>
+            
+                <input class="btn btn-primary" type="submit" value="{{ 'quote.devis'|trans }}{# demander un devis #}">
+            </form>
+
+            </div>
+
+       </div>
     </div>
+</section>
 
 {% endblock %}
