@@ -33,7 +33,6 @@ event.account.majPass: Şifre güncelle
 event.account.nom: Soyadı
 event.account.phone: Telefon numarası
 event.account.prenom: İsim
-event.account.retourCompte: hesabıma dön
 event.devis: Alıntı
 event.index.perimetre: Strasbourg çevresinde 350 km'ye kadar seyahat edin
 event.index.step1.1: Size özel rüya düğününüzü yaratın
@@ -88,7 +87,7 @@ les photos de l'évenement: les photos de l'évenement
 Les photos du mariage, plus des photos studio à encadrer: Les photos du mariage, plus des photos studio à encadrer
 livraison.footer: Teslimat detayları
 location: Kiralama
-mariage: mariage
+mariage: Düğün
 menu: Menü
 menu.footer: Menü listesi
 mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
@@ -108,7 +107,6 @@ quote.dateEvenement: Etkinliğin günü ve saati
 quote.demandes: Notlar, talimatlar, sorular ve istekler
 quote.description: Açıklama
 quote.devis: teklif istemek
-quote.email: E-postanızı giriniz
 quote.for: için alıntı
 quote.lieu: olayın yeri
 quote.lieu.event: olayın yeri
@@ -119,7 +117,6 @@ quote.p2: Bu ilerleme aşamasında, biraz daha öğrenmemiz gerekiyor
 quote.p3: İçiniz rahat olsun, hiçbir şey nihai değildir, sadece tartışma için bir temele sahip olmaktır
 quote.p4: Öyleyse şu anda bildiklerinize göre doldurun, o zaman gerçek, deneyimli bir insan ön teklifi devralacak ve her şeyi çözmek için sizinle telefonda (veya sorarsanız e-posta) sohbet edecek. her zaman düşünme
 quote.p5: öyleyse, ilk adım
-quote.phone: telefon numaranızı girin
 quote.question1: Nasıl çalışır?
 quote.question2: ama nasıl devam edeceğimi bilmiyorum
 quote.question3: Etkinliğinizi seçin
@@ -160,5 +157,24 @@ un plat simple tout en finesse: un plat simple tout en finesse
 Un repas selon les tradition orientales: Un repas selon les tradition orientales
 un vrai pro de la photo va couvrir l'évenement: un vrai pro de la photo va couvrir l'évenement
 une garderie pour les petits, pour que les adultes puissent profiter de la fête: une garderie pour les petits, pour que les adultes puissent profiter de la fête
+user.delete: Hesabı kalıcı olarak silin
+user.edit: Kullanıcılar
+user.edit.back: Dönüş
+user.edit.title: Bir kullanıcı hesabını düzenleyin
+user.index.actions: Hareketler
+user.index.adressevenement: Etkinlik adresi
+user.index.couriel: E-posta adresi
+user.index.domicile: Ev adresi
+user.index.edit: Düzenle
+user.index.id: Id
+user.index.listuser: Kullanıcı listesi
+user.index.newuser: Kullanıcı Ekle
+user.index.nom: Soyadı
+user.index.prenom: İsim
+user.index.see: Görmek
+user.index.telephone: Telefon
+user.index.userfail: Kullanıcı bulunamadı
+user.show.mdp: Parola
+user.show.roles: Roller
 vaisselle: bulaşıklar
 Vos cadeaux emballer simplement: Hediyelerin sadece paketlenir
