@@ -1,6 +1,6 @@
 {% extends 'baseevent.html.twig' %}
 
-{% block title %}Hello QuoteController!{% endblock %}
+{% block title %}Devis{% endblock %}
 
 {% block body %}
 
@@ -53,15 +53,15 @@
         {% for service in event.service %}
         <div class="form-check">
             <input class="form-check-input" type="checkbox" name="Service-{{ service.title }}" value="OK" id="Service" checked>
-            <label class="form-check-label" for="{{ service.title }}">{{ 'quote.service'|trans }}Service: {{ service.title|trans }}</label>
+            <label class="form-check-label" for="{{ service.title }}">{{ 'quote.service'|trans }}{# Service #}: {{ (service.title~'.'~service.id)|trans }}</label>
         </div>
         <br>
-        {{ 'quote.description'|trans }}{# Description #}: {{ service.description|trans }}
+        {{ 'quote.description'|trans }}{# Description #}: {{ (service.description~'.'~service.id)|trans }}
         <br>
         <select class="form-control" name="option-{{ service.title|trans }}" id="option-{{ service.title|trans }}">
             <option value="">{{ 'quote.choix.option'|trans }}{# --Veillez choisir votre option-- #}</option>
             {% for option in service.options %}
-            <option value="{{ option.name|trans }}">{{ option.name|trans }}</option>
+            <option value="{{ option.name }}">{{ (option.name~'.'~option.id)|trans }}</option>
             {% endfor %}
         </select>
         <br>

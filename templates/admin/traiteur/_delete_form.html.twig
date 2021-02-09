@@ -1,4 +1,4 @@
-<form method="post" action="{{ path('admin_event_delete', {'id': menu.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+<form method="post" action="{{ path('admin_traiteur_delete', {'id': menu.id}) }}" onsubmit="return confirm('Vous êtes sur de vouloir supprimer cet élément?');">
 	<input type="hidden" name="_method" value="DELETE">
 	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ menu.id) }}">
 	<button class="btn btn-danger mb-3 mt-3">Supprimer le menu</button>
