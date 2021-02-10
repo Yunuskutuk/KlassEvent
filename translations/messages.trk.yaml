@@ -22,6 +22,7 @@ event.account.majPass: Şifre güncelle
 event.account.nom: Soyadı
 event.account.phone: Telefon numarası
 event.account.prenom: İsim
+event.account.retourCompte: hesabıma dön
 event.devis: Alıntı
 event.index.perimetre: Strasbourg çevresinde 350 km'ye kadar seyahat edin
 event.index.step1.1: Size özel rüya düğününüzü yaratın
@@ -59,7 +60,7 @@ form.placeholder.phone: 0699999999
 gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
-horaires.footer: Her gün ... h ... ila ... h ...
+horaires.footer: Her gün 11 h ila 21 h
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
 livraison.footer: Teslimat detayları
@@ -74,6 +75,7 @@ quote.dateEvenement: Etkinliğin günü ve saati
 quote.demandes: Notlar, talimatlar, sorular ve istekler
 quote.description: Açıklama
 quote.devis: teklif istemek
+quote.email: E-postanızı giriniz
 quote.for: için alıntı
 quote.lieu.event: olayın yeri
 quote.nbrInvites: ziyaretçi sayısı
@@ -83,6 +85,7 @@ quote.p2: Bu ilerleme aşamasında, biraz daha öğrenmemiz gerekiyor
 quote.p3: İçiniz rahat olsun, hiçbir şey nihai değildir, sadece tartışma için bir temele sahip olmaktır
 quote.p4: Öyleyse şu anda bildiklerinize göre doldurun, o zaman gerçek, deneyimli bir insan ön teklifi devralacak ve her şeyi çözmek için sizinle telefonda (veya sorarsanız e-posta) sohbet edecek. her zaman düşünme
 quote.p5: öyleyse, ilk adım
+quote.phone: telefon numaranızı girin
 quote.question1: Nasıl çalışır?
 quote.question2: ama nasıl devam edeceğimi bilmiyorum
 quote.question3: Etkinliğinizi seçin
@@ -101,7 +104,7 @@ security.password: Parola
 services: Teklif isteği
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
 traiteur.index.3livraison: Teslimat başına 3 menüden
-traiteur.index.appelAction: Haftalık menünüzü seçin ... ila ...
+traiteur.index.appelAction: Haftalık menünüzü seçin
 traiteur.index.deplacements: Strasbourg çevresinde 20 km'ye kadar seyahat edin
 traiteur.index.detailsLivraison: Teslimat Detayları!
 traiteur.index.menus: Menüler
@@ -116,23 +119,4 @@ traiteur.slogan: Gerçek yemek teslim et
 traiteur.titre: Klass yemek şirketi
 traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
 traiteur.VoirMenus: Menüleri görüntüle
-user.delete: Hesabı kalıcı olarak silin
-user.edit: Kullanıcılar
-user.edit.back: Dönüş
-user.edit.title: Bir kullanıcı hesabını düzenleyin
-user.index.actions: Hareketler
-user.index.adressevenement: Etkinlik adresi
-user.index.couriel: E-posta adresi
-user.index.domicile: Ev adresi
-user.index.edit: Düzenle
-user.index.id: Id
-user.index.listuser: Kullanıcı listesi
-user.index.newuser: Kullanıcı Ekle
-user.index.nom: Soyadı
-user.index.prenom: İsim
-user.index.see: Görmek
-user.index.telephone: Telefon
-user.index.userfail: Kullanıcı bulunamadı
-user.show.mdp: Parola
-user.show.roles: Roller
 vaisselle: bulaşıklar
