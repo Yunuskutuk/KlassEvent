@@ -24,16 +24,13 @@ class QuoteController extends AbstractController
         $infos = $request->request->all();
         if ($infos) {
             $email = new Email();
-            $subject = "demande de devis \[" . $infos['event'] . "\]";
-            $message = "<h1> demande de devis pour:" . $infos['event'] . "</h1>";
-            foreach ($infos as $info => $value) {
-                $message .= "<p>$info: $value <p>";
-            }
+            $subject = "Demande de devis : " . $infos['event'];
+
             $email
                 ->from('ab2714d368-ae00ad@inbox.mailtrap.io')
                 ->to('klassevent@ymail.com')
                 ->subject($subject)
-                ->html($message);
+                ->html($this->renderView('event/newQuoteEmail.html.twig', ['infos' => $infos]));
 
             $mailer->send($email);
             $this->addFlash('success', 'Devis envoyé !');
