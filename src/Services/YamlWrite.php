@@ -108,8 +108,9 @@ class YamlWrite
             $inside = false;
             $theType = $event->getType();
             $theId = $event->getId();
+            $yamlKey = "$theType.$theId";
             foreach ($translations as $translate) {
-                if ($theType == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
@@ -140,8 +141,9 @@ class YamlWrite
             $inside = false;
             $theName = $option->getName();
             $theId = $option->getId();
+            $yamlKey = "$theName.$theId";
             foreach ($translations as $translate) {
-                if ($theName == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
@@ -157,8 +159,9 @@ class YamlWrite
             $inside = false;
             $theDescription = $option->getDescription();
             $theId = $option->getId();
+            $$yamlKey = "$theDescription.$theId";
             foreach ($translations as $translate) {
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
@@ -185,8 +188,9 @@ class YamlWrite
             $inside = false;
             $theDescription = $picture->getDescription();
             $theId = $picture->getId();
+            $yamlKey = "$theDescription.$theId";
             foreach ($translations as $translate) {
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
@@ -214,8 +218,9 @@ class YamlWrite
             $inside = false;
             $theDescription = $service->getDescription();
             $theId = $service->getId();
+            $yamlKey = "$theDescription.$theId";
             foreach ($translations as $translate) {
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
@@ -232,8 +237,9 @@ class YamlWrite
             $inside = false;
             $theTitle = $service->getTitle();
             $theId = $service->getId();
+            $yamlKey = "$theTitle.$theId";
             foreach ($translations as $translate) {
-                if ($theTitle == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
@@ -266,14 +272,17 @@ class YamlWrite
             $moreInside = false;
             $theMore = $menu->getMore();
             $theId = $menu->getId();
+            $yamlKey1 = "$theName.$theId";
+            $yamlKey2 = "$theDescription.$theId";
+            $yamlKey3 = "$theMore.$theId";
             foreach ($translations as $translate) {
-                if ($theName == $translate->getYamlKey()) {
+                if ($yamlKey1 == $translate->getYamlKey()) {
                     $nameInside = true;
                 }
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey2 == $translate->getYamlKey()) {
                     $descriptioInside = true;
                 }
-                if ($theMore == $translate->getYamlKey()) {
+                if ($yamlKey3 == $translate->getYamlKey()) {
                     $moreInside = true;
                 }
             }

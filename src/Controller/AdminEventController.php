@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Event;
 use App\Form\EventType;
 use App\Repository\EventRepository;
+use App\Repository\TranslateRepository;
 use App\Services\YamlWrite;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -84,10 +85,25 @@ class AdminEventController extends AbstractController
     /**
      * @Route("/{id}", name="admin_event_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Event $event): Response
-    {
+    public function delete(
+        Request $request,
+        Event $event,
+        TranslateRepository $translateRepository,
+        YamlWrite $yamlWrite
+    ): Response {
         if ($this->isCsrfTokenValid('delete' . $event->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
+            $eventType = $event->getType();
+            $eventId = $event->getId();
+            $yamlKey = "$eventType.$eventId";
+            $translate = $translateRepository->findOneBy([
+                'yamlKey' => $yamlKey
+            ]);
+            if ($translate) {
+                $entityManager->remove($translate);
+                $entityManager->flush();
+                $yamlWrite->event2Yaml();
+            }
             $entityManager->remove($event);
             $entityManager->flush();
         }
