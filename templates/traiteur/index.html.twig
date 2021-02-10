@@ -48,8 +48,8 @@
 			</div>
 
 			<div class="row">
-				{% for menu in menus %}
-					<div class="col-md-4 d-flex align-self-stretch text-center">
+				{% for menu in menus|slice(0,3) %}
+					<div class="col-md-4 d-flex align-self-stretch text-center margin-top-20px">
 						<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 								<img src="/images/uploads/{{ menu.path }}" alt="grillade" class="size-img">
