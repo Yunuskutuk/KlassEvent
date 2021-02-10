@@ -1,4 +1,3 @@
-à la fin, vous n'aurez plus faim: A la fin, vous n'aurez plus faim
 account.back.home: Retour à l'Accueil
 account.compte: Un compte
 account.cree: Créer
@@ -6,7 +5,7 @@ account.edit.modifier: Mes informations
 account.login: Login
 account.logout: Logout
 accueil: Accueil
-bouton.changer.passe: Changer le mot de passe
+bouton.changer.passe: changer le mot de passe
 bouton.MAJ: Mettre à jour
 bouton.modifier: Modifier
 bouton.save: Sauvegarder
@@ -18,11 +17,12 @@ event.account.adresseLivraison: Adresse de livraison
 event.account.adressePerso: Adresse personnelle
 event.account.compte: Mon compte
 event.account.compteAssocie: Compte associé à
-event.account.majInfos: Mise à jour des infos de votre compte
+event.account.majInfos: mise à jour des infos de votre compte
 event.account.majPass: Mise à jour du mot de passe
 event.account.nom: Nom
 event.account.phone: N° de téléphone
 event.account.prenom: Prénom
+event.account.retourCompte: retour sur mon compte
 event.devis: Devis
 event.index.perimetre: Déplacements jusqu'à 350km autour de Strasbourg
 event.index.step1.1: Créez votre mariage de rêve sur mesure
@@ -60,7 +60,7 @@ form.placeholder.phone: 0699999999
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
-horaires.footer: Tous les jours de ...h... à ...h...
+horaires.footer: Tous les jours de 11 h à 21 h
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
 livraison.footer: Détail des livraisons
@@ -85,6 +85,7 @@ quote.p2: A ce stade d'avancement, nous avons besoin d'en apprendre un peu plus
 quote.p3: Rassurez vous, rien n'est définitif, c'est juste pour avoir une base de discussion
 quote.p4: Donc, renseignez les choses selon ce que vous savez pour le moment, ensuite, un vrai humain expérimenté va prendre en charge le pré-devis et discuter avec vous au téléphone (ou par e-mail, si vous le demandez) pour régler tout les petits détails auquel on ne pense pas toujours
 quote.p5: donc, première étape
+quote.phone: entrez votre numéro de téléphone
 quote.question1: Comment ça marche?
 quote.question2: mais je ne sais pas comment m'y prendre
 quote.question3: Choisissez votre événement
@@ -103,7 +104,7 @@ security.password: Mot de passe
 services: Services
 traiteur.ConnexionLivraison: Connectez-vous et commander !
 traiteur.index.3livraison: A partir de 3 menus par livraison
-traiteur.index.appelAction: Choisissez votre menu pour la semaine du ... au ...
+traiteur.index.appelAction: Choisissez votre menu pour la semaine
 traiteur.index.deplacements: Déplacements jusqu'à 20km autour de Strasbourg
 traiteur.index.detailsLivraison: Détails des livraisons !
 traiteur.index.menus: Les menus
@@ -118,23 +119,4 @@ traiteur.slogan: Faites vous livrer de la vrai cuisine
 traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
 traiteur.VoirMenus: Voir les menus
-user.delete: Supprimer définitivement le compte
-user.edit: Utilisateurs
-user.edit.back: Retour
-user.edit.title: Editer un compte utilisateur
-user.index.actions: Actions
-user.index.adressevenement: Adresse de l'evenement
-user.index.couriel: Couriel
-user.index.domicile: Adresse du domicile
-user.index.edit: Editer
-user.index.id: Id
-user.index.listuser: Liste des utilisateurs
-user.index.newuser: Ajouter un utlisateur
-user.index.nom: Nom
-user.index.prenom: Prenom
-user.index.see: Voir
-user.index.telephone: Telephone
-user.index.userfail: Pas d'utilisateur trouvé
-user.show.mdp: Mot de passe
-user.show.roles: Roles
 vaisselle: vaisselle
