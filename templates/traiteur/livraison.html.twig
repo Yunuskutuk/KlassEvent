@@ -1,73 +1,78 @@
 {% extends 'basetraiteur.html.twig' %}
 
 
-{% block title %}KlassTraiteur{% endblock %}
+{% block title %}KlassTraiteur
+{% endblock %}
 
 {% block body %}
 
-    <!-- Background picture -->
-<section class="home-slider owl-carousel">
-    <div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/livraison3.jpeg') }}')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-                <section class="ftco-section">
-                    <div class="container">
-                        <div class="row justify-content-center mb-5 pb-2">
-                            <div class="col-md-12 text-center heading-section">
+	<!-- Background picture -->
+	<section class="home-slider owl-carousel">
+		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/livraison3.jpeg') }}')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+					<section class="ftco-section">
+						<div class="container">
+							<div class="row justify-content-center mb-5 pb-2">
+								<div class="col-md-12 text-center heading-section">
 
-                                <span class="menu-traiteur">{{ 'traiteur.titre'|trans }}{# Klass traiteur #}</span>
-                                <h2 class="mb-4 h2-event">{{ 'traiteur.slogan'|trans }}{# Faites vous livrer de la vrai cuisine #}</h2>
-                                <p class="mb-4 h2-event">{{ 'traiteur.livraison'|trans }}{# Livraisons jusqu'à 20 km aux alentours de Strasbourg #}</p>
+									<span class="menu-traiteur">{{ 'traiteur.titre'|trans }}{# Klass traiteur #}</span>
+									<h2 class="mb-4 h2-event">{{ 'traiteur.slogan'|trans }}{# Faites vous livrer de la vrai cuisine #}</h2>
+									<p class="mb-4 h2-event">{{ 'traiteur.livraison'|trans }}{# Livraisons jusqu'à 20 km aux alentours de Strasbourg #}</p>
 
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</section>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<!-- End Background picture -->
+	<!-- End Background picture -->
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
-        <div class="container-fluid px-0">
-            <div class="row d-flex no-gutters">
-            <div class="img mr-5">
-            <img src="{{ asset('build/images/20km_strass.jpg') }}" height="650px" width="650px" alt="map">
-            </div>
-            <div class="categories">
-                <h3 class="communes  mr-5"><u><B>{{ 'traiteur.villesLivraison'|trans }}{# Découvrez les communes livrées #}</B></u> :</h3>
-                </br>
-            <h5 class="ml-5">- Strasbourg</h5>
-            <h5 class="ml-5">- Souffelweyersheim</h5>
-            <h5 class="ml-5">- Vendenheim</h5>
-            <h5 class="ml-5">- Bischheim</h5>
-            <h5 class="ml-5">- Schiltigheim</h5>
-            <h5 class="ml-5">- Lingolsheim</h5>
-            <h5 class="ml-5">- Ostwald</h5>
-            <h5 class="ml-5">- La Wantzenau</h5>
-                <h3 class="communes mr-5"><u><B>{{ 'traiteur.modalitesLivraison'|trans }}{# Modalités de livraison #}</B></u> :</h3>
-                </br>
-                <h5 class="ml-5">- {{ 'traiteur.Livraison2'|trans }}{# Nous livrons jusqu'à 20 km aux alentours de Strasbourg #}</h5>
-                <h5 class="ml-5">- {{ 'traiteur.LivraisonMinimum'|trans }}{# Passer une commande de 3 repas (minimum) #}</h5>
-                <h5 class="ml-5 mb-4">- {{ 'traiteur.LivraisonHoraires'|trans }}{# À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j #}</h5>
-                <div class="row">
 
-                    <button type="button" onclick="document.location.href='/traiteur/menus'" class="col-3 btn see ml-5">
-                        {{ 'traiteur.VoirMenus'|trans }}{# Voir les menus #}
-                    </button>
-                <button type="button" onclick="document.location.href='/login'" class="col-6 bttn command ml-5">
-                    {{ 'traiteur.ConnexionLivraison'|trans }}{# Connectez-vous et commander ! #}
+	<section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+		<div class="container">
+			<div class="row d-flex align-items-stretch no-gutters">
 
-                </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- End Step -->
+				<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
+					<h4 class="communes mr-5">
+						<u>
+							{{ 'traiteur.villesLivraison'|trans }}
+							{# Découvrez les communes livrées #}
+						</u>
+						:</h4>
+					<ul>
+						<li>Strasbourg</li>
+						<li>Souffelweyersheim</li>
+						<li>Vendenheim</li>
+						<li>Bischheim</li>
+						<li>Schiltigheim</li>
+						<li>Lingolsheim</li>
+						<li>Ostwald</li>
+						<li>La Wantzenau</li>
 
+					</ul>
+					<h2 class="communes mr-5">
+						<u>
+							{{ 'traiteur.modalitesLivraison'|trans }}
+							{# Modalités de livraison #}
+						</u>
+						:</h2>
+					<p>-
+						{{ 'traiteur.Livraison2'|trans }}{# Nous livrons jusqu'à 20 km aux alentours de Strasbourg #}</p>
+					<p>-
+						{{ 'traiteur.LivraisonMinimum'|trans }}{# Passer une commande de 3 repas (minimum) #}</p>
+					<p>-
+						{{ 'traiteur.LivraisonHoraires'|trans }}{# À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j #}</p>
+				</div>
+				<div class="col-md-6 d-flex align-items-stretch">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35487.77406975505!2d7.773837460788184!3d48.616646056505374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c648abdacbb7%3A0x5caf40872323a937!2s31%20Route%20de%20Strasbourg%2C%2067610%20La%20Wantzenau!5e0!3m2!1sfr!2sfr!4v1612946123929!5m2!1sfr!2sfr" width="800" height="700" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

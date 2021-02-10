@@ -46,9 +46,9 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="flag align-items-start">
 					<div class="icon mr-2 d-flex  align-items-center contact-g flag">
-						<a href="/trk/event">
+						<a href="/trk/traiteur">
 							<img class="nav-flag" src="{{asset('build/images/Flag_of_Turkey.png')}}" width="36"></a>
-						<a href="/event">
+						<a href="/traiteur">
 							<img class="nav-flag " src="{{asset('build/images/Flag_of_France.png')}}" width="36"></a>
 					</div>
 				</li>
@@ -59,7 +59,7 @@
 					<a href="{{ path('traiteur_livraison') }}" class="nav-link">{{ 'navbar.livraison'|trans }}{# Détails des livraison #}</a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ path('traiteur_menus') }}" class="nav-link">{{ 'menu.footer'|trans }}{# Liste des menus #}</a>
+					<a href="{{ path('traiteur_menus') }}" class="nav-link">{{ 'traiteur.menu.savoirfaire'|trans }}{# Liste des menus #}</a>
 				</li>
 				{% if app.user %}
 					<li class="nav-item">

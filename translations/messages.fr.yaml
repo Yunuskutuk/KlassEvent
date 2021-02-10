@@ -5,6 +5,11 @@ account.edit.modifier: Mes informations
 account.login: Login
 account.logout: Logout
 accueil: Accueil
+anniversaire: Anniversaire
+baptême: Baptême
+Beyti: Beyti
+Blé, riz etc...: Blé, riz etc...
+boom: boom
 bouton.changer.passe: changer le mot de passe
 bouton.MAJ: Mettre à jour
 bouton.modifier: Modifier
@@ -58,6 +63,11 @@ form.placeholder.name: Pierre
 form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
 gallery.index.rien: aucune images dans les services, contactez l'administrateur
+garde d'enfants: garde d'enfants
+gfdqhtrbtybtybytnbyt: gfdqhtrbtybtybytnbyt
+Grillage composé de plusieurs viandes Halal cuites au feu de bois.: Grillage composé de plusieurs viandes Halal cuites au feu de bois.
+Grillage Mixte: Grillage Mixte
+hjihk: hjihk
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 horaires.footer: Tous les jours de 11 h à 21 h
@@ -67,9 +77,19 @@ livraison.footer: Détail des livraisons
 location: Location
 menu: Menu
 menu.footer: Liste des menus
+mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
+msqlkfdjmsqdljkf: msqlkfdjmsqdljkf
 navbar.gallerie: Gallerie
 navbar.livraison: Détails des livraison
 navbar.ouverture: Horaires d'ouverture - Tous les jours
+nos.menus: Nos menus
+petit banquet: petit banquet
+photo de base: photo de base
+Photo Souvenir: Photo Souvenir
+photographe pro: photographe pro
+Plat 01: Plat 01
+Plat typique Turc avec de la viande haché préparée avec des épices: Plat typique Turc avec de la viande haché préparée avec des épices
+prix.general: Prix
 quote.choix.option: --Veillez choisir votre option--
 quote.dateEvenement: Jour et heure de l’événement
 quote.demandes: Remarques, instructions, questions et demandes
@@ -92,7 +112,14 @@ quote.question3: Choisissez votre événement
 quote.service: Service
 rent.deco: Décoration de table
 rent.Vaisselle: La vaisselle
+retour.general: Retour
+Riz, Blé ou Frites1: Riz, Blé ou Frites1
+Riz, Blé ou Frites2: Riz, Blé ou Frites2
+Riz, Blé ou Frites3: Riz, Blé ou Frites3
+Sauté d'agneaux: Sauté d'agneaux
+Sauté d'agneaux Halal: Sauté d'agneaux Halal
 sauvegarder: Sauvegarder
+sdfqdsqfhghfhgf: sdfqdsqfhghfhgf
 security.ça_va_là: Vous
 security.connectez: Connectez
 security.courriel: Courriel
@@ -115,8 +142,11 @@ traiteur.Livraison2: Nous livrons jusqu'à 20 km aux alentours de Strasbourg
 traiteur.LivraisonHoraires: À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j
 traiteur.LivraisonMinimum: Passer une commande de 3 repas (minimum)
 traiteur.modalitesLivraison: Modalités de livraison
-traiteur.slogan: Faites vous livrer de la vrai cuisine
+traiteur.plats: Les Plats
+traiteur.slogan: Faites vous livrer de la vraie cuisine
 traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
 traiteur.VoirMenus: Voir les menus
 vaisselle: vaisselle
+Yufka: Yufka
+Yufka + frites: Yufka + frites
