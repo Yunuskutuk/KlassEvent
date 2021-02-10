@@ -6,6 +6,7 @@ use App\Entity\Option;
 use App\Form\OptionType;
 use App\Services\YamlWrite;
 use App\Repository\OptionRepository;
+use App\Repository\TranslateRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -84,10 +85,29 @@ class OptionController extends AbstractController
     /**
      * @Route("/{id}", name="admin_option_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Option $option): Response
-    {
+    public function delete(
+        Request $request,
+        Option $option,
+        TranslateRepository $translateRepository,
+        YamlWrite $yamlWrite
+    ): Response {
         if ($this->isCsrfTokenValid('delete' . $option->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
+            $optionName = $option->getName();
+            $optionDescription = $option->getDescription();
+            $optionId = $option->getId();
+            $yamlKeys[0] = "$optionName.$optionId";
+            $yamlKeys[1] = "$optionDescription.$optionId";
+            foreach ($yamlKeys as $yamlKey) {
+                $translate = $translateRepository->findOneBy([
+                    'yamlKey' => $yamlKey
+                ]);
+                if ($translate) {
+                    $entityManager->remove($translate);
+                    $entityManager->flush();
+                    $yamlWrite->event2Yaml();
+                }
+            }
             $entityManager->remove($option);
             $entityManager->flush();
         }

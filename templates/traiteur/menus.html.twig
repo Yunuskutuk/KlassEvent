@@ -12,7 +12,7 @@
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h2 class="modal-title" id="exampleModalLongTitle">{{menu.name|trans}}</h2>
+						<h2 class="modal-title" id="exampleModalLongTitle">{{ (menu.name~'.'~menu.id)|trans}}</h2>
 						<span><img src="/images/uploads/{{ menu.path }}" class="size-img" data-overlay="gallery"></span>
 					</div>
 					<div class="modal-body">
@@ -21,14 +21,14 @@
 							:
 						</h5>
 						<p>
-							{{menu.description|trans}}
+							{{ (menu.description~'.'~menu.id)|trans }}
 						</p>
 						<h5 class="mr-5 modal-title" id="exampleModalLabel">
 							{{"detail.general"|trans}}
 							:
 						</h5>
 						<p>
-							{{menu.more|trans}}
+							{{ (menu.more~'.'~menu.id)|trans }}
 						</p>
 						<h5 class="mr-5 modal-title" id="exampleModalLabel">{{"prix.general"|trans}}
 							:</h5>
@@ -64,7 +64,7 @@
 										<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 											<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 												<img src="/images/uploads/{{ menu.path }}" class="size-img-2">
-												<h3 class="heading mt-2">{{menu.name|trans}}</h3>
+												<h3 class="heading mt-2">{{ (menu.name~'.'~menu.id)|trans }}</h3>
 											</div>
 											<!-- Button trigger modal -->
 											<button type="button" class="btn see mb-4" data-toggle="modal" data-target="#exampleModal{{menu.id}}">

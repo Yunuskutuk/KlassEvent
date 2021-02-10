@@ -14,7 +14,7 @@
 
 					<div class="col-md-12 col-sm-12 text-center">
 						<span class="subheading">{{ 'event.titre'|trans }}{# Klass Event #}</span>
-						<h2 class="mb-4 h2-event">{{ services.title }}</h2>
+						<h2 class="mb-4 h2-event">{{ (services.title~'.'~service.id)|trans }}</h2>
 					</div>
 
 				</div>
@@ -38,7 +38,7 @@
 							</div>
 							<div class="text pt-3 pb-4 px-4">
 								<h3 class="heading">
-									{{ 'picture.description'|trans }}
+									{{ (picture.description~'.'~picture.id)|trans }}
 								</h3>
 							</div>
 						</div>

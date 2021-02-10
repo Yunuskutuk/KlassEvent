@@ -24,26 +24,26 @@
 	<!-- End Background picture -->
 
 <section class="ftco-section">
-		<div class="container">
+	<div class="container">
 
-			<div class="row justify-content-center mb-5 pb-2">
-				<div class="col-md-12 text-center heading-section">
-					<span class="subheading">{{'event.index.titre'|trans}}</span>
-					<h2 class="mb-4">{{'event.index.titre2'|trans}}</h2>
-				</div>
+		<div class="row justify-content-center mb-5 pb-2">
+			<div class="col-md-12 text-center heading-section">
+				<span class="subheading">{{'event.index.titre'|trans}}</span>
+				<h2 class="mb-4">{{'event.index.titre2'|trans}}</h2>
 			</div>
-		</div>
+		</div>	
 
-		<div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h2>{{'quote.question1'|trans}}{# Comment ça marche? #}</h2>
+		<div class="d-flex align-self-stretch text-center">
+			<div class="media block-6 services d-block step-background">
+				
+                <h2 class="mt-5 mb-3 font-weight-bold">{{'quote.question1'|trans}}{# Comment ça marche? #}</h2>
 
                 <p>{{'quote.p1'|trans}}{# Bien en général, le principe nous organisons divers type d'événements
                 et nous sommes souples sur l'organisation #}</p>
 
                 <p>{{'quote.p2'|trans}}{# A ce stade d'avancement, nous avons besoin d'en apprendre un peu plus #}</p>
 
-                <h2>{{'quote.question2'|trans}}{# mais je ne sais pas comment m'y prendre #}</h2>
+                <h2 class="mt-5 mb-3 font-weight-bold">{{'quote.question2'|trans}}{# mais je ne sais pas comment m'y prendre #}</h2>
 
                 <p>{{'quote.p3'|trans}}{# rassurez vous, rien n'est définitif, c'est juste pour avoir une base de discussion #}</p>
 
@@ -53,17 +53,24 @@
 
                 <p>{{'quote.p5'|trans}}{# donc, première étape #}:</p>
 
-                <h2>{{'quote.question3'|trans}}{# Choisissez votre événement #}:</h2>
+                <h2 class="mt-5 mb-3 font-weight-bold">{{'quote.question3'|trans}}{# Choisissez votre événement #}:</h2>
 
-                <ul>
+                <ul class="mb-5">
+				
                     {% for event in events %}
-                        <li><a href="{{ path('quote_quote', {'id': event.id}) }}">
-                        <p class="text-center">{{ event.type|trans }}</p></a> </li>
+
+					<li class="li-quote">
+					
+					<button class="btn btn-primary" style="width:20em" type="submit" value="{{ path('quote_quote', {'id': event.id}) }}">{{ event.type|trans }}</button>
+				
+					</li>
                     {% endfor %}
+			
                 </ul>
-			</div>
+			</div>	
 		</div>
 
-	</section>
+	</div>
+</section>
 
 {% endblock %}

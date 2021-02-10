@@ -53,7 +53,7 @@
 						<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 								<img src="/images/uploads/{{ menu.path }}" alt="grillade" class="size-img">
-								<h3 class="heading">{{menu.name|trans}}</h3>
+								<h3 class="heading">{{ (menu.name~'.'~menu.id)|trans }}</h3>
 								<h3 class="heading">{{ 'prix.general'|trans }}
 								</h3>
 								<h4>{{menu.price}}
@@ -62,12 +62,12 @@
 									{# Description #}
 									:
 								</h3>
-								<p>{{menu.description}}</p>
+								<p>{{ (menu.description~'.'~menu.id)|trans }}</p>
 								<h3 class="heading">
 									{{"detail.general"|trans}}
 									:
 								</h3>
-								<p>{{menu.more}}</p>
+								<p>{{ (menu.more~'.'~menu.id)|trans }}</p>
 								<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">
 									{{ 'traiteur.index.plus'|trans }}
 									{# Voir plus #}

@@ -107,8 +107,10 @@ class YamlWrite
         foreach ($events as $event) {
             $inside = false;
             $theType = $event->getType();
+            $theId = $event->getId();
+            $yamlKey = "$theType.$theId";
             foreach ($translations as $translate) {
-                if ($theType == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
@@ -116,7 +118,7 @@ class YamlWrite
             if (!$inside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theType")
+                    ->setYamlKey("$theType.$theId")
                     ->setFrench("$theType")
                     ->setTurkish("$theType");
 
@@ -138,15 +140,17 @@ class YamlWrite
         foreach ($options as $option) {
             $inside = false;
             $theName = $option->getName();
+            $theId = $option->getId();
+            $yamlKey = "$theName.$theId";
             foreach ($translations as $translate) {
-                if ($theName == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
             if (!$inside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theName")
+                    ->setYamlKey("$theName.$theId")
                     ->setFrench("$theName")
                     ->setTurkish("$theName");
                 $this->manager->persist($newTranslate);
@@ -154,15 +158,17 @@ class YamlWrite
             // we do the same for description
             $inside = false;
             $theDescription = $option->getDescription();
+            $theId = $option->getId();
+            $$yamlKey = "$theDescription.$theId";
             foreach ($translations as $translate) {
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
             if (!$inside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theDescription")
+                    ->setYamlKey("$theDescription.$theId")
                     ->setFrench("$theDescription")
                     ->setTurkish("$theDescription");
                 $this->manager->persist($newTranslate);
@@ -181,15 +187,17 @@ class YamlWrite
         foreach ($pictures as $picture) {
             $inside = false;
             $theDescription = $picture->getDescription();
+            $theId = $picture->getId();
+            $yamlKey = "$theDescription.$theId";
             foreach ($translations as $translate) {
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
             if (!$inside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theDescription")
+                    ->setYamlKey("$theDescription.$theId")
                     ->setFrench("$theDescription")
                     ->setTurkish("$theDescription");
 
@@ -209,15 +217,17 @@ class YamlWrite
         foreach ($services as $service) {
             $inside = false;
             $theDescription = $service->getDescription();
+            $theId = $service->getId();
+            $yamlKey = "$theDescription.$theId";
             foreach ($translations as $translate) {
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
             if (!$inside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theDescription")
+                    ->setYamlKey("$theDescription.$theId")
                     ->setFrench("$theDescription")
                     ->setTurkish("$theDescription");
 
@@ -226,15 +236,17 @@ class YamlWrite
             // the same for title
             $inside = false;
             $theTitle = $service->getTitle();
+            $theId = $service->getId();
+            $yamlKey = "$theTitle.$theId";
             foreach ($translations as $translate) {
-                if ($theTitle == $translate->getYamlKey()) {
+                if ($yamlKey == $translate->getYamlKey()) {
                     $inside = true;
                 }
             }
             if (!$inside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theTitle")
+                    ->setYamlKey("$theTitle.$theId")
                     ->setFrench("$theTitle")
                     ->setTurkish("$theTitle");
 
@@ -259,21 +271,25 @@ class YamlWrite
             $theDescription = $menu->getDescription();
             $moreInside = false;
             $theMore = $menu->getMore();
+            $theId = $menu->getId();
+            $yamlKey1 = "$theName.$theId";
+            $yamlKey2 = "$theDescription.$theId";
+            $yamlKey3 = "$theMore.$theId";
             foreach ($translations as $translate) {
-                if ($theName == $translate->getYamlKey()) {
+                if ($yamlKey1 == $translate->getYamlKey()) {
                     $nameInside = true;
                 }
-                if ($theDescription == $translate->getYamlKey()) {
+                if ($yamlKey2 == $translate->getYamlKey()) {
                     $descriptioInside = true;
                 }
-                if ($theMore == $translate->getYamlKey()) {
+                if ($yamlKey3 == $translate->getYamlKey()) {
                     $moreInside = true;
                 }
             }
             if (!$nameInside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theName")
+                    ->setYamlKey("$theName.$theId")
                     ->setFrench("$theName")
                     ->setTurkish("$theName");
                 $this->manager->persist($newTranslate);
@@ -281,7 +297,7 @@ class YamlWrite
             if (!$descriptioInside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theDescription")
+                    ->setYamlKey("$theDescription.$theId")
                     ->setFrench("$theDescription")
                     ->setTurkish("$theDescription");
                 $this->manager->persist($newTranslate);
@@ -289,7 +305,7 @@ class YamlWrite
             if (!$moreInside) {
                 $newTranslate = new Translate();
                 $newTranslate
-                    ->setYamlKey("$theMore")
+                    ->setYamlKey("$theMore.$theId")
                     ->setFrench("$theMore")
                     ->setTurkish("$theMore");
                 $this->manager->persist($newTranslate);

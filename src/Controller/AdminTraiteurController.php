@@ -6,6 +6,7 @@ use App\Entity\Menu;
 use App\Form\MenuType;
 use App\Services\YamlWrite;
 use App\Repository\MenuRepository;
+use App\Repository\TranslateRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -49,7 +50,7 @@ class AdminTraiteurController extends AbstractController
         ]);
     }
     /**
-     * @Route("/{id}", name="admin_traiteur_addToMenuWeek", methods={"GET"})
+     * @Route("/{id}/change", name="admin_traiteur_addToMenuWeek", methods={"GET"})
      */
     public function updateMenuWeek(Menu $menu): Response
     {
@@ -95,16 +96,37 @@ class AdminTraiteurController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin_traiteur_delete", methods={"DELETE"})
+     * @Route("/{id}/delete", name="admin_traiteur_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Menu $menu): Response
-    {
+    public function delete(
+        Request $request,
+        Menu $menu,
+        TranslateRepository $translateRepository,
+        YamlWrite $yamlWrite
+    ): Response {
         if ($this->isCsrfTokenValid('delete' . $menu->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
+            $menuName = $menu->getName();
+            $menuDescription = $menu->getDescription();
+            $menuMore = $menu->getMore();
+            $menuId = $menu->getId();
+            $yamlKeys[0] = "$menuName.$menuId";
+            $yamlKeys[1] = "$menuDescription.$menuId";
+            $yamlKeys[2] = "$menuMore.$menuId";
+            foreach ($yamlKeys as $yamlKey) {
+                $translate = $translateRepository->findOneBy([
+                    'yamlKey' => $yamlKey
+                ]);
+                if ($translate) {
+                    $entityManager->remove($translate);
+                    $entityManager->flush();
+                    $yamlWrite->event2Yaml();
+                }
+            }
             $entityManager->remove($menu);
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin/traiteur_index');
+        return $this->redirectToRoute('admin_traiteur_index');
     }
 }

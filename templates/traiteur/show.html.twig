@@ -44,10 +44,10 @@
 						<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 							<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 								<img src="/images/uploads/{{ pictures.path }}" alt="grillade" class="size-img">
-								<h3 class="heading">{{pictures.name}}</h3>
+								<h3 class="heading">{{ (pictures.name~'.'~picture.id)|trans }}</h3>
 
 								<p>Description :
-									{{pictures.description}}</p>
+									{{ (pictures.description~'.'~picture.description)|trans }}</p>
 								<p>{{pictures.datetime}}</p>
 								<button type="button" onclick="document.location.href='/traiteur/menus'" class="btn see">
 									{{ 'retour.general'|trans }}
