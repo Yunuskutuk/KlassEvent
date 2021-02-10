@@ -1,0 +1,23 @@
+{% extends 'baseEmail.html.twig' %}
+
+{% block body %}
+<h1>Fomulaire de contact Event :</h1>    
+
+    <div>
+        <p class="col-6 d-flex p-title">Nom : </p><p class="col-6 d-flex"> {{ name }} </p>
+    </div>
+    <div>
+        <p class="col-6 d-flex p-title">Numéro de téléphone : </p><p class="col-6 d-flex"> {{ number }} </p>
+    </div>
+    <div>
+        <p class="col-6 d-flex p-title">E-mail : </p><p class="col-6 d-flex"> {{ mail }} </p>
+    </div>
+    <div>
+        <p class="col-6 d-flex p-title">Message : </p><p class="col-6 d-flex"> {{ text }} </p>
+    </div>
+
+   
+{% endblock %}
+   
+
+

@@ -72,12 +72,16 @@ class EventController extends AbstractController
             $email = new Email();
             if ($contact->getSubject() !== null) {
                 $subject = $contact->getSubject();
-                $message = $contact->getSenderEmail() . "-" . $contact->getNumber() . "-" . $contact->getMessage();
+                $messageMail = $contact->getSenderEmail();
+                $messageNumber = $contact->getNumber();
+                $messageText = $contact->getMessage();
+                $messageName = $contact->getName();
                 $email
                     ->from('ab2714d368-ae00ad@inbox.mailtrap.io')
                     ->to('david67230@gmail.com')
                     ->subject($subject)
-                    ->html($message);
+                ->html($this->renderView('event/newContactEmail.html.twig', ['mail' => $messageMail,
+                'number' => $messageNumber, 'text' => $messageText, 'name' => $messageName]));
             }
 
             $mailer->send($email);
