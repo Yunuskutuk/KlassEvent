@@ -5,6 +5,8 @@ account.edit.modifier: Benim bilgim
 account.login: Oturum aç
 account.logout: Çıkış Yap
 accueil: Ev
+anniversaire: yıldönümü
+baptême: vaftiz
 bouton.changer.passe: şifreyi değiştirmek için
 bouton.MAJ: Güncelleme
 bouton.modifier: Düzenle
@@ -60,13 +62,17 @@ form.placeholder.phone: 0699999999
 gallery.index.rien: hizmetlerde resim yok, yöneticiye başvurun
 home.event: İşletmeler ve bireyler için yemek teslimi
 home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıcısı
-horaires.footer: Her gün 11 h ila 21 h
+horaires.footer: Her gün ... h ... ila ... h ...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
+langue: Dil
+langue.fr: Fransızca
+langue.tr: Türk
 livraison.footer: Teslimat detayları
 location: Kiralama
 menu: Menü
 menu.footer: Menü listesi
+mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
 navbar.gallerie: Fotoğraf Galerisi
 navbar.livraison: Teslimat Detayları.
 navbar.ouverture: Açılış saatleri - Her gün
@@ -76,22 +82,125 @@ quote.demandes: Notlar, talimatlar, sorular ve istekler
 quote.description: Açıklama
 quote.devis: teklif istemek
 quote.email: E-postanızı giriniz
-quote.for: için alıntı
-quote.lieu.event: olayın yeri
+quote.lieu: olayın yeri
 quote.nbrInvites: ziyaretçi sayısı
 quote.nom: adınızı giriniz
-quote.p1: Genel olarak, çeşitli etkinlikler düzenlememiz ilkesi ve organizasyon konusunda esneğiz
-quote.p2: Bu ilerleme aşamasında, biraz daha öğrenmemiz gerekiyor
-quote.p3: İçiniz rahat olsun, hiçbir şey nihai değildir, sadece tartışma için bir temele sahip olmaktır
-quote.p4: Öyleyse şu anda bildiklerinize göre doldurun, o zaman gerçek, deneyimli bir insan ön teklifi devralacak ve her şeyi çözmek için sizinle telefonda (veya sorarsanız e-posta) sohbet edecek. her zaman düşünme
-quote.p5: öyleyse, ilk adım
 quote.phone: telefon numaranızı girin
-quote.question1: Nasıl çalışır?
-quote.question2: ama nasıl devam edeceğimi bilmiyorum
-quote.question3: Etkinliğinizi seçin
 quote.service: Hizmet
+rent.1,60m: çap 1.60m
+rent.1,80m: çap 1.80m
+rent.10personne: 10 kişi
+rent.120cm: 120 cm, beyaz
+rent.13couleurs: 13 renk mevcut
+rent.2e: 150 top için 2 euro
+rent.3e: 500 elmas için 3 Euro
+rent.6/8.personne: 6/8 kişi
+rent.70cm: 70 cm yüksekliğinde, farklı renklerde su topu kiralama imkanı
+rent.8/10.personne: 8/10 kişi
+rent.8personne: 8 kişi
+rent.accessoire: aksesuar
+rent.accessoires: ve aksesuarlar
+rent.apropos: açıklama
+rent.arbre: şekerli badem ağacı
+rent.arendre: Aksi takdirde yıkanmış olarak iade edilmek üzere, kiralanan tabak başına 5 cts ekleyin.
+rent.assiette.carre: Kare tabak
+rent.assiette.carre.dessert: Kare tatlı tabağı
+rent.assiette.ronde: Çanak için yuvarlak tabak
+rent.assiette.ronde.dessert: Yuvarlak tatlı tabağı
+rent.astuce: ipucu Masa koşucu ve sandalye kılıflarının düğüm noktalarında aynı renk ve aynı malzeme kullanılması şiddetle tavsiye edilir.
+rent.billes: Renkli hidrojel boncuklar
+rent.blanc.noir: Beyaz, siyah, fildişi
+rent.blanche: Beyaz
+rent.boule: Top vazo
+rent.capacite: Kapasite
+rent.caracteristique: Özellikler
+rent.chaine: Elmas zincir
+rent.chaise: sandalyeler
+rent.champagne: Şampanya flütü
+rent.changement: Kademeli renk değişimi, iç / dış mekan
+rent.chemin.table: masa koşucusu
+rent.contenance: kapasite
+rent.couleur: Likra, beyaz, siyah, fildişi
+rent.couleurs: renkler
+rent.coupelle: Fincan vazo
+rent.couteau: bıçak
+rent.couvert: ve çatal bıçak takımı
+rent.cuillere: Tatlı kaşığı
+rent.cylindrique: Silindirik vazo
 rent.deco: Masa dekorasyonu
+rent.deco.lu: Hafif dekorasyon
+rent.deco.lu.salle: Parlak oda dekorasyonu
+rent.deco2: Sandalye dekorasyonu
+rent.decoration: Dekorasyonumuz
+rent.descri: Yuvarlak masalarımız, renkli ışığın masanın altında mükemmel bir şekilde yansıtılması için güçlü led projektörler ve batarya üzerinde son nesillerle donatılmıştır. Hepsi bir uzaktan kumanda ile kablosuz olarak kontrol edilir.
+rent.descri.mange: Ayakta duran masalar, süslemeyi unutmamak için şeref şarabı için vazgeçilmez bir zorunluluktur (örneğin bir saten veya organze yay ile).
+rent.descri.nappes: Masa koşucu, bir renk dokunuşu vermek ve dekorasyonunu geliştirmek için idealdir.
+                 masalarınız. Saten masa koşucu, düğün sofralarınıza parlaklık katar.
+rent.description.deco: Açıklama
+rent.diam35: Ortada vazolarınızın altına koymak için 35 cm çapında
+           tablonun
+rent.diam60: Çap 60 cm Yükseklik 1.10 m
+rent.diamant: elmaslar
+rent.diametre25: Çap 25 cm
+rent.dimension: Boyutlar
+rent.fourchette: çatal
+rent.hauteur: Yükseklik 20 cm
+rent.hauteur18: Yükseklik 16,5 cm Genişlik 5 cm
+rent.hauteur30: Yükseklik 30 yoksa 40 cm
+rent.hauteur8: Çap 25 cm Yükseklik 8 cm
+rent.housse: Beyaz veya fildişi kapak
+rent.housse.lycra: Likralı, beyaz veya fildişi kaplama
+rent.housse.noeud: Likralı kılıf + organze yay
+rent.housse.toile: Likra örtüsü + çuval bezi yayı
+rent.insta.lu: Projektörlerin odanın her yerine duvarlara montajı. Montaj ve demontajla ilgileniyoruz.
+rent.lave: İade edilecek yıkanmış, kurutulmuş, ütülenmemiş
+rent.led: Dalgıç LED mum
+rent.lumineuse: parlak
+rent.mange: Ayaklı masa için kapak
+rent.mange.debout: ayakta yemek
+rent.mange.debout.lu: parlak ayakta yiyor
+rent.martini: Martini vazo
+rent.matiere: 100% polyester, beyaz
+rent.miroir: yuvarlak ayna
+rent.nappe.rectangulaire: Dikdörtgen masa örtüsü
+rent.nappe.ronde: Yuvarlak masa örtüsü
+rent.noeud: Organze düğüm
+rent.noeud.toile: Çuval bezi düğüm
+rent.non.lave: Yıkanmadan iade edilecek
+rent.nos: Bizim
+rent.noshousse: kapaklarımız
+rent.nosnappes: Masa örtülerimiz
+rent.nosvases: Vazolarımız
+rent.nosverres: bizim gözlüklerimiz
+rent.organza: organze
+rent.possible: Zinciri keserek özelleştirme imkanı
+rent.prix: fiyat
+rent.proj.lu: Parlak led projektör (yaklaşık 7 veya 8) ve ekstra düz, kurulumu çok kolay.
+rent.propose: Masalarınızı süslemek için aksesuarlar da sunuyoruz.
+rent.proposons: Farklı ışık ortamları sunuyoruz.
+rent.ps: Not Masa örtülerimiz yere değmez, misafirler için daha keyifli olur
+rent.retrouvez: Etkinliğiniz için ihtiyacınız olan tüm yemekleri burada bulun.
+rent.rideau: Işık perdesi
+rent.rideau.lu: 300 saf beyaz LED + alüminyum yapıdan oluşan 4m x 3m ışık perdesi
+rent.satin: saten
+rent.serviette: Peçeteler
+rent.sublimez: Sandalye kılıflarımız ve organze yaylarımızla sandalyelerinizi güzelleştirin.
+rent.table: Masalar
+rent.table.ronde: yuvarlak masa
+rent.table.ronde.lumineuse: hafif yuvarlak masa (masa örtüsü olmadan)
+rent.taille: Kesmek
+rent.titre: Klass Event Kiralama
+rent.titre2: Masa dekorasyonu
+rent.transparents: şeffaf
+rent.tumbler: Bardak bardağı
+rent.type: Tür
+rent.type.accessoire: Aksesuar tipi
+rent.type.assiette: plaka türü
+rent.type.mangedebout: ayakta yemek türü
+rent.type.nappe: Masa örtüsü türü
+rent.type.verre: bardak türü
 rent.Vaisselle: Bulaşık yıkama
+rent.vin: Şarap bardağı
 sauvegarder: Kayıt etmek
 security.ça_va_là: Sen
 security.connectez: Bağlan
@@ -104,7 +213,7 @@ security.password: Parola
 services: Teklif isteği
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
 traiteur.index.3livraison: Teslimat başına 3 menüden
-traiteur.index.appelAction: Haftalık menünüzü seçin
+traiteur.index.appelAction: Haftalık menünüzü seçin ... ila ...
 traiteur.index.deplacements: Strasbourg çevresinde 20 km'ye kadar seyahat edin
 traiteur.index.detailsLivraison: Teslimat Detayları!
 traiteur.index.menus: Menüler
@@ -119,4 +228,4 @@ traiteur.slogan: Gerçek yemek teslim et
 traiteur.titre: Klass yemek şirketi
 traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
 traiteur.VoirMenus: Menüleri görüntüle
-vaisselle: bulaşıklar
+vaisselle: vaisselle
