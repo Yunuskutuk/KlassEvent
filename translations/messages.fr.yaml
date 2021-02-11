@@ -3,22 +3,26 @@ account.back.home: Retour à l'Accueil
 account.compte: Un compte
 account.cree: Créer
 account.edit.modifier: Mes informations
-account.login: Login
-account.logout: Logout
+account.login: Connexion
+account.logout: Déconnexion
 accueil: Accueil
+animation particulière.6: Animations particulières
 anniversaire: Anniversaire
+banquet.3: Les banquets
 baptême: Baptême
 boom: Boom
 bouton.changer.passe: Changer le mot de passe
 bouton.MAJ: Mettre à jour
 bouton.modifier: Modifier
 bouton.save: Sauvegarder
+circoncision: Circoncision
+congrès: Congrès
 contact: Contact
 contact.Envoyer: Envoi du message
 contact.footer: Nous contacter
+cuisine.4 : La cuisine
 demande.devis: Demande de devis
 detail.general: Détails
-dsgsrg.2: dsgsrg
 event.account.adresseLivraison: Adresse de livraison
 event.account.adressePerso: Adresse personnelle
 event.account.compte: Mon compte
@@ -67,7 +71,7 @@ garde d'enfants: Garde d'enfants
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 hop, buffet froid, histoire de voir: Hop, buffet froid, histoire de voir
-horaires.footer: Tous les jours de ...h... à ...h...
+horaires.footer: Tous les jours de 11h00 à 21h00
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
 langue: Langue
@@ -75,44 +79,45 @@ langue.fr: Français
 langue.tr: Turc
 le big truc: Le big truc
 Le super menu: Le super menu
-les photos de l'évenement: les photos de l'évenement
+les photos de l'évenement: Les photos de l'évenement
 Les photos du mariage, plus des photos studio à encadrer: Les photos du mariage, plus des photos studio à encadrer
 livraison.footer: Détail des livraisons
 location: Location
 mariage: Mariage
 menu: Menu
 menu.footer: Liste des menus
-mise à disposition des couverts, verres, et assiettes: mise à disposition des couverts, verres, et assiettes
-navbar.gallerie: Gallerie
-navbar.livraison: Détails des livraison
+mise à disposition des couverts, verres, et assiettes: Mise à disposition des couverts, verres, et assiettes
+navbar.gallerie: Galerie
+navbar.livraison: Détails des livraisons
 navbar.ouverture: Horaires d'ouverture - Tous les jours
-petit banquet: petit banquet
-photo de base: photo de base
+nos.menus: Nos menus
+petit banquet: Petit banquet
+photo de base: Photo de base
 Photo Souvenir: Photo Souvenir
-photographe pro: photographe pro
+photographe pro: Photographe pro
 Plat 01: Plat 01
 quote.choix.option: --Veillez choisir votre option--
 quote.dateEvenement: Jour et heure de l’événement
 quote.demandes: Remarques, instructions, questions et demandes
 quote.description: Description
-quote.email: entrez votre email
-quote.lieu.event: le lieu de l’événement
 quote.devis: Demander un devis
+quote.email: Entrez votre email
 quote.for: Devis pour un
 quote.lieu: Lieu de l’événement
+quote.lieu.event: Le lieu de l’événement
 quote.nbrInvites: Nombre d'invités
 quote.nom: Votre nom et prénom
-quote.p1: Bien en général, le principe nous organisons divers type d'événements et nous sommes souples sur l'organisation
+quote.p1: Nous organisons divers type d'événements et nous sommes souples sur l'organisation
 quote.p2: A ce stade d'avancement, nous avons besoin d'en apprendre un peu plus
 quote.p3: Rassurez vous, rien n'est définitif, c'est juste pour avoir une base de discussion
-quote.p4: Donc, renseignez les choses selon ce que vous savez pour le moment, ensuite, un vrai humain expérimenté va prendre en charge le pré-devis et discuter avec vous au téléphone (ou par e-mail, si vous le demandez) pour régler tout les petits détails auquel on ne pense pas toujours
-quote.p5: donc, première étape
+quote.p4: Renseignez les choses selon ce que vous savez pour le moment, ensuite, un vrai humain expérimenté va prendre en charge le pré-devis et discuter avec vous au téléphone (ou par e-mail, si vous le demandez) pour régler tous les petits détails auquel on ne pense pas toujours
+quote.p5: Première étape
 quote.question1: Comment ça marche?
-quote.question2: mais je ne sais pas comment m'y prendre
+quote.question2: Mais je ne sais pas comment m'y prendre
 quote.question3: Choisissez votre événement
 quote.service: Service
-rent.1,60m: diamètre 1,60m
-rent.1,80m: diamètre 1,80m
+rent.1,60m: Diamètre 1,60m
+rent.1,80m: Diamètre 1,80m
 rent.10personne: 10 personnes
 rent.120cm: 120 cm, blanc
 rent.13couleurs: 13 couleurs disponibles
@@ -122,55 +127,54 @@ rent.6/8.personne: 6/8 personnes
 rent.70cm: 70 cm de haut, possibilité de location de billes d’eau de différentes couleurs
 rent.8/10.personne: 8/10 personnes
 rent.8personne: 8 personnes
-rent.accessoire: accessoire
+rent.accessoire: Accessoire
 rent.accessoires: et accessoires
-rent.apropos: description
-rent.arbre: arbre à dragées
+rent.apropos: Description
+rent.arbre: Arbre à dragées
 rent.arendre: A rendre lavé sinon ajouter 5 cts par location d'article vaisselle.
 rent.assiette.carre: Assiette carrée
 rent.assiette.carre.dessert: Assiette carrée à dessert
 rent.assiette.ronde: Assiette ronde pour plat
 rent.assiette.ronde.dessert: Assiette ronde à dessert
-rent.astuce: astuce Il est fortement recommandé de prendre la même couleur et la même matière pour le chemin de table et les noeuds des housses de chaise.
+rent.astuce: Astuce = Il est fortement recommandé de prendre la même couleur et la même matière pour le chemin de table et les noeuds des housses de chaise.
 rent.billes: Billes hydrogel colorées
 rent.blanc.noir: Blanc, noir, ivoire
-rent.blanche: blanches
-rent.boule: vase boule
-rent.capacite: capacite
-rent.caracteristique: caractéristique
+rent.blanche: Blanches
+rent.boule: Vase boule
+rent.capacite: Capacité
+rent.caracteristique: Caractéristique
 rent.chaine: Chaine de diamants
 rent.chaise: de chaises
 rent.champagne: Flûte à champagne
 rent.changement: Changement graduel de couleurs, intérieur/extérieur
-rent.chemin.table: chemin de table
-rent.contenance: contenance
+rent.chemin.table: Chemin de table
+rent.contenance: Contenance
 rent.couleur: Lycra, blanc, noir, ivoire
-rent.couleurs: couleurs
-rent.coupelle: vase coupelle
-rent.couteau: couteau
-rent.couvert: et couverts
+rent.couleurs: Couleurs
+rent.coupelle: Vase coupelle
+rent.couteau: Couteau
+rent.couvert: Les couverts
 rent.cuillere: Cuillère à dessert
 rent.cylindrique: Vase cylindrique
 rent.deco: Décoration de table
 rent.deco.lu: Décoration lumineuse
 rent.deco.lu.salle: Décoration lumineuse de salle
 rent.deco2: Décoration de chaise
-rent.decoration: Nos décoration
-rent.descri: Nos tables rondes sont équipées de projecteur led puissants et des dernières générations sur batterie pour une superbe projection, sous la table, de lumiere colorée. Le tout piloté sans fil via une télécommande.
-rent.descri.mange: Les mange debout sont un must indispensable du vin d’honneur à ne pas oublier de décorer ( avec un noeud satin ou organza autour par exemple).
-rent.descri.nappes: Le chemin de table est idéal pour donner une note de couleur et rehausser la décoration de 
-                	vos table. Un chemin de table satiné apporte de la brillance à vos tables de mariage.
+rent.decoration: Nos décorations
+rent.descri: Nos tables rondes sont équipées de projecteurs led puissants et des dernières générations sur batterie pour une superbe projection, sous la table, de lumiere colorée. Le tout piloté sans fil via une télécommande.
+rent.descri.mange: Les mange-debout sont un must indispensable du vin d’honneur, à ne pas oublier de décorer (avec un noeud satin ou organza autour par exemple).
+rent.descri.nappes: Le chemin de table est idéal pour donner une note de couleur et rehausser la décoration de vos table. Un chemin de table satiné apporte de la brillance à vos tables de mariage.
 rent.description.deco: Description
-rent.diam35: Diamètre 35 cm, pour mettre en dessous de vos vases en centre
-          de table
+rent.diam35: Diamètre 35 cm, pour mettre en dessous de vos vases en centre de table
 rent.diam60: Diamètre 60 cm Hauteur 1,10 m
-rent.diamant: diamants
-rent.diametre25: diamètre 25 cm
-rent.dimension: dimensions
-rent.fourchette: fourchette
+rent.diamant: Diamants
+rent.diametre25: Diamètre 25 cm
+rent.dimension: Dimensions
+rent.eau: Verre à eau
+rent.fourchette: Fourchette
 rent.hauteur: Hauteur 20 cm
 rent.hauteur18: Hauteur 16,5 cm Largeur 5 cm
-rent.hauteur30: hauteur 30 ou 40 cm
+rent.hauteur30: Hauteur 30 ou 40 cm
 rent.hauteur8: Diamètre 25 cm  Hauteur 8 cm
 rent.housse: Housse blanc ou ivoire
 rent.housse.lycra: Housse en lycra, blanche ou ivoire
@@ -178,51 +182,51 @@ rent.housse.noeud: Housse lycra + noeud organza
 rent.housse.toile: Housse lycra + noeud toile de jute
 rent.insta.lu: Installation de projecteurs contre les murs, tout autour de la salle. Nous nous occupons du montage et du démontage.
 rent.lave: A rendre lavées, séchées, non repassées
-rent.led: Bougie LED Submersible
+rent.led: Bougie LED submersible
 rent.lumineuse: lumineuses
 rent.mange: Housse pour mange debout
-rent.mange.debout: mange debout
-rent.mange.debout.lu: mange debout lumineux
+rent.mange.debout: Mange debout
+rent.mange.debout.lu: Mange debout lumineux
 rent.martini: Vase Martini
 rent.matiere: 100% polyester, blanche
-rent.miroir: miroir rond
+rent.miroir: Miroir rond
 rent.nappe.rectangulaire: Nappe rectangulaire
 rent.nappe.ronde: Nappe ronde
 rent.noeud: Noeud organza
 rent.noeud.toile: Noeud toile de jute
 rent.non.lave: A rendre non lavées
 rent.nos: Nos
-rent.noshousse: nos housses
+rent.noshousse: Nos housses
 rent.nosnappes: Nos nappes
-rent.nosvases: nos vases
-rent.nosverres: nos verres
-rent.organza: organza
+rent.nosvases: Nos vases
+rent.nosverres: Nos verres
+rent.organza: Organza
 rent.possible: Possibilité de personnaliser la longueur en coupant la chaîne
-rent.prix: prix
+rent.prix: Prix
 rent.proj.lu: Projecteur lumineux à led (environ 7 ou 8) et extra plat, très facile d’installation.
 rent.propose: Nous proposons aussi des accessoires pour décorer vos tables.
 rent.proposons: Nous proposons différentes ambiances lumineuses.
-rent.ps: PS Nos nappes ne touchent pas le sol, cela est plus agréable pour les invités
+rent.ps: Nos nappes ne touchent pas le sol, cela est plus agréable pour les invités
 rent.retrouvez: Retrouvez ici toute la vaisselle nécessaire à votre événement.
 rent.rideau: Rideau lumineux
 rent.rideau.lu: Rideau lumineux 4m x 3m composé de 300 LED blanches pures + structure aluminium
-rent.satin: satin
+rent.satin: Satin
 rent.serviette: Serviettes de table
 rent.sublimez: Sublimez vos chaises grâce à nos housses de chaises et nos noeuds en organza.
-rent.table: Table
-rent.table.ronde: table ronde
-rent.table.ronde.lumineuse: table ronde lumineuse (sans nappe)
-rent.taille: taille
+rent.table: Tables
+rent.table.ronde: Table ronde
+rent.table.ronde.lumineuse: Table ronde lumineuse (sans nappe)
+rent.taille: Taille
 rent.titre: Klass Event Location
 rent.titre2: Décoration de table
-rent.transparents: transparents
+rent.transparents: Transparents
 rent.tumbler: Verre tumbler
 rent.type: Type
-rent.type.accessoire: type d'accessoire
-rent.type.assiette: type d'assiette
-rent.type.mangedebout: type de mange debout
-rent.type.nappe: type de nappe
-rent.type.verre: type de verre
+rent.type.accessoire: Type d'accessoire
+rent.type.assiette: Type d'assiette
+rent.type.mangedebout: Type de mange debout
+rent.type.nappe: Type de nappe
+rent.type.verre: Type de verre
 rent.Vaisselle: La vaisselle
 rent.vin: Verre à vin
 sauvegarder: Sauvegarder
@@ -234,31 +238,37 @@ security.deconnection: Se déconnecter
 security.deja.connecte: Vous êtes déjà connecté avec
 security.email: Renseignez votre e-mail et votre mot de passe pour vous connecter
 security.password: Mot de passe
+serveurs.5: Les serveurs
 services: Services
+tables.1: Les tables
 traiteur.aperitif: Les apéritifs
-test.2: test
-traiteur.ConnexionLivraison: Connectez-vous et commander !
-traiteur.desserts: Les Desserts et fruits
+traiteur.ConnexionLivraison: Connectez-vous et commandez !
+traiteur.desserts: Les Desserts et les Fruits
 traiteur.entree: Les Entrées
 traiteur.gateaux: Les Gâteaux
 traiteur.index.3livraison: A partir de 3 menus par livraison
-traiteur.index.appelAction: Choisissez votre menu pour la semaine du ... au ...
+traiteur.index.appelAction: Choisissez votre menu pour la semaine
 traiteur.index.deplacements: Déplacements jusqu'à 20km autour de Strasbourg
-traiteur.index.detailsLivraison: Détails des livraisons !
+traiteur.index.detailsLivraison: Détail des livraisons !
 traiteur.index.menus: Les menus
 traiteur.index.menus2: De la semaine
 traiteur.index.plus: Voir plus
 traiteur.livraison: Livraisons jusqu'à 20 km aux alentours de Strasbourg
 traiteur.Livraison2: Nous livrons jusqu'à 20 km aux alentours de Strasbourg
 traiteur.LivraisonHoraires: À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j
-traiteur.LivraisonMinimum: Passer une commande de 3 repas (minimum)
+traiteur.LivraisonMinimum: Passez une commande de 3 repas (minimum)
 traiteur.menu.savoirfaire: Notre savoir faire
 traiteur.modalitesLivraison: Modalités de livraison
+traiteur.plats: Plat principal
 traiteur.slogan: Faites vous livrer de la vrai cuisine
 traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
 traiteur.voirlemenu: Voir le menu
 traiteur.VoirMenus: Voir les menus
+Yufka: Yufka
+Yufka + frites: Yufka + frites
+vaisselle: vaisselle
+vaisselle.2: La vaisselle
 un vrai pro de la photo va couvrir l'évenement: un vrai pro de la photo va couvrir l'évenement
 une garderie pour les petits, pour que les adultes puissent profiter de la fête: une garderie pour les petits, pour que les adultes puissent profiter de la fête
 user.delete: Supprimer définitivement le compte
@@ -267,7 +277,7 @@ user.edit.back: Retour
 user.edit.title: Editer un compte utilisateur
 user.index.actions: Actions
 user.index.adressevenement: Adresse de l'evenement
-user.index.couriel: Couriel
+user.index.couriel: Courriel
 user.index.domicile: Adresse du domicile
 user.index.edit: Editer
 user.index.id: Id
@@ -280,4 +290,4 @@ user.index.telephone: Telephone
 user.index.userfail: Pas d'utilisateur trouvé
 user.show.mdp: Mot de passe
 user.show.roles: Roles
-zetz.1: zetz
+
