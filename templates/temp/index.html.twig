@@ -1,0 +1,27 @@
+{% block body %}
+<style>
+#home{
+    max-width: 100%;
+    height: 100%;
+    background-image:url('{{ asset('build/images/ImgKlassEvent/Pasta3.jpg') }}');
+    background-size: cover;   
+    vertical-align: middle;
+    position: relative;
+}
+
+.merci{    
+    color:white;
+    font-size:150px;
+    font-family:'Great Vibes', cursive;
+    position: absolute;
+    top: 60%; 
+    margin-left: 200px;
+    margin-right: 200px;
+}
+</style>
+
+        <div id="home">
+            <h1 class="merci">Merci à tous !</h1>
+        </div>
+
+{% endblock %}
