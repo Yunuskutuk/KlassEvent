@@ -60,10 +60,9 @@
                     {% for event in events %}
 
 					<li class="li-quote">
-					
-					<button class="btn btn-primary" style="width:20em" type="submit" value="{{ path('quote_quote', {'id': event.id}) }}">{{ event.type|trans }}</button>
-				
+					<a href="{{ path('quote_quote', {'id': event.id}) }}" class="btn btn-primary"  style="width:20em">{{ event.type|trans }}</a>				
 					</li>
+					
                     {% endfor %}
 			
                 </ul>

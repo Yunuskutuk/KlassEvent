@@ -45,7 +45,7 @@
 
 
 	<!-- Background picture -->
-	<section class="home-slider owl-carousel">
+	<section class="home-slider owl-carousel menu-listmenu">
 		<div class="slider-item .event-slider" style="background-image:url('{{ asset('build/images/lunch-4.jpg') }}')">
 			<div class="overlay"></div>
 			<div class="container">
@@ -59,15 +59,15 @@
 								</div>
 							</div>
 							<div class="row">
-								{% for menu in menus %}
-									<div class="col-md-4 d-flex align-self-stretch text-center">
+								{% for menu in menus|slice(0,3) %}
+									<div class="col-md-4 d-flex align-self-stretch text-center margin-top-20px">
 										<div class="media block-6 services d-block step-background-traiteur margin-traiteur">
 											<div class="media-body p-2 mt-3 justify-content-center align-items-center">
-												<img src="/images/uploads/{{ menu.path }}" class="size-img">
-												<h3 class="heading">{{ (menu.name~'.'~menu.id)|trans }}</h3>
+												<img src="/images/uploads/{{ menu.path }}" class="size-img-2">
+												<h3 class="heading mt-2">{{ (menu.name~'.'~menu.id)|trans }}</h3>
 											</div>
 											<!-- Button trigger modal -->
-											<button type="button" class="btn see" data-toggle="modal" data-target="#exampleModal{{menu.id}}">
+											<button type="button" class="btn see mb-4" data-toggle="modal" data-target="#exampleModal{{menu.id}}">
 												{{"traiteur.voirlemenu"|trans}}
 											</button>
 										</div>
@@ -96,7 +96,7 @@
 			<div class="row">
 				<div class="col-md-6 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background margin-event">
-						<a href="{{ path('traiteur_showpicture', {'type': 'aperitif'} )}}" class="block-20" style="background-image:url({{ asset('build/images/entree3.jpeg') }})"></a>
+						<a href="{{ path('traiteur_showpicture', {'type': 'aperitif'} )}}" class="block-20" style="background-image:url({{ asset('build/images/ImgKlassEvent/DSC00101-red.jpg') }})"></a>
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 							<h3 class="heading">{{"traiteur.aperitif"|trans}}</h3>
 						</div>
@@ -104,7 +104,7 @@
 				</div>
 				<div class="col-md-6 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background margin-event">
-						<a href="{{ path('traiteur_showpicture', {'type': 'entree'} )}}" class="block-20" style="background-image:url({{ asset('build/images/entree3.jpeg') }})"></a>
+						<a href="{{ path('traiteur_showpicture', {'type': 'entree'} )}}" class="block-20" style="background-image:url({{ asset('build//images/ImgKlassEvent/DEA_4434.jpg') }})"></a>
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 							<h3 class="heading">{{"traiteur.entree"|trans}}</h3>
 						</div>
@@ -112,7 +112,7 @@
 				</div>
 				<div class="col-md-6 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background margin-event">
-						<a href="{{ path('traiteur_showpicture', {'type': 'plat'} )}}" class="block-20" style="background-image:url({{ asset('build/images/plat3.jpeg') }})"></a>
+						<a href="{{ path('traiteur_showpicture', {'type': 'plat'} )}}" class="block-20" style="background-image:url({{ asset('build//images/ImgKlassEvent/tavuk-sarma.jpg') }})"></a>
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 							<h3 class="heading">{{"traiteur.plats"|trans}}</h3>
 						</div>
@@ -120,7 +120,7 @@
 				</div>
 				<div class="col-md-6 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background margin-event">
-						<a href="{{ path('traiteur_showpicture', {'type': 'dessert'} )}}" class="block-20" style="background-image:url({{ asset('build/images/dessert.jpeg') }})"></a>
+						<a href="{{ path('traiteur_showpicture', {'type': 'dessert'} )}}" class="block-20" style="background-image:url({{ asset('build//images/ImgKlassEvent/IMG_0211.jpg') }})"></a>
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 							<h3 class="heading">{{"traiteur.desserts"|trans}}</h3>
 						</div>
@@ -128,7 +128,7 @@
 				</div>
 				<div class="col-md-6 d-flex align-self-stretch text-center">
 					<div class="media block-6 services d-block step-background margin-event">
-						<a href="{{ path('traiteur_showpicture', {'type': 'gateaux'}) }}" class="block-20" style="background-image:url({{ asset('build/images/dessert.jpeg') }})"></a>
+						<a href="{{ path('traiteur_showpicture', {'type': 'gateaux'}) }}" class="block-20" style="background-image:url({{ asset('build/images/ImgKlassEvent/Pasta3-red.jpg') }})"></a>
 						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 							<h3 class="heading">{{"traiteur.gateaux"|trans}}</h3>
 						</div>
