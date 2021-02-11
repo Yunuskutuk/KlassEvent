@@ -1,4 +1,3 @@
-à la fin, vous n'aurez plus faim: A la fin, vous n'aurez plus faim
 account.back.home: Retour à l'Accueil
 account.compte: Un compte
 account.cree: Créer
@@ -6,11 +5,9 @@ account.edit.modifier: Mes informations
 account.login: Connexion
 account.logout: Déconnexion
 accueil: Accueil
-animation particulière.6: Animations particulières
 anniversaire: Anniversaire
 banquet.3: Les banquets
 baptême: Baptême
-boom: Boom
 bouton.changer.passe: Changer le mot de passe
 bouton.MAJ: Mettre à jour
 bouton.modifier: Modifier
@@ -67,7 +64,6 @@ form.placeholder.name: Pierre
 form.placeholder.password: Mot de passe
 form.placeholder.phone: 0699999999
 gallery.index.rien: Aucune image dans les services, contactez l'administrateur
-garde d'enfants: Garde d'enfants
 home.event: Livraison de repas pour Entreprises et Particuliers
 home.traiteur: Organisation de mariage / Fêtes familiales / Wedding Planner
 hop, buffet froid, histoire de voir: Hop, buffet froid, histoire de voir
@@ -77,24 +73,15 @@ Klass.phone: 07 80 55 50 17
 langue: Langue
 langue.fr: Français
 langue.tr: Turc
-le big truc: Le big truc
-Le super menu: Le super menu
-les photos de l'évenement: Les photos de l'évenement
-Les photos du mariage, plus des photos studio à encadrer: Les photos du mariage, plus des photos studio à encadrer
 livraison.footer: Détail des livraisons
 location: Location
 mariage: Mariage
 menu: Menu
 menu.footer: Liste des menus
-mise à disposition des couverts, verres, et assiettes: Mise à disposition des couverts, verres, et assiettes
 navbar.gallerie: Galerie
 navbar.livraison: Détails des livraisons
 navbar.ouverture: Horaires d'ouverture - Tous les jours
 nos.menus: Nos menus
-petit banquet: Petit banquet
-photo de base: Photo de base
-Photo Souvenir: Photo Souvenir
-photographe pro: Photographe pro
 Plat 01: Plat 01
 quote.choix.option: --Veillez choisir votre option--
 quote.dateEvenement: Jour et heure de l’événement
@@ -265,12 +252,8 @@ traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
 traiteur.voirlemenu: Voir le menu
 traiteur.VoirMenus: Voir les menus
-Yufka: Yufka
-Yufka + frites: Yufka + frites
 vaisselle: vaisselle
 vaisselle.2: La vaisselle
-un vrai pro de la photo va couvrir l'évenement: un vrai pro de la photo va couvrir l'évenement
-une garderie pour les petits, pour que les adultes puissent profiter de la fête: une garderie pour les petits, pour que les adultes puissent profiter de la fête
 user.delete: Supprimer définitivement le compte
 user.edit: Utilisateurs
 user.edit.back: Retour
