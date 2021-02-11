@@ -18,6 +18,7 @@ contact: İletişim
 contact.Envoyer: Mesaj gönder
 contact.footer: Bize Ulaşın
 demande.devis: Teklif isteği
+detail.general: Detaylar
 event.account.adresseLivraison: Teslimat adresi
 event.account.adressePerso: Kişisel adres
 event.account.compte: Hesabım
@@ -73,6 +74,9 @@ home.traiteur: Düğün organizasyonu / aile kutlamaları / Düğün planlayıc�
 horaires.footer: Her gün 11 h ila 21 h
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
+langue: Dil
+langue.fr: Fransızca
+langue.tr: Türk
 livraison.footer: Teslimat detayları
 location: Kiralama
 menu: Menü
@@ -97,6 +101,7 @@ quote.description: Açıklama
 quote.devis: teklif istemek
 quote.email: E-postanızı giriniz
 quote.for: için alıntı
+quote.lieu: olayın yeri
 quote.lieu.event: olayın yeri
 quote.nbrInvites: ziyaretçi sayısı
 quote.nom: adınızı giriniz
@@ -111,6 +116,7 @@ quote.question2: ama nasıl devam edeceğimi bilmiyorum
 quote.question3: Etkinliğinizi seçin
 quote.service: Hizmet
 rent.deco: Masa dekorasyonu
+rent.deco2: Sandalye dekorasyonu
 rent.Vaisselle: Bulaşık yıkama
 retour.general: Dönüş
 Riz, Blé ou Frites1: Riz, Blé ou Frites1
@@ -129,7 +135,11 @@ security.deja.connecte: İle zaten bağlısın
 security.email: Oturum açmak için e-posta adresinizi ve şifrenizi giriniz
 security.password: Parola
 services: Teklif isteği
+traiteur.aperitif: Mezeler
 traiteur.ConnexionLivraison: Giriş yapın ve sipariş verin!
+traiteur.desserts: Pasta ve yemek cesitleri
+traiteur.entree: Meze
+traiteur.gateaux: Dugun pastalari
 traiteur.index.3livraison: Teslimat başına 3 menüden
 traiteur.index.appelAction: Haftalık menünüzü seçin
 traiteur.index.deplacements: Strasbourg çevresinde 20 km'ye kadar seyahat edin
@@ -141,14 +151,14 @@ traiteur.livraison: Strasbourg çevresinde 20 km'ye kadar teslimat
 traiteur.Livraison2: Strasbourg çevresinde 20 km'ye kadar teslimat yapıyoruz
 traiteur.LivraisonHoraires: 11.30 - 14.30 ve 18.00 - 22.30 arası haftanın 7 günü
 traiteur.LivraisonMinimum: 3 öğün yemek siparişi verin (minimum)
+traiteur.menu.savoirfaire: Bizim uzmanlığımız
 traiteur.modalitesLivraison: Teslimat şartları
+traiteur.plats: Ana yemek
 traiteur.slogan: Gerçek yemek teslim et
 traiteur.titre: Klass yemek şirketi
 traiteur.villesLivraison: Teslim edilen belediyeleri keşfedin
+traiteur.voirlemenu: Menüyü görüntüle
 traiteur.VoirMenus: Menüleri görüntüle
-un vrai pro de la photo va couvrir l'évenement: un vrai pro de la photo va couvrir l'évenement
-une garderie pour les petits, pour que les adultes puissent profiter de la fête: une garderie pour les petits, pour que les adultes puissent profiter de la fête
 Yufka: Yufka
 Yufka + frites: Yufka + frites
 vaisselle: bulaşıklar
-
