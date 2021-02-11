@@ -17,6 +17,7 @@ contact: Contact
 contact.Envoyer: Envoi du message
 contact.footer: Nous contacter
 demande.devis: Demande de devis
+detail.general: Détails
 dsgsrg.2: dsgsrg
 event.account.adresseLivraison: Adresse de livraison
 event.account.adressePerso: Adresse personnelle
@@ -69,6 +70,9 @@ hop, buffet froid, histoire de voir: Hop, buffet froid, histoire de voir
 horaires.footer: Tous les jours de ...h... à ...h...
 Klass.courriel: klassevent@ymail.com
 Klass.phone: 07 80 55 50 17
+langue: Langue
+langue.fr: Français
+langue.tr: Turc
 le big truc: Le big truc
 Le super menu: Le super menu
 les photos de l'évenement: les photos de l'évenement
@@ -91,6 +95,8 @@ quote.choix.option: --Veillez choisir votre option--
 quote.dateEvenement: Jour et heure de l’événement
 quote.demandes: Remarques, instructions, questions et demandes
 quote.description: Description
+quote.email: entrez votre email
+quote.lieu.event: le lieu de l’événement
 quote.devis: Demander un devis
 quote.for: Devis pour un
 quote.lieu: Lieu de l’événement
@@ -229,8 +235,12 @@ security.deja.connecte: Vous êtes déjà connecté avec
 security.email: Renseignez votre e-mail et votre mot de passe pour vous connecter
 security.password: Mot de passe
 services: Services
+traiteur.aperitif: Les apéritifs
 test.2: test
 traiteur.ConnexionLivraison: Connectez-vous et commander !
+traiteur.desserts: Les Desserts et fruits
+traiteur.entree: Les Entrées
+traiteur.gateaux: Les Gâteaux
 traiteur.index.3livraison: A partir de 3 menus par livraison
 traiteur.index.appelAction: Choisissez votre menu pour la semaine du ... au ...
 traiteur.index.deplacements: Déplacements jusqu'à 20km autour de Strasbourg
@@ -242,10 +252,12 @@ traiteur.livraison: Livraisons jusqu'à 20 km aux alentours de Strasbourg
 traiteur.Livraison2: Nous livrons jusqu'à 20 km aux alentours de Strasbourg
 traiteur.LivraisonHoraires: À partir de 11h30 - 14h30 et 18h00 - 22h30 7j/7j
 traiteur.LivraisonMinimum: Passer une commande de 3 repas (minimum)
+traiteur.menu.savoirfaire: Notre savoir faire
 traiteur.modalitesLivraison: Modalités de livraison
 traiteur.slogan: Faites vous livrer de la vrai cuisine
 traiteur.titre: Klass Traiteur
 traiteur.villesLivraison: Découvrez les communes livrées
+traiteur.voirlemenu: Voir le menu
 traiteur.VoirMenus: Voir les menus
 un vrai pro de la photo va couvrir l'évenement: un vrai pro de la photo va couvrir l'évenement
 une garderie pour les petits, pour que les adultes puissent profiter de la fête: une garderie pour les petits, pour que les adultes puissent profiter de la fête
