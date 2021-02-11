@@ -1,20 +1,24 @@
 {{ form_start(form) }}
 
-{{ form_row(form.email, {'label': 'form.email'|trans,'attr': {'placeholder': 'form.placeholder.email'|trans}}) }}
+{{ form_row(form.email, {'label': 'form.email','attr': {'placeholder': 'form.placeholder.email'  }}) }}
 
-{{ form_row(form.password, {'label': 'form.password'|trans,'attr': {'placeholder': 'form.placeholder.password'|trans}}) }}
+{% if form.password is defined %}
+	<div class="form-group">
+		<label for="password">Password:</label>
+		{{ form_widget(form.password,{'attr':{'class':'form-row'}}) }}
+		{{ form_errors(form.password) }}
+	</div>
+{% endif %}
 
-{{ form_row(form.name, {'label': 'form.name'|trans,'attr': {'placeholder': 'form.placeholder.name'|trans}}) }}
+{{ form_row(form.name, {'label': 'form.name','attr': {'placeholder': 'form.placeholder.name'}}) }}
 
-{{ form_row(form.firstName, {'label': 'form.firstname'|trans,'attr': {'placeholder': 'form.placeholder.firstname'|trans}}) }}
+{{ form_row(form.firstName, {'label': 'form.firstname','attr': {'placeholder': 'form.placeholder.firstname'}}) }}
 
-{{ form_row(form.phone, {'label': 'form.phone'|trans,'attr': {'placeholder': 'form.placeholder.phone'|trans}}) }}
+{{ form_row(form.phone, {'label': 'form.phone','attr': {'placeholder': 'form.placeholder.phone'}}) }}
 
-{{ form_row(form.adress, {'label': 'form.adress'|trans,'attr': {'placeholder': 'form.placeholder.adress'|trans}}) }}
+{{ form_row(form.adress, {'label': 'form.adress','attr': {'placeholder': 'form.placeholder.adress'}}) }}
 
-{{ form_row(form.adressEvent, {'label': 'form.adressevent'|trans,'attr': {'placeholder': 'form.placeholder.adressevent'|trans}}) }}
+{{ form_row(form.adressEvent, {'label': 'form.adressevent','attr': {'placeholder': 'form.placeholder.adressevent'}}) }}
 
-<button class="btn btn-primary">{{ button_label|default('sauvegarder'|trans) }}</button>
+<button class="btn btn-primary">{{ button_label|default('sauvegarder') }}</button>
 {{ form_end(form) }}
-
-

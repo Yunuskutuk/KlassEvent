@@ -1,78 +1,82 @@
 {% extends 'baseadmin.html.twig' %}
 
-{% block title %}User{% endblock %}
+{% block title %}User
+{% endblock %}
 
 {% block body %}
 
-<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row  slider-text align-items-center justify-content-center">
-          <div class="col-md-9 text-center mt-5">
-            <h1 class="mb-2 bread">KlassEvent</h1>
-            <h2 class="breadcrumbs" style="font-size: 25px;">{{ 'user.edit'|trans }}{# Utilisateurs #}</h2>
-          </div>
-        </div>
-      </div>
-</section>
+	<section class="hero-wrap hero-wrap-2 img-black-white" style="background-image: url('{{ asset('build/images/4271330660_74de175953_o.jpg') }}')" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row  slider-text align-items-center justify-content-center">
+				<div class="col-md-9 text-center mt-5">
+					<h1 class="mb-2 bread">KlassEvent</h1>
+					<h2 class="breadcrumbs" style="font-size: 25px;">Utilisateurs</h2>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<section class="ftco-section pt-5">
-	<div class="container">
-		<div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-8 text-center heading-section">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
 
-                <h2 class="mb-5">{{ 'user.edit'|trans }}{# Utilisateur #}</h2>
- 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>{{ 'user.index.id'|trans }}{# Id #}</th>
-                <td>{{ user.id }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.index.couriel'|trans }}{# Email #}</th>
-                <td>{{ user.email }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.show.roles'|trans }} {# Roles #}</th>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.show.mdp'|trans }}{# Mot de passe #}</th>
-                <td>{{ user.password }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.index.nom'|trans }}{# Nom #}</th>
-                <td>{{ user.name }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.index.prenom'|trans }}{# Prenom #}</th>
-                <td>{{ user.firstName }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.index.telephone'|trans }}{# Telephone #}</th>
-                <td>{{ user.phone }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.index.domicile'|trans }}{# Adresse du domicile #}</th>
-                <td>{{ user.adress }}</td>
-            </tr>
-            <tr>
-                <th>{{ 'user.index.adressevenement'|trans }}{# Adresse de l'evenement #}</th>
-                <td>{{ user.adressEvent }}</td>
-            </tr>
-        </tbody>
-    </table>
+				<div class="col-md-12 justify-content-center text-center">
+					<div class="media block-6 services d-block step-background margin-traiteur">
+						<div class="media-body p-2 mt-3 justify-content-center align-items-center">
 
-    <a class="admin-light mx-2" href="{{ path('admin_user_index') }}">{{ 'user.edit.back'|trans }}{# Retour #}</a>
+							<h2 class="mb-5">Utilisateurs :</h2>
 
-    <a class="admin-light" href="{{ path('admin_user_edit', {'id': user.id}) }}">{{ 'user.index.edit'|trans }}{# Editer #}</a>
+							<h3>Nom :
+							</h3>
+							<p>
+								{{ user.name }}</p>
 
-    {{ include('user/_delete_form.html.twig') }}
+							<h3>Prénom :
+							</h3>
+							<p>
+								{{ user.firstName }}</p>
 
-            </div>   
-        </div>	
-    </div>
-</section>
+							<h3 class="heading">Id :</h3>
+							<p>
+								{{ user.id }}</p>
+							<h3 class="heading">Email :</h3>
+							<p>
+								{{ user.email }}</p>
+							<h3>Roles:
+							</h3>
+							<p>
+								{{ user.roles ? user.roles|json_encode : '' }}</p>
+							<h3>Mot de passe :
+							</h3>
+							<p>
+								{{ user.password }}</p>
+
+							<h3>Téléphone :
+							</h3>
+							<p>
+								{{ user.phone }}</p>
+
+							<h3>Adresse :
+							</h3>
+							<p>
+								{{ user.adress }}</p>
+
+							<h3>Adresse de l'Event :
+							</h3>
+							<p>
+								{{ user.adressEvent }}</p>
+
+							<a class="btn btn-warning" href="{{ path('admin_user_edit', {'id': user.id}) }}">Editer</a>
+
+							{{ include('user/_delete_form.html.twig') }}
+
+							<a type="button" class="btn btn-dark" href="{{ path('admin_user_index') }}">Retour</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 {% endblock %}
