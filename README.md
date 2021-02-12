@@ -1,3 +1,18 @@
+To do to instal the project
+
+  * composer install
+  * yarn insall
+  * yarn encore dev
+  * php bin/console doctrine:database:create
+  * php bin/console make:migration
+  * php bin/console d:m:m
+  * php bin/console d:f:l
+
+  the admin account is created with the fixtures (you can find the password inside AppFixtures)
+
+  there is a instagram function in footer who bug on wild code school IP adress than we comment it, but you can test it on server...
+
+
 # Project 3 - Starter Kit - Symfony 5.*
 
 ![Wild Code School](https://wildcodeschool.fr/wp-content/uploads/2019/01/logo_pink_176x60.png)
